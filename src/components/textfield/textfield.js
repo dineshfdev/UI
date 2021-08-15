@@ -7,9 +7,9 @@ function CustomTextField({ ...props }) {
       <TextField
         error={props.error}
         id="standard-error-helper-text"
-        label
-        defaultValue="Hello World"
+        label={props.label}
         helperText="Incorrect entry."
+        type={props.fieldType}
       />
     </div>
   );

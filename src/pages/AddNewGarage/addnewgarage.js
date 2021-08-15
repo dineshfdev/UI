@@ -39,8 +39,8 @@ function AddNewGarage() {
   console.log('position :>> ', position);
 
   const renderFields = () => {
-    return modelBuffer.map(() => {
-      return <CustomTextField />;
+    return modelBuffer.map((field) => {
+      return <CustomTextField {...field} />;
     });
   };
 

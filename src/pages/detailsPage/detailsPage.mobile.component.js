@@ -255,7 +255,7 @@ const MobileDetailsPage = (props) => {
                           alt="CarWash"
                           className="cursor-pointer"
                         />
-                        <div className="image-caption">CarWash</div>
+                        <div className="image-caption">Car Wash</div>
                       </li>
                     ) : null}
                     {name.garageServices && name.garageServices.acAndCL ? (
