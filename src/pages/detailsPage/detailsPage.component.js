@@ -245,7 +245,10 @@ const DetailsPage = (props) => {
                             className="cursor-pointer"
                             onClick={(e) => {
                               e.preventDefault();
-                              window.location.href = `https://wa.me/919361040506?text=I%20need%20General%20Service%20Oil%20Change%20@%20${name.garageTitle},%20${name.location}`;
+                              window.open(
+                                `https://wa.me/919361040506?text=I%20need%20General%20Service%20Oil%20Change%20@%20${name.garageTitle},%20${name.location}`,
+                                "_blank"
+                              );
                             }}
                           />
                           <div className="image-caption">
@@ -261,7 +264,10 @@ const DetailsPage = (props) => {
                             className="cursor-pointer"
                             onClick={(e) => {
                               e.preventDefault();
-                              window.location.href = `https://wa.me/919361040506?text=I%20need%20Painting%20Tinkering%20@%20${name.garageTitle},%20${name.location}`;
+                              window.open(
+                                `https://wa.me/919361040506?text=I%20need%20Painting%20Tinkering%20@%20${name.garageTitle},%20${name.location}`,
+                                "_blank"
+                              );
                             }}
                           />
                           <div className="image-caption">
@@ -277,7 +283,10 @@ const DetailsPage = (props) => {
                             className="cursor-pointer"
                             onClick={(e) => {
                               e.preventDefault();
-                              window.location.href = `https://wa.me/919361040506?text=I%20need%20Car%20Wash%20@%20${name.garageTitle},%20${name.location}`;
+                              window.open(
+                                `https://wa.me/919361040506?text=I%20need%20Car%20Wash%20@%20${name.garageTitle},%20${name.location}`,
+                                "_blank"
+                              );
                             }}
                           />
                           <div className="image-caption">Car Wash</div>
@@ -291,7 +300,10 @@ const DetailsPage = (props) => {
                             className="cursor-pointer"
                             onClick={(e) => {
                               e.preventDefault();
-                              window.location.href = `https://wa.me/919361040506?text=I%20need%20AC%20Repair%20Cleaning%20@%20${name.garageTitle},%20${name.location}`;
+                              window.open(
+                                `https://wa.me/919361040506?text=I%20need%20AC%20Repair%20Cleaning%20@%20${name.garageTitle},%20${name.location}`,
+                                "_blank"
+                              );
                             }}
                           />
                           <div className="image-caption">
@@ -307,7 +319,10 @@ const DetailsPage = (props) => {
                             className="cursor-pointer"
                             onClick={(e) => {
                               e.preventDefault();
-                              window.location.href = `https://wa.me/919361040506?text=I%20need%20Wheels%20Spares%20@%20${name.garageTitle},%20${name.location}`;
+                              window.open(
+                                `https://wa.me/919361040506?text=I%20need%20Wheels%20Spares%20@%20${name.garageTitle},%20${name.location}`,
+                                "_blank"
+                              );
                             }}
                           />
                           <div className="image-caption">Wheels & Spares</div>
@@ -321,7 +336,10 @@ const DetailsPage = (props) => {
                             className="cursor-pointer"
                             onClick={(e) => {
                               e.preventDefault();
-                              window.location.href = `https://wa.me/919361040506?text=I%20need%20ECU%20Coding%20@%20${name.garageTitle},%20${name.location}`;
+                              window.open(
+                                `https://wa.me/919361040506?text=I%20need%20ECU%20Coding%20@%20${name.garageTitle},%20${name.location}`,
+                                "_blank"
+                              );
                             }}
                           />
                           <div className="image-caption">ECU Coding</div>
@@ -335,7 +353,10 @@ const DetailsPage = (props) => {
                             className="cursor-pointer"
                             onClick={(e) => {
                               e.preventDefault();
-                              window.location.href = `https://wa.me/919361040506?text=I%20need%20Accessories%20@%20${name.garageTitle},%20${name.location}`;
+                              window.open(
+                                `https://wa.me/919361040506?text=I%20need%20Accessories%20@%20${name.garageTitle},%20${name.location}`,
+                                "_blank"
+                              );
                             }}
                           />
                           <div className="image-caption">Accessories</div>
