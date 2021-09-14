@@ -12,7 +12,7 @@ function CustomCarousel(props) {
       ? BannerMobileItems()
       : BannerDesktopItems();
   return (
-    <Carousel animation="slide" autoPlay={false} className="carousel">
+    <Carousel animation="slide" autoPlay={true} className="carousel">
       {render.map((item, i) => (
         <ImgMediaCard key={i} {...item} />
       ))}
