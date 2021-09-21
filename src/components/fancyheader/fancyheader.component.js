@@ -27,7 +27,7 @@ export default function FancyHeaderComponent({ device }) {
               <a href="https://www.servicegeni.in/">HOME</a>
             </li>
             <li>
-              <a href="https://www.servicegeni.in/doorstep">
+              <a href="https://www.servicegeni.in/doorstep-services">
                 DOORSTEP SERVICES
               </a>
             </li>

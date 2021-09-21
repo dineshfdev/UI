@@ -153,7 +153,7 @@ export default function PersistentDrawerRight({ device }) {
             <li className={classes.listItem}>
               <a
                 className={classes.anchorTag}
-                href="https://www.servicegeni.in/doorstep"
+                href="https://www.servicegeni.in/doorstep-services"
               >
                 DOORSTEP SERVICES
               </a>
