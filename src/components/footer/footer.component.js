@@ -81,7 +81,7 @@ export default function Footer(props) {
           <Grid item xs={12} md={6}>
             <ul className="footer-list">
               <li>
-                <a href="https://www.servicegeni.in/doorstep">
+                <a href="https://www.servicegeni.in/doorstep-services">
                   Periodic Services
                 </a>
               </li>
