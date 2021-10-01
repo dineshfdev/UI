@@ -1,43 +1,41 @@
 import * as React from 'react';
-import {useState} from 'react';
-import {render} from 'react-dom';
+import { useState, useCallback, useEffect } from 'react';
 import MapGL, {
   Popup,
   NavigationControl,
   FullscreenControl,
   ScaleControl,
-  GeolocateControl
+  GeolocateControl,
 } from 'react-map-gl';
 
 import Pins from './pins';
-import CityInfo from './city-info';
-
-import CITIES from './cities.json';
-
-const TOKEN = 'pk.eyJ1Ijoid3JhamVzcyIsImEiOiJja3Q1bTgyOW4wOXV6MnduMXlma2MxdDRzIn0.lNK588uuBqbzQpmhGyilSg'; // Set your mapbox token here
+import GarageInfo from './garageInfo';
+import { getAllGaragesByLatAndLong } from '../../services/services';
+import { usePosition } from '../../customHooks/usePosition';
+import { CHENNAI_POSITION, MAPBOX_TOKEN } from '../../utils/constants';
 
 const geolocateStyle = {
   top: 0,
   left: 0,
-  padding: '10px'
+  padding: '10px',
 };
 
 const fullscreenControlStyle = {
   top: 36,
   left: 0,
-  padding: '10px'
+  padding: '10px',
 };
 
 const navStyle = {
   top: 72,
   left: 0,
-  padding: '10px'
+  padding: '10px',
 };
 
 const scaleControlStyle = {
   bottom: 36,
   left: 0,
-  padding: '10px'
+  padding: '10px',
 };
 
 export default function Mapbox() {
@@ -46,9 +44,41 @@ export default function Mapbox() {
     longitude: 80.2707,
     zoom: 12,
     bearing: 0,
-    pitch: 0
+    pitch: 0,
   });
   const [popupInfo, setPopupInfo] = useState(null);
+
+  const { latitude, longitude } = usePosition();
+  const [markerData, setMarkerData] = useState([]);
+
+  const getPosition = useCallback(() => {
+    if (latitude && longitude) {
+      const getGarage = async () => {
+        try {
+          // Get the garages by current latitude and longitude
+          const res = await getAllGaragesByLatAndLong(5, latitude, longitude);
+          setMarkerData(res.data);
+
+          // If the response is not empty, set the position to the Chennai position
+          if (res.data.length === 0) {
+            const res = await getAllGaragesByLatAndLong(
+              5,
+              CHENNAI_POSITION.LATITUDE,
+              CHENNAI_POSITION.LONGITUDE
+            );
+            setMarkerData(res.data);
+          }
+        } catch (error) {
+          console.error(error);
+        }
+      };
+      getGarage();
+    }
+  }, [latitude, longitude]);
+
+  useEffect(() => {
+    getPosition();
+  }, [getPosition, latitude, longitude]);
 
   return (
     <>
@@ -58,9 +88,9 @@ export default function Mapbox() {
         height="100%"
         mapStyle="mapbox://styles/mapbox/light-v10"
         onViewportChange={setViewport}
-        mapboxApiAccessToken={TOKEN}
+        mapboxApiAccessToken={MAPBOX_TOKEN}
       >
-        <Pins data={CITIES} onClick={setPopupInfo} />
+        <Pins data={markerData} onClick={setPopupInfo} />
 
         {popupInfo && (
           <Popup
@@ -71,7 +101,7 @@ export default function Mapbox() {
             closeOnClick={false}
             onClose={setPopupInfo}
           >
-            <CityInfo info={popupInfo} />
+            <GarageInfo info={popupInfo} />
           </Popup>
         )}
 
