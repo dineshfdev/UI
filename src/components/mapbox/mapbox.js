@@ -12,7 +12,11 @@ import Pins from './pins';
 import GarageInfo from './garageInfo';
 import { getAllGaragesByLatAndLong } from '../../services/services';
 import { usePosition } from '../../customHooks/usePosition';
-import { CHENNAI_POSITION, MAPBOX_TOKEN } from '../../utils/constants';
+import {
+  CHENNAI_POSITION,
+  MAPBOX_STYLE,
+  MAPBOX_TOKEN,
+} from '../../utils/constants';
 
 const geolocateStyle = {
   top: 0,
@@ -81,35 +85,33 @@ export default function Mapbox() {
   }, [getPosition, latitude, longitude]);
 
   return (
-    <>
-      <MapGL
-        {...viewport}
-        width="100%"
-        height="100%"
-        mapStyle="mapbox://styles/mapbox/light-v10"
-        onViewportChange={setViewport}
-        mapboxApiAccessToken={MAPBOX_TOKEN}
-      >
-        <Pins data={markerData} onClick={setPopupInfo} />
+    <MapGL
+      {...viewport}
+      width="100%"
+      height="100%"
+      mapStyle={MAPBOX_STYLE}
+      onViewportChange={setViewport}
+      mapboxApiAccessToken={MAPBOX_TOKEN}
+    >
+      <Pins data={markerData} onClick={setPopupInfo} />
 
-        {popupInfo && (
-          <Popup
-            tipSize={5}
-            anchor="top"
-            longitude={popupInfo.longitude}
-            latitude={popupInfo.latitude}
-            closeOnClick={false}
-            onClose={setPopupInfo}
-          >
-            <GarageInfo info={popupInfo} />
-          </Popup>
-        )}
+      {popupInfo && (
+        <Popup
+          tipSize={5}
+          anchor="top"
+          longitude={popupInfo.longitude}
+          latitude={popupInfo.latitude}
+          closeOnClick={false}
+          onClose={setPopupInfo}
+        >
+          <GarageInfo info={popupInfo} />
+        </Popup>
+      )}
 
-        <GeolocateControl style={geolocateStyle} />
-        <FullscreenControl style={fullscreenControlStyle} />
-        <NavigationControl style={navStyle} />
-        <ScaleControl style={scaleControlStyle} />
-      </MapGL>
-    </>
+      <GeolocateControl style={geolocateStyle} />
+      <FullscreenControl style={fullscreenControlStyle} />
+      <NavigationControl style={navStyle} />
+      <ScaleControl style={scaleControlStyle} />
+    </MapGL>
   );
 }

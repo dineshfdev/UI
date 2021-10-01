@@ -2,14 +2,12 @@ import React from 'react';
 import CookieConsent from 'react-cookie-consent';
 
 // components
-import Search from "../../components/search/search.component";
-import Map from "../../components/map/map.component";
-import useGaTracker from "../../useGaTracker";
+import Search from '../../components/search/search.component';
+import useGaTracker from '../../useGaTracker';
 import Mapbox from '../../components/mapbox/mapbox';
 
 const SearchPage = (props) => {
   useGaTracker();
-  const { latitude, longitude, history } = props;
   return (
     <>
       <CookieConsent
@@ -30,7 +28,6 @@ const SearchPage = (props) => {
         </a>
       </CookieConsent>
       <Search />
-      {/* <Map latitude={latitude} longitude={longitude} history={history} /> */}
       <Mapbox />
     </>
   );

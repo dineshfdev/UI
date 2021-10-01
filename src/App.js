@@ -1,6 +1,6 @@
-import "./App.scss";
-import React from "react";
-import { Route, withRouter } from "react-router-dom";
+import './App.scss';
+import React from 'react';
+import { Route, withRouter } from 'react-router-dom';
 import './App.scss';
 // commenting homepage for temporary purpose
 // import Homepage from "./components/homePage/homePage.component";
@@ -14,7 +14,7 @@ import useDevice from './customHooks/findDevice/useDevice';
 import AddNewGarage from './pages/AddNewGarage/addnewgarage';
 import DetailPageLoadableComponent from './pages/detailsPage';
 // import LandscapeScreen from './components/landscapeScreen/landscapeScreen';
-import useGaTracker from "./useGaTracker";
+import useGaTracker from './useGaTracker';
 
 const App = () => {
   useGaTracker();
