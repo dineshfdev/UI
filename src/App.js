@@ -25,11 +25,13 @@ const App = () => {
 
 function MainApp() {
   useGaTracker();
+
   const breakpoints = [
     { name: "phone", min: 0, max: 640 },
     { name: "tablet", min: 640, max: 1080 },
     { name: "desktop", min: 1080, max: Infinity },
   ];
+
   const device = useDevice({ breakpoints });
 
   if (device.os.includes("Mac OS") || device.browser.includes("Safari")) {
