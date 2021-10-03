@@ -25,6 +25,7 @@ const App = () => {
 
 function MainApp() {
   useGaTracker();
+
   const breakpoints = [
     { name: "phone", min: 0, max: 640 },
     { name: "tablet", min: 640, max: 1080 },
