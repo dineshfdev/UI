@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/reset.scss"],"names":[],"mappings":"AAAA,EACE,qBAAsB,CACtB,aAAc,CACd,gCAAkC","file":"5.876764ea.chunk.css","sourcesContent":["* {\r\n  box-sizing: border-box;\r\n  line-height: 1;\r\n  font-family: Helvetica, sans-serif;\r\n}\r\n"]}
