@@ -2,7 +2,6 @@ import "./App.scss";
 import React from "react";
 import { Route, withRouter } from "react-router-dom";
 import "./App.scss";
-import withClearCache from "./ClearCache";
 // commenting homepage for temporary purpose
 // import Homepage from "./components/homePage/homePage.component";
 import SearchPage from "./pages/searchPage/searchPage.component";
@@ -17,27 +16,18 @@ import DetailPageLoadableComponent from "./pages/detailsPage";
 // import LandscapeScreen from './components/landscapeScreen/landscapeScreen';
 import useGaTracker from "./useGaTracker";
 
-const ClearCacheComponent = withClearCache(MainApp);
-
 const App = () => {
-  return <ClearCacheComponent />;
-};
-
-function MainApp() {
   useGaTracker();
-
   const breakpoints = [
     { name: "phone", min: 0, max: 640 },
     { name: "tablet", min: 640, max: 1080 },
     { name: "desktop", min: 1080, max: Infinity },
   ];
-
   const device = useDevice({ breakpoints });
 
   if (device.os.includes("Mac OS") || device.browser.includes("Safari")) {
     import("./reset.scss");
   }
-
   return (
     <div className="grid-container">
       <FancyHeaderComponent device={device} />
@@ -65,6 +55,6 @@ function MainApp() {
       <Footer path={window.location.pathname} />
     </div>
   );
-}
+};
 
 export default withRouter(App);
