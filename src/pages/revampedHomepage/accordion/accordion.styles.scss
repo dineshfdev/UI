@@ -1,0 +1,53 @@
+// create accordion styles
+
+@mixin accordion-gradient-color() {
+  background-color: #ffffff;
+  background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+}
+
+.accordion {
+  display: grid;
+  grid-auto-flow: column;
+  height: 248px;
+  &-items__container {
+    width: 416px;
+  }
+  &__item {
+    &-header {
+    }
+    &-title {
+      font-family: PoppinsSemiBold;
+      display: grid;
+      grid-auto-flow: column;
+      align-items: center;
+      grid-template-columns: 16px 416px;
+      grid-gap: 10px;
+
+      &:hover {
+        cursor: pointer;
+        @include accordion-gradient-color;
+      }
+    }
+    &.selected {
+      @include accordion-gradient-color;
+    }
+  }
+  &-content {
+    &-wrapper {
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-columns: 528px 336px;
+      width: 864px;
+    }
+    &__content {
+      font-family: LatoRegular;
+      align-self: center;
+      justify-self: center;
+    }
+
+    &__image {
+      width: 336px;
+      height: 248px;
+    }
+  }
+}

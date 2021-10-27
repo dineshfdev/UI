@@ -1,0 +1,68 @@
+@import '../../../styles/utility.scss';
+
+// align left container and right container using grid
+.header {
+  &-container {
+    font-family: LatoBold;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 10px 0 15px 0;
+
+    a {
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      color: $brand-grey;
+
+      &:hover {
+        color: $brand-orange;
+      }
+    }
+  }
+  &-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    margin-left: 50px;
+    margin-right: 50px;
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+
+    &-left {
+      display: grid;
+      align-items: center;
+      grid-auto-flow: column;
+
+      &-logo {
+        // center the logo
+        background-position: center;
+        background-repeat: no-repeat;
+
+        img {
+          width: 248px;
+          height: 56px;
+        }
+      }
+
+      &-menu {
+        &-item {
+          display: grid;
+          grid-template-columns: auto auto auto;
+        }
+      }
+    }
+    &-right {
+      display: grid;
+      justify-items: flex-end;
+      align-items: center;
+
+      &-menu {
+        &-item {
+          display: grid;
+          grid-auto-columns: 100px;
+          grid-auto-flow: column;
+        }
+      }
+    }
+  }
+}
