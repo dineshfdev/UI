@@ -1,7 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 import AccordionData from './accordionData.js';
-import './accordion.styles.scss';
+import '../accordion/accordion.styles.scss';
 
 // Create accordion component
 // Accordion component is a container for the accordion items
@@ -31,35 +31,42 @@ function Accordion() {
         <div className="accordion__item-header">
           <div className="accordion__item-title">
             <img src={item.icon} alt="icon" />
-            <h3>{item.title}</h3>
+            <div>{item.title}</div>
           </div>
         </div>
       </div>
     );
   };
-  const renderAccordion = () => {
-    return AccordionData.map((item, index) => accordionItem(item, index));
+  const renderAccordionHeaders = () => {
+    return (
+      <div className="accordion-headings-container">
+        {AccordionData.map((item, index) => accordionItem(item, index))}
+      </div>
+    );
   };
 
   const renderAccordionContent = () => {
+    const { content, title, image, alt, readMore } = AccordionData[selected];
     return (
       <div className="accordion-content-wrapper">
-        <div className="accordion-content__content">
-          {AccordionData[selected].content}
+        <div className="accordion-content__container">
+          <div className="accordion-content__content">{content}</div>
+          <div className="accordion-content__link">
+            <a href={readMore}>{'Read more >'}</a>
+          </div>
         </div>
-        <img
-          src={AccordionData[selected].image}
-          alt={AccordionData[selected].alt}
-          className="accordion-content__image"
-        />
+        <img src={image} alt={alt} className="accordion-content__image" />
       </div>
     );
   };
 
   return (
     <div className="accordion">
-      <div className="accordion-items__container">{renderAccordion()}</div>
-      {renderAccordionContent()}
+      <p className="accordion__main-header">Why People Love Us</p>
+      <div className="accordion-wrapper">
+        {renderAccordionHeaders()}
+        {renderAccordionContent()}
+      </div>
     </div>
   );
 }

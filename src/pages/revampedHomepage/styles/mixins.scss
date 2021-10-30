@@ -1,0 +1,10 @@
+%title {
+  font-family: PoppinsBold;
+  font-size: 36px;
+  color: #3a404f;
+}
+
+@mixin accordion-gradient-color() {
+  background-color: #ffffff;
+  background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+}

@@ -10,7 +10,7 @@ const data = [
     icon: TickIcon,
     image: Image1,
     alt: 'Easy & FREE to find mechanics',
-    id: 0,
+    readMore: 'https://google.com',
   },
   {
     title: 'Transparent pricing & reviews ',
@@ -19,7 +19,7 @@ const data = [
     icon: TickIcon,
     image: Image1,
     alt: 'Transparent pricing & reviews',
-    id: 1,
+    readMore: 'https://google.com',
   },
   {
     title: 'Value added text goes here',
@@ -28,7 +28,7 @@ const data = [
     icon: TickIcon,
     image: Image2,
     alt: 'Value added text goes here',
-    id: 2,
+    readMore: 'https://google.com',
   },
   {
     title: 'Value added text goes here',
@@ -37,7 +37,7 @@ const data = [
     icon: TickIcon,
     image: Image2,
     alt: 'Value added text goes here',
-    id: 3,
+    readMore: 'https://google.com',
   },
 ];
 
