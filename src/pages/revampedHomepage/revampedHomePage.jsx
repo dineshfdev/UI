@@ -19,9 +19,9 @@ function RevampHomePage() {
       <CarouselItemMechanic
         image={Image3}
         text={{
-          heading: 'Title',
+          heading: 'Adyar Water Wash And Foam Wash',
           pricing: '1599',
-          address: 'Address',
+          address: '38, 3 rd Avenue, 4th Street, Indira Nagar, Adyar',
         }}
         garageOverallRating={{
           averageGarageRatings: 4,
