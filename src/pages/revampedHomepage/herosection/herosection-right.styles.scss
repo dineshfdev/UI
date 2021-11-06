@@ -14,6 +14,9 @@
   }
 
   &__sub-title {
+    padding-left: 40px;
+    display: flex;
+
     img {
       fill: #cd6a03;
       margin-right: 5px;
@@ -22,5 +25,19 @@
     font-family: LatoBold;
     font-size: 16px;
     color: #cd6a03;
+  }
+
+  &__cta-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 40px;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__button {
+    @include button-style(#ff8400, #ffa748);
   }
 }

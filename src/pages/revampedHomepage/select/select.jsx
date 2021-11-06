@@ -63,3 +63,8 @@ export default function CustomizedSelect({
     </div>
   );
 }
+
+// Usage
+// options={[{ menu: 'General', value: 'general' }]}
+//             handleChange={() => {}}
+//             defaultValue="general"

@@ -1,0 +1,12 @@
+.hero-section {
+  &-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+    margin-top: 20px;
+  }
+
+  &-right {
+    justify-self: flex-start;
+  }
+}
