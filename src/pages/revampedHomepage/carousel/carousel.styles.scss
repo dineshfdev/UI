@@ -14,11 +14,58 @@
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.mechanic-carousel {
+@mixin button-style($color, $hoverColor) {
+  background-color: $color;
+  width: 153px;
+  height: 56px;
+  font-family: LatoBold;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  border-color: $color;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  &:hover {
+    background-color: $hoverColor;
+  }
+}
+
+%font-color-light-grey-1 {
+  color: #a8abb1;
+}
+
+%font-color-light-grey-2 {
+  color: #7a7c80;
+}
+
+%brand-primary-dark {
+  color: #cd6a03;
+}
+
+.block-clear {
+  margin-block: 0;
+}
+
+@mixin margin($top, $right, $bottom, $left) {
+  margin-top: $top;
+  margin-right: $right;
+  margin-bottom: $bottom;
+  margin-left: $left;
+}
+
+@mixin padding($top, $right, $bottom, $left) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+}
+
+.mechanic-carousel,
+.accessories-carousel {
   &__item {
     width: 416px;
     height: 430px;
-    max-height: 430px;
     @include box-shadow;
 
     &-content {
@@ -31,6 +78,18 @@
 
     &--bold {
       @extend %carousel-bold-style;
+    }
+
+    &--light-grey-1 {
+      @extend %font-color-light-grey-1;
+    }
+
+    &--light-grey-2 {
+      @extend %font-color-light-grey-2;
+    }
+
+    &--brand-primary-dark {
+      @extend %brand-primary-dark;
     }
 
     &-image {
@@ -51,7 +110,7 @@
 
       #{$self}-address-marker {
         display: flex;
-        margin-right: 10px;
+        @include margin(0, 10px, 0, 0);
       }
     }
 
@@ -60,7 +119,7 @@
       align-items: center;
 
       .star-ratings {
-        margin-right: 10px;
+        @include margin(0, 10px, 0, 0);
       }
     }
 
@@ -68,21 +127,71 @@
       display: grid;
       grid-auto-flow: column;
 
-      #{$self}-button {
-        background-color: #f98306;
-        width: 153px;
-        height: 56px;
-        font-family: LatoBold;
-        font-size: 16px;
-        text-transform: uppercase;
-        border-radius: 8px;
-        border-color: #f98306;
-        border: 0;
-        color: #fff;
+      .mechanic-carousel__item-button,
+      .accessories-carousel__item-button {
+        @include button-style(#ff8400, #ffa748);
         letter-spacing: 2px;
         align-self: center;
         margin-top: 15px;
       }
+
+      .mechanic-carousel__item-starts-from,
+      .mechanic-carousel__item-distance {
+        @include margin(20px, 0, 0, 0);
+      }
+
+      .accessories-carousel__item-starts-from {
+        align-self: center;
+      }
+    }
+  }
+}
+
+.accessories-carousel {
+  &__item {
+    width: 304px;
+    height: 416px;
+    border-radius: 8px;
+  }
+}
+
+.service-carousel {
+  &__item {
+    width: 304px;
+    height: 331px;
+    display: inline-block;
+    @include box-shadow;
+
+    &-content {
+      margin: 30px;
+    }
+
+    &-image {
+      width: 304px;
+      height: 180px;
+    }
+
+    &-heading {
+      font-family: PoppinsBold;
+      font-size: 20px;
+      color: #3a404f;
+    }
+
+    &-pricing {
+      font-family: LatoRegular;
+      font-size: 16px;
+      color: #7a7c80;
+    }
+
+    &-button {
+      font-family: LatoBold;
+      font-size: 16px;
+      color: #f98306;
+      text-transform: uppercase;
+      background: #fff;
+      border: 0;
+      text-decoration: underline;
+      padding: 0;
     }
   }
 }
