@@ -1,0 +1,28 @@
+@import '../styles/mixins.scss';
+
+.hero-section-left {
+  width: 640px;
+  height: 319px;
+  border-radius: 8px;
+  background: url('../../../images/assets/img/banner/find a mechanic.png')
+    no-repeat center;
+  color: #fff;
+
+  &__title {
+    @extend %hero-title-styles;
+  }
+
+  &__sub-title {
+    font-family: LatoBold;
+    font-size: 16px;
+    height: 19px;
+    padding-top: 40px;
+    padding-left: 40px;
+  }
+
+  &__button {
+    @include button-style(#ff8400, #ffa748);
+    margin-top: 40px;
+    margin-left: 40px;
+  }
+}

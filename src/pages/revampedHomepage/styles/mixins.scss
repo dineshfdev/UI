@@ -8,3 +8,55 @@
   background-color: #ffffff;
   background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
 }
+
+%carousel-semibold-style {
+  font-family: LatoRegular;
+  font-size: 14px;
+}
+
+%carousel-bold-style {
+  font-family: LatoBold;
+  font-size: 20px;
+}
+
+@mixin box-shadow {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+@mixin button-style($color, $hoverColor) {
+  background-color: $color;
+  width: 153px;
+  height: 56px;
+  font-family: LatoBold;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  border-color: $color;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  &:hover {
+    background-color: $hoverColor;
+  }
+}
+
+%font-color-light-grey-1 {
+  color: #a8abb1;
+}
+
+%font-color-light-grey-2 {
+  color: #7a7c80;
+}
+
+%brand-primary-dark {
+  color: #cd6a03;
+}
+
+%hero-title-styles {
+  font-family: PoppinsBold;
+  font-size: 36px;
+  width: 376px;
+  height: 108px;
+  padding-top: 40px;
+  padding-left: 40px;
+}

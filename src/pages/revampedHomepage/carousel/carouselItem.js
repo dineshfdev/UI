@@ -3,8 +3,6 @@ import StarRatings from 'react-star-ratings';
 import Marker from '../../../images/assets/img/icons/global/marker.svg';
 import './carousel.styles.scss';
 
-import styles from './carousel.styles.scss';
-
 // Create a carousel item component with image and text
 
 function CarouselItemServices({ image, text, onClick }) {

@@ -1,0 +1,26 @@
+@import '../styles/mixins.scss';
+
+.hero-section-right {
+  width: 640px;
+  height: 319px;
+  border-radius: 8px;
+  background: url('../../../images/assets/img/banner/doorstep services.png')
+    no-repeat center;
+  color: #fff;
+
+  &__title {
+    @extend %hero-title-styles;
+    color: #3a404f;
+  }
+
+  &__sub-title {
+    img {
+      fill: #cd6a03;
+      margin-right: 5px;
+    }
+
+    font-family: LatoBold;
+    font-size: 16px;
+    color: #cd6a03;
+  }
+}
