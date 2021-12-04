@@ -1,12 +1,17 @@
-@import '../styles/mixins.scss';
+@import "../styles/mixins.scss";
 
 .hero-section-left {
-  width: 640px;
   height: 319px;
   border-radius: 8px;
-  background: url('../../../images/assets/img/banner/find a mechanic.png')
-    no-repeat center;
+  background: url("../../../images/assets/img/banner/find a mechanic.png")
+    no-repeat;
   color: #fff;
+  box-sizing: border-box;
+  margin-left: 50px;
+
+  &__content {
+    padding-top: 10px;
+  }
 
   &__title {
     @extend %hero-title-styles;

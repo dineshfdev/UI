@@ -1,0 +1,28 @@
+@import "../styles/mixins.scss";
+.contact-container {
+  width: 100%;
+  padding: 30px;
+  background: #f4f6f9;
+}
+.title {
+  @extend %title;
+}
+.footer-header {
+  font-family: PoppinsBold;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.footer-list-container {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li {
+    font-family: LatoRegular;
+    font-size: 16px;
+    line-height: 36px;
+    a {
+      text-decoration: none;
+      color: #3a404f;
+    }
+  }
+}

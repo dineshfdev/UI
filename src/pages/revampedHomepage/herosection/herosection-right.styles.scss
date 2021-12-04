@@ -1,12 +1,13 @@
-@import '../styles/mixins.scss';
+@import "../styles/mixins.scss";
 
 .hero-section-right {
-  width: 640px;
   height: 319px;
   border-radius: 8px;
-  background: url('../../../images/assets/img/banner/doorstep services.png')
-    no-repeat center;
+  background: url("../../../images/assets/img/banner/doorstep services.png")
+    no-repeat;
   color: #fff;
+  margin-left: 50px;
+  overflow: hidden;
 
   &__title {
     @extend %hero-title-styles;

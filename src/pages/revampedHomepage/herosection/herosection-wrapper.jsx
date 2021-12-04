@@ -1,3 +1,4 @@
+import { Grid } from '@material-ui/core';
 import React from 'react';
 import HeroSectionLeft from './herosection-left';
 import HeroSectionRight from './herosection-right';
@@ -6,10 +7,15 @@ import './herosection-wrapper.styles.scss';
 
 function HeroSectionWrapper() {
   return (
-    <div className="hero-section-wrapper">
-      <HeroSectionLeft />
-      <HeroSectionRight />
-    </div>
+    <Grid container className="hero-section-wrapper" justifycontent="center"
+    alignItems="center">
+      <Grid item xs={6}>
+        <HeroSectionLeft />
+      </Grid>
+      <Grid item xs={6}>
+        <HeroSectionRight />
+      </Grid>
+    </Grid>
   );
 }
 

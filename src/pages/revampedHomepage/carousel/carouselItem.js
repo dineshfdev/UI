@@ -1,7 +1,7 @@
-import React from 'react';
-import StarRatings from 'react-star-ratings';
-import Marker from '../../../images/assets/img/icons/global/marker.svg';
-import './carousel.styles.scss';
+import React from "react";
+import StarRatings from "react-star-ratings";
+import Marker from "../../../images/assets/img/icons/global/marker.svg";
+import "./carousel.styles.scss";
 
 // Create a carousel item component with image and text
 
@@ -14,11 +14,9 @@ function CarouselItemServices({ image, text, onClick }) {
         className="service-carousel__item-image"
       ></img>
       <div className="service-carousel__item-content">
-        <p className="service-carousel__item-heading"> {text.heading}</p>
-        <p className="service-carousel__item-pricing">Starts {text.pricing}</p>
-        <button className="service-carousel__item-button" onClick={onClick}>
-          Book now
-        </button>
+        <p className="service-carousel__item-heading"> test</p>
+        <p className="service-carousel__item-pricing">Starts price</p>
+        <button className="service-carousel__item-button">Book now</button>
       </div>
     </div>
   );
@@ -31,7 +29,7 @@ function CarouselItemMechanic({
   garageOverallRating,
   pricing,
   distance,
-  carouselName = 'mechanic',
+  carouselName = "mechanic",
 }) {
   return (
     <div className="mechanic-carousel__item">
@@ -55,8 +53,8 @@ function CarouselItemMechanic({
           </p>
         </div>
         <div className="mechanic-carousel__item-reviews mechanic-carousel__item--semibold">
-          {garageOverallRating.averageGarageRatings === 'NaN' ? (
-            'No Reviews'
+          {garageOverallRating.averageGarageRatings === "NaN" ? (
+            "No Reviews"
           ) : (
             <>
               <StarRatings
@@ -68,7 +66,7 @@ function CarouselItemMechanic({
                 starSpacing="3px"
               />
               <p
-                style={{ margin: '0' }}
+                style={{ margin: "0" }}
                 className="mechanic-carousel__item--semibold mechanic-carousel__item--light-grey-1"
               >
                 {garageOverallRating.totalGarageReviews > 1
@@ -120,8 +118,8 @@ function CarouselItemAccessories({
       <div className="accessories-carousel__item-content">
         <p className="accessories-carousel__item-heading">{text.heading}</p>
         <div className="accessories-carousel__item-reviews accessories-carousel__item--semibold">
-          {garageOverallRating.averageGarageRatings === 'NaN' ? (
-            'No Reviews'
+          {garageOverallRating.averageGarageRatings === "NaN" ? (
+            "No Reviews"
           ) : (
             <>
               <StarRatings
@@ -133,7 +131,7 @@ function CarouselItemAccessories({
                 starSpacing="3px"
               />
               <p
-                style={{ margin: '0' }}
+                style={{ margin: "0" }}
                 className="accessories-carousel__item--semibold accessories-carousel__item--light-grey-1"
               >
                 {garageOverallRating.totalGarageReviews > 1

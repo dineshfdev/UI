@@ -1,0 +1,29 @@
+@import "../styles/mixins.scss";
+.doorstep-services-container {
+  padding: 40px;
+  .title {
+    @extend %title;
+  }
+  .card-header {
+    font-family: PoppinsBold;
+    font-size: 20px;
+    color: #3a404f;
+  }
+  .card-price {
+    font-family: LatoRegular;
+    font-size: 16px;
+    color: #7a7c80;
+  }
+  .card-button {
+    font-family: LatoBold;
+    font-size: 16px;
+    color: #f98306;
+    text-transform: uppercase;
+    background: #fff;
+    border: 0;
+    border-bottom: 1px dotted #f98306;
+    padding: 0;
+    margin: 0 0 0 10px;
+    border-radius: 0;
+  }
+}

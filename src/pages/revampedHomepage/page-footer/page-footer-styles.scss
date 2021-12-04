@@ -1,0 +1,17 @@
+@import "../styles/mixins.scss";
+.page-footer-container {
+  width: 100%;
+  padding: 30px;
+  p {
+    font-family: LatoRegular;
+    font-size: 16px;
+  }
+}
+.title {
+  @extend %title;
+}
+
+.page-footer-logo {
+  width: 248px;
+  height: 64px;
+}
