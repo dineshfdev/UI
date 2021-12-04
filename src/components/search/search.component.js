@@ -1,5 +1,5 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import {
   Radio,
   RadioGroup,
@@ -86,6 +86,7 @@ export default function Search() {
       <Grid item xs={12}>
         <div className="row center flex-row">
           <Grid item xs={12} sm={4} lg={2}>
+            <Link to="/new-home">homepage</Link>
             <h3 className="find-text">Find a mechanic near you</h3>
           </Grid>
           <Grid item xs={12} sm={3} lg={2}>
