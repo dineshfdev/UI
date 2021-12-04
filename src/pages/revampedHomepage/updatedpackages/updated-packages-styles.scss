@@ -1,0 +1,25 @@
+.updated-packages-container {
+  background: #3a404f;
+  padding: 25px 50px;
+  color: #fff;
+}
+.packages-img {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.packages-primary-text {
+  color: #f98306;
+  font-size: 28px;
+  font-family: Latoblack;
+  margin: 15px 0;
+}
+.packages-secondary-text {
+  color: #fff;
+  font-size: 16px;
+  font-family: LatoRegular;
+}

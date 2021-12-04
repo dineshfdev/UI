@@ -4,13 +4,10 @@ import App from "./App";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import { ClearCacheProvider } from "react-clear-cache";
 
 ReactDOM.render(
   <BrowserRouter>
-    <ClearCacheProvider duration={5000} filename="build.json">
-      <App />
-    </ClearCacheProvider>
+    <App />
   </BrowserRouter>,
   document.getElementById("root")
 );

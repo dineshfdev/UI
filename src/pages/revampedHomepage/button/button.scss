@@ -1,0 +1,16 @@
+@import '../../../styles/utility.scss';
+// button styles
+.button__brand {
+  width: 130px;
+  height: 50px;
+  border-radius: 8px;
+  font-family: LatoBold;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+
+  &--orange {
+    background-color: $brand-primary-orange;
+  }
+}

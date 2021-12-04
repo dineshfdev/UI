@@ -1,10 +1,10 @@
-import { sgServices } from './apiUtils';
+import { sgServices } from "./apiUtils";
 
 export const getAllUniqueGarages = () =>
-  sgServices.get({ endpoint: '/getAllUniqueGarageLocations' });
+  sgServices.get({ endpoint: "/getAllUniqueGarageLocations" });
 
 export const getAllGarages = () =>
-  sgServices.get({ endpoint: '/getAllGarages' });
+  sgServices.get({ endpoint: "/getAllGarages" });
 
 export const getLocationByLocation = (location) =>
   sgServices.get({ endpoint: `/getGaragesOnLocation?location=${location}` });
@@ -39,7 +39,12 @@ export const getOverallReviewRating = (value, location) =>
 
 export const createNewGarage = async (formData) => {
   await sgServices.file({
-    endpoint: '/createGarage',
+    endpoint: "/createGarage",
     data: formData,
   });
 };
+
+export const getTopGaragesNearLocation = (latitude, longitude) =>
+  sgServices.get({
+    endpoint: `/getTopGaragesNearLocation?latitude=${latitude}&longitude=${longitude}`,
+  });

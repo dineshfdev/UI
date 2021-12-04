@@ -1,0 +1,22 @@
+@import "../styles/mixins.scss";
+.car-container {
+  padding: 25px;
+}
+.title {
+  @extend %title;
+}
+.serices-container {
+  background: #f4f6f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+.services-primary-text {
+  color: #3a404f;
+  font-size: 16px;
+  font-family: PoppinsSemiBold;
+}

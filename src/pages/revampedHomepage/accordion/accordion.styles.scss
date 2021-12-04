@@ -1,0 +1,95 @@
+// create accordion styles
+@import '../styles/mixins.scss';
+
+.accordion {
+  height: 502px;
+  background-color: #f4f6f9;
+
+  &__main-header {
+    @extend %title;
+    padding-top: 80px;
+    padding-left: 64px;
+  }
+  &-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    height: 248px;
+  }
+  &-headings-container {
+    width: 416px;
+    padding-left: 64px;
+  }
+  &__item {
+    margin: 10px 0 10px 0;
+    height: 56px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+
+    &-header {
+      margin-left: 16px;
+    }
+    &-title {
+      font-family: PoppinsSemiBold;
+      display: grid;
+      grid-auto-flow: column;
+      align-items: center;
+      grid-template-columns: 16px 416px;
+      grid-gap: 10px;
+    }
+    &:hover {
+      cursor: pointer;
+      @include accordion-gradient-color;
+    }
+    &.selected {
+      @include accordion-gradient-color;
+    }
+  }
+  &-content {
+    &__content {
+      color: #7a7c80;
+      height: 100px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: break-spaces;
+      width: 408px;
+    }
+    &-wrapper {
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-columns: 528px 336px;
+      width: 864px;
+      background-color: #ffffff;
+    }
+    &__container {
+      font-family: LatoRegular;
+      align-self: flex-start;
+      justify-self: flex-start;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      font-size: 16px;
+      margin: 40px;
+    }
+    &__link {
+      display: flex;
+      align-items: center;
+
+      & > a {
+        font-family: LatoRegular;
+        font-size: 16px;
+        color: #f98306;
+        text-decoration: underline !important;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    &__image {
+      width: 336px;
+      height: 100%;
+    }
+  }
+}

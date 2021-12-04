@@ -1,0 +1,10 @@
+.hero-section {
+  &-wrapper {
+    justify-items: center;
+    margin-top: 20px;
+  }
+
+  &-right {
+    justify-self: flex-start;
+  }
+}

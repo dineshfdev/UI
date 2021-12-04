@@ -1,0 +1,118 @@
+@import "../../../styles/utility.scss";
+
+// align left container and right container using grid
+.header {
+  font-family: LatoBold;
+  border-bottom: 1px solid #e6e6e6;
+
+  .logo {
+    img {
+      width: 248px;
+      height: 56px;
+    }
+  }
+  .header-list {
+    list-style-type: none;
+    li {
+      display: inline-block;
+      padding: 10px;
+    }
+    a {
+      text-decoration: none;
+      color: #555;
+    }
+  }
+
+  .link-icon-container {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 70px;
+    padding-right: 20px;
+    .link-with-icon-container {
+      margin-left: 20px;
+    }
+  }
+
+  &-container {
+    padding: 10px 0 15px 0;
+
+    a {
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      color: $brand-grey;
+
+      &:hover {
+        color: $brand-orange;
+      }
+    }
+  }
+  &-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    margin-left: 50px;
+    margin-right: 50px;
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+
+    .logo {
+      // center the logo
+      background-position: center;
+      background-repeat: no-repeat;
+
+      img {
+        width: 248px;
+        height: 56px;
+      }
+
+      &-menu {
+        &-item {
+          display: grid;
+          grid-template-columns: auto auto auto;
+        }
+      }
+    }
+    &-right {
+      display: grid;
+      justify-items: flex-end;
+      align-items: center;
+
+      &-menu {
+        &-item {
+          display: grid;
+          grid-auto-columns: 100px;
+          grid-auto-flow: column;
+        }
+      }
+    }
+  }
+}
+
+.header-location-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 50px;
+  margin-bottom: 20px !important;
+  div {
+    margin-right: 20px;
+    display: flex;
+    img {
+      align-items: center;
+      margin-right: 10px;
+    }
+  }
+  img {
+    margin-right: 10px;
+  }
+}
+.header-current-location {
+  color: #f98306;
+  font-family: LatoBold;
+  font-size: 16px;
+  line-height: 24px;
+  border-bottom: 1px dotted #f98306;
+}
