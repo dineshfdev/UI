@@ -20,6 +20,7 @@
     "moment": "*",
     "node-sass": "4.14.1",
     "react": "17.0.1",
+    "react-clear-cache": "^1.4.12",
     "react-cookie-consent": "^6.2.4",
     "react-dom": "17.0.1",
     "react-ga": "^3.3.0",
@@ -38,7 +39,9 @@
     "deploy": "gh-pages -d build",
     "start": "serve -s _static -l tcp://0.0.0.0:$PORT -n",
     "local-start": "react-scripts start",
-    "build": "node ./update-build.js && react-scripts build && mv build _static",
+    "prebuild": "npm run generate-build-meta",
+    "generate-build-meta": "node ./node_modules/react-clear-cache/bin/cli.js",
+    "build": "rm -r _static 2>/dev/null; react-scripts build && mv build _static",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "publish:npm": "rm -rf dist && mkdir dist &&  babel src/components -d dist --copy-files"
