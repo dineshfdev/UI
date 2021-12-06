@@ -1,10 +1,12 @@
 @import "../../../styles/utility.scss";
 
 // align left container and right container using grid
-.header {
-  font-family: LatoBold;
+.header-container {
+  padding: 15px 40px !important;
   border-bottom: 1px solid #e6e6e6;
-
+  font-family: LatoBold;
+}
+.header {
   .logo {
     img {
       width: 248px;
@@ -95,8 +97,6 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 50px;
-  margin-bottom: 20px !important;
   div {
     margin-right: 20px;
     display: flex;
@@ -107,6 +107,15 @@
   }
   img {
     margin-right: 10px;
+  }
+  a {
+    text-decoration: none;
+    span {
+      color: #3a404f;
+      text-decoration: none;
+      font-family: LatoBold;
+      font-size: 16px;
+    }
   }
 }
 .header-current-location {

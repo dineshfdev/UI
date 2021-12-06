@@ -128,7 +128,6 @@ const DoorStepServices = ({latitude,longitude}) =>{
                 
             </Grid>
             </div>
-            <Accordion />
         </ Grid>
 
     );

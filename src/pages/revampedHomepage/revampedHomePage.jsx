@@ -12,6 +12,7 @@ import OurTeam from './ourteam/our-team';
 import Footer from './footer/footer';
 import PageFooter from "./page-footer/page-footer";
 import CarouselItemMechanic  from './topmechanic/top-mechanic';
+import Accordion from './accordion/accordion';
 
 // Styles
 import './styles/mixins.scss';
@@ -34,6 +35,7 @@ const RevampHomePage = () => {
          <Header />
          <HeroSectionWrapper />
          <DoorStepServices latitude={latitude} longitude={longitude} />
+         <Accordion />
          <UpdatedPackages />
          <CarServices />
          <CarouselItemMechanic />

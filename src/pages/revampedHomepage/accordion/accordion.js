@@ -1,7 +1,8 @@
-import React from 'react';
-import cx from 'classnames';
-import AccordionData from './accordionData.js';
-import '../accordion/accordion.styles.scss';
+import React from "react";
+import { Grid } from "@material-ui/core";
+import cx from "classnames";
+import AccordionData from "./accordionData.js";
+import "../accordion/accordion.styles.scss";
 
 // Create accordion component
 // Accordion component is a container for the accordion items
@@ -18,7 +19,7 @@ function Accordion() {
     setSelected(Number(id));
   };
   const accordionItem = (item, index) => {
-    const itemClass = cx('accordion__item', { selected: selected === index });
+    const itemClass = cx("accordion__item", { selected: selected === index });
     const key = `accordion-item-${index}`;
 
     return (
@@ -52,7 +53,7 @@ function Accordion() {
         <div className="accordion-content__container">
           <div className="accordion-content__content">{content}</div>
           <div className="accordion-content__link">
-            <a href={readMore}>{'Read more >'}</a>
+            <a href={readMore}>{"Read more >"}</a>
           </div>
         </div>
         <img src={image} alt={alt} className="accordion-content__image" />
@@ -61,13 +62,15 @@ function Accordion() {
   };
 
   return (
-    <div className="accordion">
-      <p className="accordion__main-header">Why People Love Us</p>
-      <div className="accordion-wrapper">
-        {renderAccordionHeaders()}
-        {renderAccordionContent()}
+    <Grid item xs={12}>
+      <div className="accordion">
+        <p className="accordion__main-header">Why People Love Us</p>
+        <div className="accordion-wrapper">
+          {renderAccordionHeaders()}
+          {renderAccordionContent()}
+        </div>
       </div>
-    </div>
+    </Grid>
   );
 }
 
