@@ -1,10 +1,11 @@
-@import '../../../styles/utility.scss';
+@import "../../../styles/utility.scss";
 // link with icon
 // creates a link with an icon
 // --------------------------------------------------------
 .link-with-icon-container {
   a {
     display: flex;
+    text-decoration: none;
   }
   .link-with-icon-icon {
     margin-right: 0.5rem;
