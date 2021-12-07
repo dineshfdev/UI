@@ -1,13 +1,9 @@
-import React,{useEffect,useState} from "react";
+import React from "react";
 import { Grid,Card,CardActionArea,CardContent,Typography,CardActions,Button } from '@material-ui/core';
-
-// services
-import { getTopGaragesNearLocation } from "../../../services/services";
 
 // styles
 import './door-step-services-styles.scss';
 import "../styles/common-styles.scss";
-import Accordion from "../accordion/accordion";
 
 // images  
 import generalService from "../../../images/assets/img/services/general-service.png";
@@ -15,15 +11,7 @@ import expressService from "../../../images/assets/img/services/express-service.
 import inspectionService from "../../../images/assets/img/services/inspection-service.png";
 import jumpstartService from "../../../images/assets/img/services/jumpstart-service.png";
 
-const DoorStepServices = ({latitude,longitude}) =>{
-    const [data, setData] = useState([]);
-    useEffect(() => {
-    getTopGaragesNearLocation(latitude,longitude)
-      .then((res) => setData(res.data))
-      .catch((error) => error.message);
-    }, [latitude,longitude]);
-
-    console.log('data',data);
+const DoorStepServices = () =>{
     return(
         <Grid item className="doorstep-services-container" xs={12} >
             <h3 className="title">Popular Doorstep Services</h3>
@@ -32,7 +20,7 @@ const DoorStepServices = ({latitude,longitude}) =>{
                         <div>For your convenience, we also provide handpicked car maintenance services right at your home or work premises.</div>
                     </Grid>
                     <Grid container item xs={4} justify="flex-end">
-                        <a className="services-link" href="#">View All Services ></a>
+                        <a className="services-link" href="#">View All Services </a>
                     </Grid>
             </Grid>
             <div style={{ padding: "20px 0" }}>

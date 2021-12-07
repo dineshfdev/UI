@@ -5,7 +5,12 @@ import { Grid } from '@material-ui/core';
 import './car-services-styles.scss';
 
 // image 
-import partners from '../../../images/assets/img/icons/global/partners.svg';
+import battery from '../../../images/assets/img/carservices/battery.png';
+import carWash from '../../../images/assets/img/carservices/car-wash.png';
+import Ac from '../../../images/assets/img/carservices/AC.png';
+import Tyre from '../../../images/assets/img/carservices/tyre.png';
+import Painting from '../../../images/assets/img/carservices/painting.png';
+import WindShield from '../../../images/assets/img/carservices/windshield.png';
 
 const CarServices = () => {
     return(<Grid className="car-container" xs={12}>
@@ -21,7 +26,7 @@ const CarServices = () => {
                 <Grid items xs={2}>
                         <div className="serices-container">
                             <div className="packages-img">
-                            <img src ={partners} alt="partners" />
+                            <img src ={battery} alt="Batteries" />
                             </div>
                             <div className="services-primary-text">
                                 Batteries
@@ -31,7 +36,7 @@ const CarServices = () => {
                 <Grid items xs={2}>
                         <div className="serices-container">
                             <div className="packages-img">
-                            <img src ={partners} alt="partners" />
+                            <img src ={carWash} alt="carWash" />
                             </div>
                             <div className="services-primary-text">
                             Car Wash
@@ -41,7 +46,7 @@ const CarServices = () => {
                 <Grid items xs={2}>
                         <div className="serices-container">
                             <div className="packages-img">
-                            <img src ={partners} alt="partners" />
+                            <img src ={Ac} alt="Ac" />
                             </div>
                             <div className="services-primary-text">
                             AC repair and cleaning
@@ -51,7 +56,7 @@ const CarServices = () => {
                 <Grid items xs={2}>
                         <div className="serices-container">
                             <div className="packages-img">
-                            <img src ={partners} alt="partners" />
+                            <img src ={Tyre} alt="Tyre" />
                             </div>
                             <div className="services-primary-text">
                             Tyre and wheel services
@@ -61,7 +66,7 @@ const CarServices = () => {
                 <Grid items xs={2}>
                         <div className="serices-container">
                             <div className="packages-img">
-                            <img src ={partners} alt="partners" />
+                            <img src ={Painting} alt="Painting" />
                             </div>
                             <div className="services-primary-text">
                             Painting
@@ -71,7 +76,7 @@ const CarServices = () => {
                 <Grid items xs={2}>
                         <div className="serices-container">
                             <div className="packages-img">
-                            <img src ={partners} alt="partners" />
+                            <img src ={WindShield} alt="WindShield" />
                             </div>
                             <div className="services-primary-text">
                             Windshield

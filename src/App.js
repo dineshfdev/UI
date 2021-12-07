@@ -1,5 +1,5 @@
 import "./App.scss";
-import React from "react";
+import React, { useState } from "react";
 import { Route, withRouter } from "react-router-dom";
 import "./App.scss";
 import withClearCache from "./ClearCache";
@@ -17,7 +17,10 @@ import DetailPageLoadableComponent from "./pages/detailsPage";
 // import LandscapeScreen from './components/landscapeScreen/landscapeScreen';
 import useGaTracker from "./useGaTracker";
 import RevampHomePage from "./pages/revampedHomepage/revampedHomePage";
-import { useState } from "react";
+
+// context
+
+import { SelectedLocation } from "./context/context";
 
 const App = () => {
   useGaTracker();
@@ -70,7 +73,11 @@ const App = () => {
       <Route
         exact
         path="/new-home"
-        render={(props) => <RevampHomePage {...props} device={device} />}
+        render={(props) => (
+          <SelectedLocation.Provider>
+            <RevampHomePage {...props} device={device} />
+          </SelectedLocation.Provider>
+        )}
       />
     </>
   );
