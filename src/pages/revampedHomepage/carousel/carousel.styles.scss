@@ -1,4 +1,4 @@
-@import '../styles/mixins.scss';
+@import "../styles/mixins.scss";
 
 .block-clear {
   margin-block: 0;
@@ -107,8 +107,10 @@
 .accessories-carousel {
   &__item {
     width: 304px;
-    height: 416px;
+    height: auto;
+    padding-bottom: 10px;
     border-radius: 8px;
+    margin-bottom: 10px;
   }
 }
 
@@ -151,4 +153,8 @@
       padding: 0;
     }
   }
+}
+
+.items-accessories-container {
+  padding: 40px;
 }

@@ -13,6 +13,7 @@ import Footer from './footer/footer';
 import PageFooter from "./page-footer/page-footer";
 import CarouselItemMechanic  from './topmechanic/top-mechanic';
 import Accordion from './accordion/accordion';
+import Accessories from './accessories/accessories';
 
 // Styles
 import './styles/mixins.scss';
@@ -34,11 +35,12 @@ const RevampHomePage = () => {
       <Grid container>
          <Header />
          <HeroSectionWrapper />
-         <DoorStepServices latitude={latitude} longitude={longitude} />
+         <DoorStepServices/>
          <Accordion />
          <UpdatedPackages />
+         <CarouselItemMechanic latitude={latitude} longitude={longitude}  />
          <CarServices />
-         <CarouselItemMechanic />
+         <Accessories />
          <Testimonial />
          <OurTeam />
          <Footer />
