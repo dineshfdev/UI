@@ -22,7 +22,8 @@
 .accessories-carousel {
   &__item {
     width: 416px;
-    height: 430px;
+    min-height: 300px;
+    margin-bottom: 20px;
     @include box-shadow;
 
     &-content {
@@ -43,6 +44,7 @@
 
     &--light-grey-2 {
       @extend %font-color-light-grey-2;
+      margin-left: 15px;
     }
 
     &--brand-primary-dark {

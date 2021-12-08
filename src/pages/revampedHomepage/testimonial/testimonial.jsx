@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import {Grid,Card,CardHeader,Avatar,CardContent,Typography} from '@material-ui/core';
 
 // images
@@ -8,6 +8,14 @@ import user1 from "../../../images/assets/img/testimonial/user1.png";
 import "./testimonial-styles.scss";
 
 const Testimonial =() => {
+    const [breakPoints] = useState([
+        { width: 1, itemsToShow: 1 },
+        { width: 550, itemsToShow: 2, itemsToScroll: 2, pagination: false },
+        { width: 850, itemsToShow: 3 },
+        { width: 1150, itemsToShow: 4, itemsToScroll: 2 },
+        { width: 1450, itemsToShow: 5 },
+        { width: 1750, itemsToShow: 6 },
+      ]);
 return (
     <Grid className="testimonial-container">
         <h3 className="title">What People Says</h3>
@@ -16,8 +24,7 @@ return (
                 <Card className="testimonial-card">
                     <CardContent>
                         <Typography variant="body2" color="textSecondary" component="p">
-                        This impressive paella is a perfect party dish and a fun meal to cook together with your
-                        guests. Add 1 cup of frozen peas along with the mussels, if you like.
+                        I usually carry around my farming material in my car along with my pet who never lets go of me. Service Geni had a wonderful team sent to my home to get my car interior cleaned. The experts were able to remove the stains on my car seats and cleaned my car so well . Thank you Service Geni
                         </Typography>
                     </CardContent>
                     <CardHeader
@@ -26,7 +33,7 @@ return (
                             <img src={user1} alt="user1" />
                         </Avatar>
                         }
-                        title="Customer Name"
+                        title="Swetha Prabu"
                         subheader="About customer"
                     />
                 </Card>
@@ -35,8 +42,7 @@ return (
                 <Card className="testimonial-card">
                     <CardContent>
                         <Typography variant="body2" color="textSecondary" component="p">
-                        This impressive paella is a perfect party dish and a fun meal to cook together with your
-                        guests. Add 1 cup of frozen peas along with the mussels, if you like.
+                        thank you @servicegeni for helping me find the best person to fix my car windshield, it was a timely help and the extra mile of support by sending them to do the replacement in my house was really nice
                         </Typography>
                     </CardContent>
                     <CardHeader
@@ -45,45 +51,7 @@ return (
                             <img src={user1} alt="user1" />
                         </Avatar>
                         }
-                        title="Customer Name"
-                        subheader="About customer"
-                    />
-                </Card>
-            </Grid>
-            <Grid item xs={3}>
-                <Card className="testimonial-card">
-                    <CardContent>
-                        <Typography variant="body2" color="textSecondary" component="p">
-                        This impressive paella is a perfect party dish and a fun meal to cook together with your
-                        guests. Add 1 cup of frozen peas along with the mussels, if you like.
-                        </Typography>
-                    </CardContent>
-                    <CardHeader
-                        avatar={
-                        <Avatar aria-label="recipe">
-                            <img src={user1} alt="user1" />
-                        </Avatar>
-                        }
-                        title="Customer Name"
-                        subheader="About customer"
-                    />
-                </Card>
-            </Grid>
-            <Grid item xs={3}>
-                <Card className="testimonial-card">
-                    <CardContent>
-                        <Typography variant="body2" color="textSecondary" component="p">
-                        This impressive paella is a perfect party dish and a fun meal to cook together with your
-                        guests. Add 1 cup of frozen peas along with the mussels, if you like.
-                        </Typography>
-                    </CardContent>
-                    <CardHeader
-                        avatar={
-                        <Avatar aria-label="recipe">
-                            <img src={user1} alt="user1" />
-                        </Avatar>
-                        }
-                        title="Customer Name"
+                        title="Jennifer Hamrita"
                         subheader="About customer"
                     />
                 </Card>

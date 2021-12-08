@@ -24,7 +24,10 @@ function HeroSectionRight() {
             handleChange={() => {}}
             defaultValue="general"
           />
-          <button className="hero-section-right__button">BOOK NOW</button>
+          <button className="hero-section-right__button" onClick={(e) => {
+      e.preventDefault();
+      window.location.href='https://www.servicegeni.in/doorstep-services';
+      }}>BOOK NOW</button>
         </div>
       </div>
     </div>
