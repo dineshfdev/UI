@@ -8,7 +8,11 @@ function HeroSection() {
       <div className="hero-section-left__content">
         <p className="hero-section-left__title">Find a Mechanic Near me </p>
         <p className="hero-section-left__sub-title">*FREE to search mechanics </p>
-        <button className="hero-section-left__button">Find now</button>
+        <button className="hero-section-left__button" onClick={(e) => {
+      e.preventDefault();
+      window.location.href='https://service-geni.in/';
+      }}
+      >Find now</button>
       </div>
     </div>
   );

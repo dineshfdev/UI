@@ -11,11 +11,11 @@ return (
             <Grid item xs={3}>
                 <h5 className="footer-header">About Us</h5>
                 <ul className="footer-list-container">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">FAQs</a></li>
+                    <li><a href="https://www.servicegeni.in/about-us">About</a></li>
+                    <li><a href="https://www.servicegeni.in/contact-us">Contact Us</a></li>
+                    <li><a href="https://www.servicegeni.in/faq">FAQs</a></li>
                     <li><a href="#">News</a></li>
-                    <li><a href="#">Blogs</a></li>
+                    <li><a href="https://www.servicegeni.in/blogs">Blogs</a></li>
                     <li><a href="#">Careers</a></li>
                     <li><a href="#">Our Partners</a></li>
                     <li><a href="#">Offers</a></li>
@@ -25,15 +25,15 @@ return (
             <Grid item xs={3}>
                 <h5 className="footer-header">Our Services</h5>
                 <ul className="footer-list-container">
-                    <li><a href="#">Find Mechanics Near Me</a></li>
+                    <li><a href="https://service-geni.in/">Find Mechanics Near Me</a></li>
                 </ul>
                 <h5 className="footer-header">Doorstep Services</h5>
                 <ul className="footer-list-container">
-                    <li><a href="#">General service</a></li>
-                    <li><a href="#">Express Service</a></li>
-                    <li><a href="#">Inspection Service</a></li>
-                    <li><a href="#">Jumpstart Service</a></li>
-                    <li><a href="#">Other Service</a></li>
+                    <li><a href="https://www.servicegeni.in/doorstep-services">General service</a></li>
+                    <li><a href="https://www.servicegeni.in/doorstep-services">Express Service</a></li>
+                    <li><a href="https://www.servicegeni.in/doorstep-services">Inspection Service</a></li>
+                    <li><a href="https://www.servicegeni.in/doorstep-services">Jumpstart Service</a></li>
+                    <li><a href="https://www.servicegeni.in/doorstep-services">Other Service</a></li>
                 </ul>
             </Grid>
             <Grid item xs={5}>
