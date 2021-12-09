@@ -70,7 +70,7 @@ const CarouselItemMechanic = ({latitude,longitude}) => {
                     </p>
                   </div>
                   <div className="mechanic-carousel__item-reviews mechanic-carousel__item--semibold">
-                  {x.averageGarageRatings === "N/A" ? (
+                  {x.averageGarageRatings === "NaN" ? (
                         "No Reviews"
                       ) : (
                         <>
