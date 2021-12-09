@@ -29,17 +29,16 @@ const CarouselItemMechanic = ({latitude,longitude}) => {
 
       const [breakPoints] = useState([
         { width: 1, itemsToShow: 1 },
-        { width: 550, itemsToShow: 2, itemsToScroll: 2, pagination: false },
-        { width: 850, itemsToShow: 3 },
+        { width: 550, itemsToShow: 1, itemsToScroll: 2, pagination: false },
+        { width: 850, itemsToShow: 2 },
         { width: 1150, itemsToShow: 3, itemsToScroll: 2 },
-        { width: 1450, itemsToShow: 5 },
-        { width: 1750, itemsToShow: 6 },
+        { width: 1450, itemsToShow: 4 },
+        { width: 1750, itemsToShow: 4 },
       ]);
-
-      console.log('data',data);
 
     return (
         <Grid item xs={12} className="items-accessories-container">
+             <h3 className="title">Top Rated Mechanics</h3>
         <Carousel breakPoints={breakPoints} easing="cubic-bezier(1,.15,.55,1.54)"
         tiltEasing="cubic-bezier(0.110, 1, 1.000, 0.210)"
         transitionMs={700}
@@ -98,7 +97,7 @@ const CarouselItemMechanic = ({latitude,longitude}) => {
                         Starts from
                       </p>
                       <p className="mechanic-carousel__item--bold mechanic-carousel__item--brand-primary-dark block-clear">
-                        {/* {text.pricing} */}
+                      &#x20b9; {x.startingPrice}
                       </p>
                     </div>
                     <div className="mechanic-carousel__item-distance">
