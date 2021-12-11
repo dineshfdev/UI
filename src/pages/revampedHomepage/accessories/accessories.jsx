@@ -23,10 +23,10 @@ const Accessories = () =>{
     <Grid item xs={12} className="items-accessories-container">
         <h3 className="title">Buy Car Accessories</h3>
         <Grid container className="margin-bottom-20">
-                    <Grid container item xs={8}>
+                    <Grid container item xs={12} md={8}>
                         <div>Accessorise your favourite car from India's favourite E-commerce brand</div>
                     </Grid>
-                    <Grid container item xs={4} justify="flex-end">
+                    <Grid container item xs={12} md={4} justify="flex-end">
                         <a className="services-link" href="https://www.servicegeni.in/doorstep-services">View All Accessories </a>
                     </Grid>
             </Grid>

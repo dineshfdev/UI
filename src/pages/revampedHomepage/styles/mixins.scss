@@ -60,3 +60,12 @@
   height: 108px;
   padding-left: 40px;
 }
+
+@media screen and (max-width: 768px) {
+  %title {
+    font-family: PoppinsBold;
+    font-size: 24px;
+    color: #3a404f;
+    line-height: 20px;
+  }
+}
