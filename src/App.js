@@ -1,5 +1,5 @@
 import "./App.scss";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Route, withRouter } from "react-router-dom";
 import "./App.scss";
 import withClearCache from "./ClearCache";
@@ -23,6 +23,7 @@ import RevampHomePage from "./pages/revampedHomepage/revampedHomePage";
 import { SelectedLocation } from "./context/context";
 
 const App = () => {
+  const [isNewHome, setIsNewHome] = useState();
   useGaTracker();
   const breakpoints = [
     { name: "phone", min: 0, max: 640 },
@@ -35,7 +36,12 @@ const App = () => {
     import("./reset.scss");
   }
 
-  const [isNewHome] = useState(window.location.pathname === "/new-home");
+  // added to check url correctly
+  useEffect(() => {
+    if (window.location.pathname === "/new-home") {
+      setIsNewHome(true);
+    }
+  }, [isNewHome]);
 
   return (
     <>

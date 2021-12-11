@@ -15,15 +15,15 @@ import WindShield from '../../../images/assets/img/carservices/windshield.png';
 const CarServices = () => {
     return(<Grid className="car-container" xs={12}>
         <Grid container>
-            <Grid container item xs={8}>
-                <h3 className="title">Pouplar Car Services</h3>
+            <Grid container item xs={12} md={8}>
+                <h3 className="title">Popular Car Services</h3>
             </Grid>
-            <Grid container item xs={4} justify="flex-end">
+            <Grid container item xs={12} md={4} justify="flex-end">
                 <div>View All Services</div>
             </Grid>
         </Grid>
-        <Grid container item spacing={3} xs={12} >
-                <Grid items xs={2}>
+        <Grid container item spacing={3} xs={12} className="car-container-inner" >
+                <Grid items xs={6} md={2}>
                         <div className="serices-container">
                             <div className="packages-img">
                             <img src ={battery} alt="Batteries" />
@@ -33,7 +33,7 @@ const CarServices = () => {
                             </div>
                         </div>
                 </Grid>
-                <Grid items xs={2}>
+                <Grid items xs={6} md={2}>
                         <div className="serices-container">
                             <div className="packages-img">
                             <img src ={carWash} alt="carWash" />
@@ -43,7 +43,7 @@ const CarServices = () => {
                             </div>
                         </div>
                 </Grid>
-                <Grid items xs={2}>
+                <Grid items xs={6} md={2}>
                         <div className="serices-container">
                             <div className="packages-img">
                             <img src ={Ac} alt="Ac" />
@@ -53,7 +53,7 @@ const CarServices = () => {
                             </div>
                         </div>
                 </Grid>
-                <Grid items xs={2}>
+                <Grid items xs={6} md={2}>
                         <div className="serices-container">
                             <div className="packages-img">
                             <img src ={Tyre} alt="Tyre" />
@@ -63,7 +63,7 @@ const CarServices = () => {
                             </div>
                         </div>
                 </Grid>
-                <Grid items xs={2}>
+                <Grid items xs={6} md={2}>
                         <div className="serices-container">
                             <div className="packages-img">
                             <img src ={Painting} alt="Painting" />
@@ -73,7 +73,7 @@ const CarServices = () => {
                             </div>
                         </div>
                 </Grid>
-                <Grid items xs={2}>
+                <Grid items xs={6} md={2}>
                         <div className="serices-container">
                             <div className="packages-img">
                             <img src ={WindShield} alt="WindShield" />

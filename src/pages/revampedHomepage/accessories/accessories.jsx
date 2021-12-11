@@ -8,6 +8,7 @@ import Carousel from 'react-elastic-carousel';
 import Accesories from "../../../images/assets/img/accessories/accessory.png";
 // styles
 import "../carousel/carousel.styles.scss";
+import "./accessories.styles.scss";
 
 const Accessories = () =>{
     const [breakPoints] = useState([
@@ -20,6 +21,15 @@ const Accessories = () =>{
       ]);
     return(
     <Grid item xs={12} className="items-accessories-container">
+        <h3 className="title">Buy Car Accessories</h3>
+        <Grid container className="margin-bottom-20">
+                    <Grid container item xs={12} md={8}>
+                        <div>Accessorise your favourite car from India's favourite E-commerce brand</div>
+                    </Grid>
+                    <Grid container item xs={12} md={4} justify="flex-end">
+                        <a className="services-link" href="https://www.servicegeni.in/doorstep-services">View All Accessories </a>
+                    </Grid>
+            </Grid>
         <Carousel breakPoints={breakPoints}  easing="cubic-bezier(1,.15,.55,1.54)"
   tiltEasing="cubic-bezier(0.110, 1, 1.000, 0.210)"
   transitionMs={700}

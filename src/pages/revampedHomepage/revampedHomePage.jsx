@@ -19,8 +19,8 @@ import Accessories from './accessories/accessories';
 import './styles/mixins.scss';
 
 const RevampHomePage = () => {
-  const [latitude,setLatitude]=useState(13.0827);
-  const [longitude, setLongitude] = useState(80.2707);
+  const [latitude,setLatitude]=useState(12.914828805146252);
+  const [longitude, setLongitude] = useState(80.17147804256318);
 
   useEffect(() => {
     if (navigator.geolocation) {

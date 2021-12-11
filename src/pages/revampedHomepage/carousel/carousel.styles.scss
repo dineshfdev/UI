@@ -159,4 +159,7 @@
 
 .items-accessories-container {
   padding: 40px;
+  .title {
+    @extend %title;
+  }
 }
