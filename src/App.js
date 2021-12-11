@@ -36,6 +36,7 @@ const App = () => {
     import("./reset.scss");
   }
 
+  // added to check url correctly
   useEffect(() => {
     if (window.location.pathname === "/new-home") {
       setIsNewHome(true);
