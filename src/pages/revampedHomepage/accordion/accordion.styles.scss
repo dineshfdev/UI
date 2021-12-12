@@ -1,5 +1,5 @@
 // create accordion styles
-@import '../styles/mixins.scss';
+@import "../styles/mixins.scss";
 
 .accordion {
   height: 502px;
@@ -16,7 +16,7 @@
     height: 248px;
   }
   &-headings-container {
-    width: 416px;
+    width: 80%;
     padding-left: 64px;
   }
   &__item {
@@ -53,13 +53,11 @@
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: break-spaces;
-      width: 408px;
     }
     &-wrapper {
       display: grid;
       grid-auto-flow: column;
-      grid-template-columns: 528px 336px;
-      width: 864px;
+      width: 95%;
       background-color: #ffffff;
     }
     &__container {

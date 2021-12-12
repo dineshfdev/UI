@@ -16,6 +16,9 @@ import CartIcon from "../../../images/assets/img/icons/global/cart.svg";
 import Button from "../button/button";
 import AutoComplete from "../autocomplete/autocomplete";
 
+import cx from "classnames";
+import PersistentDrawerRight from "../../../components/fancyheader/drawer.component";
+
 // styles
 import "./header.scss";
 import CustomizedSelect from "../select/select";
@@ -24,14 +27,21 @@ import CustomizedSelect from "../select/select";
 import location from "../../../images/assets/img/header/location.png";
 import locationTracker from "../../../images/assets/img/header/pointer-location.png";
 
-const Header = () => {
+const Header = ({ device }) => {
+  console.log("device", device);
+  const { breakpoint } = device;
+  const classForContainer = cx("nav-container", {
+    "fancy-header-desktop": breakpoint === "desktop",
+    "fancy-header-mobile": breakpoint === "phone" || breakpoint === "miniphone",
+  });
   return (
     <Grid item className="header-container" xs={12}>
       <Grid container className="header">
         <Grid item xs={3} className="logo">
           <img src={Logo} alt="logo" />
         </Grid>
-        <Grid item xs={4} md={4}>
+        <PersistentDrawerRight device={breakpoint} />
+        <Grid item xs={12} md={4}>
           <ul className="header-list">
             <li>
               <a className="header-content-left-menu-item__link" href="#">
@@ -50,7 +60,7 @@ const Header = () => {
             </li>
           </ul>
         </Grid>
-        <Grid item xs={5} md={5}>
+        <Grid item xs={12} md={5}>
           <div className="link-icon-container">
             {/* commented for future use*/}
             {/* <LinkWithIcon icon={SearchIcon} text="Search" link="#" alt="search" /> */}
