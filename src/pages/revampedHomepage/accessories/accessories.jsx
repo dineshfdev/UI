@@ -13,22 +13,25 @@ import "./accessories.styles.scss";
 const Accessories = () =>{
     const [breakPoints] = useState([
         { width: 1, itemsToShow: 1 },
-        { width: 550, itemsToShow: 2, itemsToScroll: 2, pagination: false },
-        { width: 850, itemsToShow: 3 },
-        { width: 1150, itemsToShow: 4, itemsToScroll: 2 },
-        { width: 1450, itemsToShow: 5 },
-        { width: 1750, itemsToShow: 6 },
+        { width: 550, itemsToShow: 1, itemsToScroll: 1, pagination: false,showArrows: false },
+        { width: 850, itemsToShow: 1 ,showArrows: false},
+        { width: 1150, itemsToShow: 3, itemsToScroll: 1 },
+        { width: 1450, itemsToShow: 3 },
+        { width: 1750, itemsToShow: 3 },
       ]);
     return(
     <Grid item xs={12} className="items-accessories-container">
         <h3 className="title">Buy Car Accessories</h3>
         <Grid container className="margin-bottom-20">
-                    <Grid container item xs={12} md={8}>
-                        <div>Accessorise your favourite car from India's favourite E-commerce brand</div>
+                    <Grid container item xs={12}>
+                        <div className="accessories-text-container">
+                            <div>Accessorise your favourite car from India's favourite E-commerce brand</div>
+                            <a className="services-link" href="https://www.servicegeni.in/doorstep-services">View All Accessories </a>
+                        </div>
                     </Grid>
-                    <Grid container item xs={12} md={4} justify="flex-end">
-                        <a className="services-link" href="https://www.servicegeni.in/doorstep-services">View All Accessories </a>
-                    </Grid>
+                    {/* <Grid container item xs={12} md={4} justify="flex-end">
+                        
+                    </Grid> */}
             </Grid>
         <Carousel breakPoints={breakPoints}  easing="cubic-bezier(1,.15,.55,1.54)"
   tiltEasing="cubic-bezier(0.110, 1, 1.000, 0.210)"

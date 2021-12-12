@@ -18,19 +18,11 @@ const CarouselItemMechanic = ({latitude,longitude}) => {
       .then((res) => setData(res.data))
       .catch((error) => error.message);
     }, [latitude,longitude]);
-    const [items,setItems] = useState( [
-          {id: 1, title: 'item #1'},
-          {id: 2, title: 'item #2'},
-          {id: 3, title: 'item #3'},
-          {id: 4, title: 'item #4'},
-          {id: 5, title: 'item #5'}
-        ]
-      );
 
       const [breakPoints] = useState([
         { width: 1, itemsToShow: 1 },
-        { width: 550, itemsToShow: 1, itemsToScroll: 2, pagination: false },
-        { width: 850, itemsToShow: 2 },
+        { width: 550, itemsToShow: 1, itemsToScroll: 2, pagination: false,showArrows: false },
+        { width: 850, itemsToShow: 1,showArrows: false },
         { width: 1150, itemsToShow: 3, itemsToScroll: 2 },
         { width: 1450, itemsToShow: 4 },
         { width: 1750, itemsToShow: 4 },

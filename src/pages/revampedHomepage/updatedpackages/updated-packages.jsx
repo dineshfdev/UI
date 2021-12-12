@@ -13,12 +13,12 @@ import social from '../../../images/assets/img/icons/global/social.svg';
 const UpdatedPackages = () => {
     return(<Grid className="updated-packages-container" xs={12} container>
         <Grid container xs={12} md={3} className="updated-packages-inner">
-            <Grid item xs={4} md={12}>
+            <Grid item xs={2} md={12}>
                 <div className="packages-img">
                 <img src ={partners} alt="partners" />
                 </div>
             </Grid>
-            <Grid item xs={8} md={12}>
+            <Grid item xs={10} md={12}>
             <Grid item xs={12}>
                 <div className="packages-primary-text">
                     200+
@@ -32,12 +32,12 @@ const UpdatedPackages = () => {
             </Grid>
         </Grid>
         <Grid container xs={12} md={3} className="updated-packages-inner">
-            <Grid item xs={4} md={12}>
+            <Grid item xs={2} md={12}>
                 <div className="packages-img">
                 <img src ={search} alt="search" />
                 </div>
             </Grid>
-            <Grid item xs={8} md={12}>
+            <Grid item xs={10} md={12}>
                 <Grid item xs={12}>
                 <div className="packages-primary-text">
                     Free
@@ -51,12 +51,12 @@ const UpdatedPackages = () => {
             </Grid>
         </Grid>
         <Grid container xs={12} md={3} className="updated-packages-inner">
-        <Grid item xs={4} md={12}>
+        <Grid item xs={2} md={12}>
                 <div className="packages-img">
                 <img src ={packages} alt="packages" />
                 </div>
                 </Grid>
-                <Grid item xs={8} md={12}>
+                <Grid item xs={10} md={12}>
                 <Grid item xs={12}>
                 <div className="packages-primary-text">
                     3543+
@@ -70,12 +70,12 @@ const UpdatedPackages = () => {
                 </Grid>
         </Grid>
         <Grid container xs={12} md={3}>
-        <Grid item xs={4} md={12} className="updated-packages-inner">
+        <Grid item xs={2} md={12} className="updated-packages-inner">
                 <div className="packages-img">
                 <img src ={social} alt="social" />
                 </div>
                 </Grid>
-                <Grid item xs={8} md={12}>
+                <Grid item xs={10} md={12}>
                 <Grid item xs={12}>
                 <div className="packages-primary-text">
                     799

@@ -18,7 +18,7 @@ import Accessories from './accessories/accessories';
 // Styles
 import './styles/mixins.scss';
 
-const RevampHomePage = () => {
+const RevampHomePage = ({device}) => {
   const [latitude,setLatitude]=useState(12.914828805146252);
   const [longitude, setLongitude] = useState(80.17147804256318);
 
@@ -33,7 +33,7 @@ const RevampHomePage = () => {
 
   return (
       <Grid container>
-         <Header />
+         <Header device={device} />
          <HeroSectionWrapper />
          <DoorStepServices/>
          <Accordion />
