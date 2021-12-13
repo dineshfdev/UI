@@ -163,3 +163,13 @@
     @extend %title;
   }
 }
+.item-subheader {
+  img {
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+}
+
+.carousel-container {
+  margin-top: 50px;
+}

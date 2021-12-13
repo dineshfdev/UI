@@ -26,7 +26,7 @@ function HeroSectionRight() {
           />
           <button className="hero-section-right__button" onClick={(e) => {
       e.preventDefault();
-      window.location.href='https://www.servicegeni.in/doorstep-services';
+      window.location.href='https://www.servicegeni.in/doorstep';
       }}>BOOK NOW</button>
         </div>
       </div>

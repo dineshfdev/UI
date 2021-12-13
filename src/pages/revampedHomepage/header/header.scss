@@ -124,4 +124,17 @@
   font-size: 16px;
   line-height: 24px;
   border-bottom: 1px dotted #f98306;
+  cursor: pointer;
+}
+
+.display-none {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header-location-container {
+    div {
+      margin-top: 5px;
+    }
+  }
 }

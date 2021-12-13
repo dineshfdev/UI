@@ -16,14 +16,14 @@ const PageFooter =() => {
 return (
     <Grid className="page-footer-container">
         <Grid container xs={12} spacing={3}>
-            <Grid item xs={6}>
+            <Grid item xs={12} md={6}>
                 <img src={Logo} alt={Logo} className="page-footer-logo" />
                 <p>
                     29, MGR Street, Santhosapuram
                     Chennai - 600073, India.
                 </p>
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} md={6}>
                 <div>
                     <a href="#"><img src={instagramIcon} alt="instagram" /></a>
                     <a href="#"><img src={twitterIcon} alt="twitter" /></a>

@@ -19,11 +19,16 @@ import useGaTracker from "./useGaTracker";
 import RevampHomePage from "./pages/revampedHomepage/revampedHomePage";
 
 // context
-
-import { SelectedLocation } from "./context/context";
+import { LatLongContext } from "./context/latLongContext";
 
 const App = () => {
   const [isNewHome, setIsNewHome] = useState();
+
+  // lat long from new home page
+  const [lat, setLat] = useState("80.270718");
+  const [long, setLong] = useState("13.082680");
+  const [defaultLocation, setDefaultLocation] = React.useState("chennai");
+
   useGaTracker();
   const breakpoints = [
     { name: "phone", min: 0, max: 640 },
@@ -80,9 +85,18 @@ const App = () => {
         exact
         path="/new-home"
         render={(props) => (
-          <SelectedLocation.Provider>
+          <LatLongContext.Provider
+            value={{
+              lat,
+              setLat,
+              long,
+              setLong,
+              defaultLocation,
+              setDefaultLocation,
+            }}
+          >
             <RevampHomePage {...props} device={device} />
-          </SelectedLocation.Provider>
+          </LatLongContext.Provider>
         )}
       />
     </>

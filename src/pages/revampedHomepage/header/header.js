@@ -1,39 +1,94 @@
-import React from "react";
-import {
-  Grid,
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem,
-} from "@material-ui/core";
+import React, { useEffect, useContext } from "react";
+import { Grid, makeStyles, TextField } from "@material-ui/core";
 import LinkWithIcon from "../linkwithicon/linkwithicon";
 import Logo from "../../../images/logo.png";
-import SearchIcon from "../../../images/assets/img/icons/global/search.svg";
+import Autocomplete from "@material-ui/lab/Autocomplete";
+// import SearchIcon from "../../../images/assets/img/icons/global/search.svg";
 import HelpIcon from "../../../images/assets/img/icons/global/help.svg";
-import LoginIcon from "../../../images/assets/img/icons/global/login.svg";
-import CartIcon from "../../../images/assets/img/icons/global/cart.svg";
-
+// import LoginIcon from "../../../images/assets/img/icons/global/login.svg";
+// import CartIcon from "../../../images/assets/img/icons/global/cart.svg";
 import Button from "../button/button";
-import AutoComplete from "../autocomplete/autocomplete";
 
 import cx from "classnames";
 import PersistentDrawerRight from "../../../components/fancyheader/drawer.component";
 
+// context
+import { LatLongContext } from "../../../context/latLongContext";
+
 // styles
 import "./header.scss";
-import CustomizedSelect from "../select/select";
 
 // image
 import location from "../../../images/assets/img/header/location.png";
 import locationTracker from "../../../images/assets/img/header/pointer-location.png";
+import { getAllUniqueGarages } from "../../../services/services";
+
+const useStyles = makeStyles(() => ({
+  autoCompleteTextFields: {
+    "& input::placeholder": {
+      color: "white",
+    },
+  },
+}));
 
 const Header = ({ device }) => {
-  console.log("device", device);
   const { breakpoint } = device;
   const classForContainer = cx("nav-container", {
     "fancy-header-desktop": breakpoint === "desktop",
-    "fancy-header-mobile": breakpoint === "phone" || breakpoint === "miniphone",
+    "fancy-header-mobile display-none":
+      breakpoint === "phone" || breakpoint === "miniphone",
   });
+
+  const [open, setOpen] = React.useState(false);
+  const [options, setOptions] = React.useState([]);
+
+  const classes = useStyles();
+
+  // set latitude longitude and default location from context
+  const { setLat, setLong, defaultLocation, setDefaultLocation } =
+    useContext(LatLongContext);
+
+  useEffect(() => {
+    (async () => {
+      await getAllUniqueGarages()
+        .then((response) => setOptions(response.data))
+        .catch((error) => error.message);
+    })();
+  }, [open, defaultLocation]);
+
+  useEffect(() => {
+    if (!open) {
+      setOptions([]);
+    }
+  }, [open]);
+
+  // get latest geocode along eith latidue and longitude
+  useEffect(() => {
+    (async () => {
+      await fetch(
+        `https://api.mapbox.com/geocoding/v5/mapbox.places/${defaultLocation}.json?access_token=pk.eyJ1Ijoic2VydmljZWdlbmkiLCJhIjoiY2t3cTFqZ3AwMDF2cTJ2bngwMjJybHJpdSJ9.To44yXt9LxoCUi0lk7q77A`
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          setLat(data?.features[0]?.center[0]);
+          setLong(data?.features[0]?.center[1]);
+        });
+    })();
+  }, [setLat, setLong, defaultLocation]);
+
+  const selectChange = (event, val) => {
+    setDefaultLocation(val);
+  };
+
+  const getCurrentLocation = () => {
+    debugger;
+    if (navigator.geolocation) {
+      navigator.geolocation.watchPosition((position) => {
+        setLat(position.coords.latitude);
+        setLong(position.coords.longitude);
+      });
+    }
+  };
   return (
     <Grid item className="header-container" xs={12}>
       <Grid container className="header">
@@ -41,7 +96,7 @@ const Header = ({ device }) => {
           <img src={Logo} alt="logo" />
         </Grid>
         <PersistentDrawerRight device={breakpoint} />
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={4} className={classForContainer}>
           <ul className="header-list">
             <li>
               <a className="header-content-left-menu-item__link" href="#">
@@ -50,7 +105,7 @@ const Header = ({ device }) => {
             </li>
             <li>
               <a className="header-content-left-menu-item__link" href="#">
-                Door step services
+                Doorstep services
               </a>
             </li>
             <li>
@@ -60,7 +115,7 @@ const Header = ({ device }) => {
             </li>
           </ul>
         </Grid>
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={5} className={classForContainer}>
           <div className="link-icon-container">
             {/* commented for future use*/}
             {/* <LinkWithIcon icon={SearchIcon} text="Search" link="#" alt="search" /> */}
@@ -76,154 +131,40 @@ const Header = ({ device }) => {
           We serve chennai alone
         </div>
         <div>
-          <FormControl variant="outlined" style={{ width: 210 }}>
-            <InputLabel id="demo-simple-select-outlined-label">
-              Select Are or Pincode
-            </InputLabel>
-            <Select
-              labelId="demo-simple-select-outlined-label"
-              id="demo-simple-select-outlined"
-              label="Age"
-            >
-              <MenuItem value="">
-                <em>None</em>
-              </MenuItem>
-              <MenuItem value={10}>Ten</MenuItem>
-              <MenuItem value={20}>Twenty</MenuItem>
-              <MenuItem value={30}>Thirty</MenuItem>
-            </Select>
-          </FormControl>
+          <Autocomplete
+            id="garage-select"
+            style={{ width: 300 }}
+            options={options}
+            autoHighlight
+            getOptionLabel={(option) => (option ? option : "")}
+            onChange={selectChange}
+            onOpen={() => {
+              setOpen(true);
+            }}
+            onClose={() => {
+              setOpen(false);
+            }}
+            renderOption={(option) => <React.Fragment>{option}</React.Fragment>}
+            renderInput={(params) => (
+              <TextField
+                {...params}
+                label="Choose Location"
+                variant="outlined"
+                inputProps={{
+                  ...params.inputProps,
+                }}
+                classes={{ root: classes.autoCompleteTextFields }}
+              />
+            )}
+          />
         </div>
         <img src={locationTracker} alt="current location" />
-        <div className="header-current-location">Use My Current Location</div>
+        <div className="header-current-location" onClick={getCurrentLocation}>
+          Use My Current Location
+        </div>
       </Grid>
     </Grid>
   );
 };
-
-// function Header() {
-//   return (
-//     <Grid className="header-container" xs={12}>
-//       <Grid container className="header">
-//         <Grid item xs={3} className="logo">
-//           <img src={Logo} alt="logo" />
-//         </Grid>
-//         <Grid item xs={4}>
-//           <ul className="header-list">
-//             <li>
-//               <a className="header-content-left-menu-item__link" href="#">
-//                 Find a Mechanic
-//               </a>
-//             </li>
-//             <li>
-//               <a className="header-content-left-menu-item__link" href="#">
-//                 Door step services
-//               </a>
-//             </li>
-//             <li>
-//               <a className="header-content-left-menu-item__link" href="#">
-//                 ECU Coding
-//               </a>
-//             </li>
-//           </ul>
-//         </Grid>
-//         <Grid item xs={5}>
-//           <div className="link-icon-container">
-//             {/* commented for future use*/}
-//             {/* <LinkWithIcon icon={SearchIcon} text="Search" link="#" alt="search" /> */}
-//             <LinkWithIcon icon={HelpIcon} text="Help" link="#" alt="help" />
-//             {/* <LinkWithIcon icon={LoginIcon} text="Help" link="#" alt="Help" />
-//           <LinkWithIcon icon={CartIcon} text="Cart" link="#" alt="cart" /> */}
-//           </div>
-//         </Grid>
-//         <Grid container item xs={12} className="header-location-container">
-//           <div>
-//             <img src={location} alt="location" />
-//             We serve chennai alone
-//           </div>
-//           <div>
-//             <FormControl variant="outlined" style={{ width: 210 }}>
-//               <InputLabel id="demo-simple-select-outlined-label">
-//                 Select Are or Pincode
-//               </InputLabel>
-//               <Select
-//                 labelId="demo-simple-select-outlined-label"
-//                 id="demo-simple-select-outlined"
-//                 label="Age"
-//               >
-//                 <MenuItem value="">
-//                   <em>None</em>
-//                 </MenuItem>
-//                 <MenuItem value={10}>Ten</MenuItem>
-//                 <MenuItem value={20}>Twenty</MenuItem>
-//                 <MenuItem value={30}>Thirty</MenuItem>
-//               </Select>
-//             </FormControl>
-//           </div>
-//           <img src={locationTracker} alt="current location" />
-//           <div className="header-current-location">Use My Current Location</div>
-//         </Grid>
-//       </Grid>
-//     </Grid>
-//     // <div className="header-container">
-//     //   <div className="header-content">
-//     //     <div className="header-content-left">
-//     //       <div className="header-content-left-logo">
-//     //         <img src={Logo} alt="logo" />
-//     //       </div>
-//     //       <div className="header-content-left-menu">
-//     //         <div className="header-content-left-menu-item">
-//     //           <a className="header-content-left-menu-item__link" href="#">
-//     //             Find a Mechanic
-//     //           </a>
-//     //           <a className="header-content-left-menu-item__link" href="#">
-//     //             Door step services
-//     //           </a>
-//     //           <a className="header-content-left-menu-item__link" href="#">
-//     //             ECU Coding
-//     //           </a>
-//     //         </div>
-//     //       </div>
-//     //     </div>
-//     //     <div className="header-content-right">
-//     //       <div className="header-content-right-menu">
-//     //         <div className="header-content-right-menu-item">
-//     //           <LinkWithIcon
-//     //             icon={SearchIcon}
-//     //             text="Search"
-//     //             link="#"
-//     //             alt="search"
-//     //           />
-//     //           <LinkWithIcon icon={HelpIcon} text="Help" link="#" alt="help" />
-//     //           <LinkWithIcon icon={LoginIcon} text="Help" link="#" alt="Help" />
-//     //           <LinkWithIcon icon={CartIcon} text="Cart" link="#" alt="cart" />
-//     //         </div>
-//     //       </div>
-//     //     </div>
-//     //   </div>
-//     //   {/* <Button text="Find now" />
-//     //     <CustomizedSelect
-//     //       options={[
-//     //         {
-//     //           menu: 'General',
-//     //           value: 'General',
-//     //         },
-//     //         {
-//     //           menu: 'Motor',
-//     //           value: 'Motor',
-//     //         },
-//     //         {
-//     //           menu: 'Sever',
-//     //           value: 'Sever',
-//     //         },
-//     //       ]}
-//     //       defaultValue="General"
-//     //       handleChange={(e) => console.log(e)}
-//     //     />
-//     //   </div>
-//     //   <AutoComplete /> */}
-//     // </div>
-//   );
-// }
 
 export default Header;
