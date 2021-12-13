@@ -25,7 +25,7 @@ const DoorStepServices = () =>{
             </Grid>
             <div style={{ padding: "20px 0" }}>
             <Grid container spacing={3}>
-                <Grid item xs={3}>
+                <Grid item xs={6} md={3}>
                         <Card>
                                 <CardActionArea>
                                 <img src={generalService} alt={generalService} style={{width: "100%"}} />
@@ -50,7 +50,7 @@ const DoorStepServices = () =>{
                                 </CardActions>
                         </Card>
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={6} md={3}>
                         <Card>
                                 <CardActionArea>
                                 <img src={expressService} alt={expressService} style={{width: "100%"}} />
@@ -75,7 +75,7 @@ const DoorStepServices = () =>{
                                 </CardActions>
                         </Card>
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={6} md={3}>
                 <Card>
                                 <CardActionArea>
                                 <img src={inspectionService} alt={inspectionService} style={{width: "100%"}} />
@@ -100,7 +100,7 @@ const DoorStepServices = () =>{
                                 </CardActions>
                         </Card>
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={6} md={3}>
                 <Card>
                                 <CardActionArea>
                                 <img src={jumpstartService} alt={jumpstartService} style={{width: "100%"}} />

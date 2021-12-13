@@ -9,6 +9,7 @@
   box-sizing: border-box;
   margin-left: 50px;
   margin-bottom: 20px;
+  background-size: cover;
 
   &__content {
     padding-top: 10px;
@@ -28,5 +29,14 @@
   &__button {
     @include button-style(#ff8400, #ffa748);
     margin-left: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-section-left {
+    margin-left: 0;
+    &__title {
+      font-size: 22px;
+    }
   }
 }

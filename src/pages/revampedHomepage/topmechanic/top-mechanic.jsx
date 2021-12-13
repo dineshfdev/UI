@@ -1,23 +1,29 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState,useEffect,useContext} from 'react';
 import {Grid} from "@material-ui/core";
 import StarRatings from "react-star-ratings";
 
 import Carousel from 'react-elastic-carousel';
 import { getTopGaragesNearLocation } from '../../../services/services';
 
+// context
+import { LatLongContext } from "../../../context/latLongContext";
+
 // images
 import Marker from "../../../images/assets/img/icons/global/marker.svg";
+import locationIcon from "../../../images/assets/img/header/location.png";
 
 // styles 
 import "../carousel/carousel.styles.scss";
 
-const CarouselItemMechanic = ({latitude,longitude}) => {
+const CarouselItemMechanic = () => {
     const [data, setData] = useState([]);
+    const { lat, long, defaultLocation } =
+    useContext(LatLongContext);
     useEffect(() => {
-    getTopGaragesNearLocation(latitude,longitude)
+    getTopGaragesNearLocation(lat,long)
       .then((res) => setData(res.data))
       .catch((error) => error.message);
-    }, [latitude,longitude]);
+    }, [lat,long]);
 
       const [breakPoints] = useState([
         { width: 1, itemsToShow: 1 },
@@ -31,12 +37,15 @@ const CarouselItemMechanic = ({latitude,longitude}) => {
     return (
         <Grid item xs={12} className="items-accessories-container">
              <h3 className="title">Top Rated Mechanics</h3>
+             <h4 className="item-subheader"><img src={locationIcon} alt="location" /> <span>{defaultLocation}</span></h4>
         <Carousel breakPoints={breakPoints} easing="cubic-bezier(1,.15,.55,1.54)"
         tiltEasing="cubic-bezier(0.110, 1, 1.000, 0.210)"
         transitionMs={700}
-        pagination={false}>
+        pagination={false}
+        className="carousel-container"
+        >
             {data.map(x=>
-                <div className="mechanic-carousel__item">
+                <div className="mechanic-carousel__item" key={x.garageTitle}>
                 {x.garageImage === "" ? (
                   <img src="http://via.placeholder.com/400x200" alt="garage" className="mechanic-carousel__item-image" />
                 ) : (
@@ -47,7 +56,7 @@ const CarouselItemMechanic = ({latitude,longitude}) => {
                   />
                 )}
                 <div className="mechanic-carousel__item-content">
-                  <p className="mechanic-carousel__item-heading">{x.garageTitle} Test</p>
+                  <p className="mechanic-carousel__item-heading">{x.garageTitle}</p>
                   <div className="mechanic-carousel__item-address mechanic-carousel__item--semibold">
                     <p className="mechanic-carousel__item-address-marker">
                       <img
