@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import { usePosition } from '../../customHooks/usePosition';
-import { bufferValues } from './bufferModel';
-import { makeStyles } from '@material-ui/core/styles';
-import './addnewgarage.scss';
-import { Button } from '@material-ui/core';
-import { createNewGarage } from '../../services/services';
-import SimpleModal from '../../components/modal/modal';
-import ImageUpload from '../../components/imageUpload/imageUpload';
-import RenderFields from './renderFields';
+import React, { useEffect, useState } from "react";
+import { usePosition } from "../../customHooks/usePosition";
+import { bufferValues } from "./bufferModel";
+import { makeStyles } from "@material-ui/core/styles";
+import "./addnewgarage.scss";
+import { Button } from "@material-ui/core";
+import { createNewGarage } from "../../services/services";
+import SimpleModal from "../../components/modal/modal";
+import ImageUpload from "../../components/imageUpload/imageUpload";
+import RenderFields from "./renderFields";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    '& .MuiTextField-root': {
+    "& .MuiTextField-root": {
       margin: theme.spacing(1),
       width: 200,
     },
@@ -21,10 +21,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
-    fontFamily: 'AvenirLight',
+    fontFamily: "AvenirLight",
   },
   modalButton: {
-    background: '#eea44d',
+    background: "#eea44d",
   },
 }));
 
@@ -56,7 +56,6 @@ function AddNewGarage() {
 
   const saveForm = async (formData) => {
     await createNewGarage(formData).then((res) => {
-      console.log(res);
       handleReset();
     });
   };
@@ -66,7 +65,7 @@ function AddNewGarage() {
     if (position.error !== null) {
       setIsModalOpen(true);
     }
-    if (getBuffer.every((i) => i.value !== '')) {
+    if (getBuffer.every((i) => i.value !== "")) {
       const payload = getBuffer.reduce((acc, next) => {
         return {
           ...acc,
@@ -79,7 +78,7 @@ function AddNewGarage() {
       });
     } else {
       getBuffer = getBuffer.map((field) => {
-        if (field.value === '') {
+        if (field.value === "") {
           field.validations.isValid = false;
         } else {
           field.validations.isValid = true;
@@ -94,7 +93,7 @@ function AddNewGarage() {
     let getBuffer = [...modelBuffer];
 
     getBuffer = getBuffer.map((field) => {
-      field.value = '';
+      field.value = "";
       field.validations.isValid = true;
       return field;
     });
@@ -120,7 +119,7 @@ function AddNewGarage() {
   const handleImageUpload = (image) => {
     const getBuffer = [...modelBuffer];
     getBuffer.push({
-      name: 'image',
+      name: "image",
       value: image,
       validations: {
         isValid: true,

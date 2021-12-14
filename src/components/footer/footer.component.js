@@ -41,7 +41,7 @@ export default function Footer(props) {
       </div> */}
       <Grid container justify="center" alignItems="center" className="footer">
         <Box clone order={{ xs: 2, sm: 2 }}>
-          <Grid item xs={12} md={4} alignContent="center" alignItems="center">
+          <Grid item xs={12} md={4}>
             <div>
               <a
                 href="https://www.facebook.com/servicegeni"

@@ -32,7 +32,6 @@ export default function CustomizedSelect({
   handleChange,
   defaultValue = '',
 }) {
-  console.log('options, defaultValue :>> ', options, defaultValue);
   const [value, setValue] = React.useState(defaultValue);
   const onChange = (event) => {
     setValue(event.target.value);

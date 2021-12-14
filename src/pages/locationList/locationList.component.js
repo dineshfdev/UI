@@ -47,7 +47,6 @@ const LocationList = (props) => {
     }
   }, [props.location.state, history]);
 
-  console.log("props.device.breakpoints :>> ", props.device);
   const listHeading = () => {
     const { breakpoint } = props.device;
     if (breakpoint !== "phone") {

@@ -26,3 +26,12 @@
     }
   }
 }
+
+.footer-list-location {
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    width: 30%;
+    cursor: pointer;
+  }
+}
