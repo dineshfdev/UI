@@ -25,14 +25,14 @@ return (
             </Grid>
             <Grid item xs={12} md={6}>
                 <div>
-                    <a href="#"><img src={instagramIcon} alt="instagram" /></a>
-                    <a href="#"><img src={twitterIcon} alt="twitter" /></a>
-                    <a href="#"><img src={linkedinIcon} alt="linkedin" /></a>
-                    <a href="#"><img src={facebookIcon} alt="facebook" /></a>
-                    <a href="#"><img src={youtubeIcon} alt="youtube" /></a>
+                    <a href="https://www.instagram.com/servicegeni/" target="_blank" rel="instagram noreferrer"><img src={instagramIcon} alt="instagram" /></a>
+                    <a href="https://twitter.com/GeniService"><img src={twitterIcon} alt="twitter" /></a>
+                    <a href="https://www.linkedin.com/company/service-geni"><img src={linkedinIcon} alt="linkedin" /></a>
+                    <a href="https://www.facebook.com/servicegeni"><img src={facebookIcon} alt="facebook" /></a>
+                    <a href="https://www.youtube.com/channel/UC7rSwsw7lqxQ4477gzlyAOg"><img src={youtubeIcon} alt="youtube" /></a>
                 </div>
                 <p>
-                   <a href="#">Terms & Conditions</a>
+                   <a href="#" className="offset-margin-right-10">Terms & Conditions</a>
                    <a href="#">Privacy Policy</a>
                 </p>
                 <p>

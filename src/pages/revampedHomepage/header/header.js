@@ -81,7 +81,6 @@ const Header = ({ device }) => {
   };
 
   const getCurrentLocation = () => {
-    debugger;
     if (navigator.geolocation) {
       navigator.geolocation.watchPosition((position) => {
         setLat(position.coords.latitude);

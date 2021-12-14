@@ -1,10 +1,34 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
+import { useHistory, Link } from "react-router-dom";
 import {Grid} from '@material-ui/core';
+
+// services
+import { getAllUniqueGarages } from "../../../services/services";
 
 // styles
 import "./footer-styles.scss";
 
 const Footer =() => {
+    let history = useHistory();
+    const [locationData,setLocationData] = useState([]);
+    useEffect(() => {
+        (async () => {
+          await getAllUniqueGarages()
+            .then((response) => setLocationData(response.data))
+            .catch((error) => error.message);
+        })();
+      }, []);
+
+// onclick location 
+
+const onLocationClick = (val) => {
+      history.push({
+        pathname: "/location-list",
+        search: `?location=${val}`,
+        state: { val, searchName: "location" },
+      });
+  };
+
 return (
     <Grid className="contact-container">
         <Grid container xs={12} spacing={3}>
@@ -39,32 +63,9 @@ return (
             <Grid item xs={12} md={5}>
                 <h5 className="footer-header">Popular Areas We Serve At Chennai</h5>
                 <Grid container xs={12}>
-                <Grid item xs={6}>
-                    <ul className="footer-list-container">
-                        <li>Near My Location</li>
-                        <li>Near My Location</li>
-                        <li>Near My Location</li>
-                        <li>Near My Location</li>
-                        <li>Near My Location</li>
-                        <li>Near My Location</li>
-                        <li>Near My Location</li>
-                        <li>Near My Location</li>
-                        <li>Near My Location</li>
+                    <ul className="footer-list-container footer-list-location">
+                        {locationData.map(x =><li key={x} onClick={() => onLocationClick(x)}>{x}</li> )}
                     </ul>
-                </Grid>
-                <Grid item xs={6}>
-                    <ul className="footer-list-container">
-                        <li>Near My Location</li>
-                        <li>Near My Location</li>
-                        <li>Near My Location</li>
-                        <li>Near My Location</li>
-                        <li>Near My Location</li>
-                        <li>Near My Location</li>
-                        <li>Near My Location</li>
-                        <li>Near My Location</li>
-                        <li>Near My Location</li>
-                    </ul>
-                </Grid>
                 </Grid>
             </Grid>
         </Grid>
