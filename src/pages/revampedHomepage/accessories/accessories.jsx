@@ -33,8 +33,7 @@ const Accessories = () =>{
                         
                     </Grid> */}
             </Grid>
-        <Carousel breakPoints={breakPoints}  easing="cubic-bezier(1,.15,.55,1.54)"
-  tiltEasing="cubic-bezier(0.110, 1, 1.000, 0.210)"
+        <Carousel breakPoints={breakPoints} 
   transitionMs={700}
   pagination={false}
   >

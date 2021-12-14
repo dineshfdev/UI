@@ -20,7 +20,7 @@ const CarouselItemMechanic = () => {
     const { lat, long, defaultLocation } =
     useContext(LatLongContext);
     useEffect(() => {
-    getTopGaragesNearLocation(lat,long)
+    getTopGaragesNearLocation(long,lat)
       .then((res) => setData(res.data))
       .catch((error) => error.message);
     }, [lat,long]);
@@ -38,8 +38,7 @@ const CarouselItemMechanic = () => {
         <Grid item xs={12} className="items-accessories-container">
              <h3 className="title">Top Rated Mechanics</h3>
              <h4 className="item-subheader"><img src={locationIcon} alt="location" /> <span>{defaultLocation}</span></h4>
-        <Carousel breakPoints={breakPoints} easing="cubic-bezier(1,.15,.55,1.54)"
-        tiltEasing="cubic-bezier(0.110, 1, 1.000, 0.210)"
+        <Carousel breakPoints={breakPoints} 
         transitionMs={700}
         pagination={false}
         className="carousel-container"
