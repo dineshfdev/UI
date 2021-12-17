@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState,useEffect,useContext} from 'react';
 import {Grid} from "@material-ui/core";
 
 // Components
@@ -15,21 +15,27 @@ import CarouselItemMechanic  from './topmechanic/top-mechanic';
 import Accordion from './accordion/accordion';
 import Accessories from './accessories/accessories';
 
+// context
+import { LatLongContext } from "../../../src/context/latLongContext";
+
 // Styles
 import './styles/mixins.scss';
 
 const RevampHomePage = ({device}) => {
-  const [latitude,setLatitude]=useState(12.914828805146252);
-  const [longitude, setLongitude] = useState(80.17147804256318);
+
+  // set latitude longitude and default location from context
+  const { setLat, setLong } =
+    useContext(LatLongContext);
 
   useEffect(() => {
     if (navigator.geolocation) {
       navigator.geolocation.watchPosition((position) => {
-        setLatitude(position.coords.latitude);
-        setLongitude(position.coords.longitude);
+        setLat(position.coords.latitude);
+        setLong(position.coords.longitude);
       });
     }
-  }, [latitude,longitude]);
+  }, [setLat,setLong]);
+
 
   return (
       <Grid container>
@@ -38,7 +44,7 @@ const RevampHomePage = ({device}) => {
          <DoorStepServices/>
          <Accordion />
          <UpdatedPackages />
-         <CarouselItemMechanic latitude={latitude} longitude={longitude}  />
+         <CarouselItemMechanic />
          <CarServices />
          <Accessories />
          <Testimonial />

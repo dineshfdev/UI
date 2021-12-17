@@ -21,8 +21,7 @@
 .mechanic-carousel,
 .accessories-carousel {
   &__item {
-    width: 416px;
-    min-height: 300px;
+    width: 90%;
     margin-bottom: 20px;
     @include box-shadow;
 
@@ -172,4 +171,14 @@
 
 .carousel-container {
   margin-top: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .items-accessories-container {
+    padding: 10px;
+  }
+  .mechanic-carousel__item-last-child,
+  .accessories-carousel__item-last-child {
+    display: inherit !important;
+  }
 }
