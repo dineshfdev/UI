@@ -45,7 +45,7 @@ const Header = ({ device }) => {
   const classes = useStyles();
 
   // set latitude longitude and default location from context
-  const { setLat, setLong, defaultLocation, setDefaultLocation } =
+  const { lat, long, setLat, setLong, defaultLocation, setDefaultLocation } =
     useContext(LatLongContext);
 
   useEffect(() => {
@@ -88,6 +88,8 @@ const Header = ({ device }) => {
       });
     }
   };
+
+  console.log("defaultLocation", defaultLocation);
   return (
     <Grid item className="header-container" xs={12}>
       <Grid container className="header">

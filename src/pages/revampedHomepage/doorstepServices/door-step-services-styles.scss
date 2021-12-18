@@ -27,3 +27,14 @@
     border-radius: 0;
   }
 }
+
+.card-accessories-button {
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+  .card-accessories-button {
+    justify-content: flex-start;
+    margin-top: 10px !important;
+  }
+}

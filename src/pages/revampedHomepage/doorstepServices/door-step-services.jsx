@@ -16,11 +16,11 @@ const DoorStepServices = () =>{
         <Grid item className="doorstep-services-container" xs={12} >
             <h3 className="title">Popular Doorstep Services</h3>
             <Grid container>
-                    <Grid container item xs={8}>
+                    <Grid container item xs={12} md={8}>
                         <div>For your convenience, we also provide handpicked car maintenance services right at your home or work premises.</div>
                     </Grid>
-                    <Grid container item xs={4} justify="flex-end">
-                        <a className="services-link" href="https://www.servicegeni.in/doorstep-services">View All Services </a>
+                    <Grid container item xs={12} md={4} className="card-accessories-button">
+                        <a className="services-link" href="https://www.servicegeni.in/doorstep">View All Services </a>
                     </Grid>
             </Grid>
             <div style={{ padding: "20px 0" }}>
@@ -43,7 +43,7 @@ const DoorStepServices = () =>{
                                 <CardActions>
                                 <Button size="small" color="primary" className="card-button" onClick={e => {
       e.preventDefault();
-      window.location.href='https://www.servicegeni.in/doorstep-services';
+      window.location.href='https://www.servicegeni.in/doorstep';
       }}>
                                     Book Now
                                 </Button>
@@ -68,7 +68,7 @@ const DoorStepServices = () =>{
                                 <CardActions>
                                 <Button size="small" color="primary" className="card-button" onClick={e => {
       e.preventDefault();
-      window.location.href='https://www.servicegeni.in/doorstep-services';
+      window.location.href='https://www.servicegeni.in/doorstep';
       }}>
                                     Book Now
                                 </Button>
@@ -93,7 +93,7 @@ const DoorStepServices = () =>{
                                 <CardActions>
                                 <Button size="small" color="primary" className="card-button" onClick={e => {
       e.preventDefault();
-      window.location.href='https://www.servicegeni.in/doorstep-services';
+      window.location.href='https://www.servicegeni.in/doorstep';
       }}>
                                     Book Now
                                 </Button>
@@ -107,7 +107,7 @@ const DoorStepServices = () =>{
                                 <CardContent>
                                 
                                     <Typography gutterBottom variant="h5" component="h2" className="card-header">
-                                    Jumpstart Service
+                                    Car Wash
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p" className="card-price">
                                     Starts @ 3600
@@ -118,7 +118,7 @@ const DoorStepServices = () =>{
                                 <CardActions>
                                 <Button size="small" color="primary" className="card-button" onClick={e => {
       e.preventDefault();
-      window.location.href='https://www.servicegeni.in/doorstep-services';
+      window.location.href='https://www.servicegeni.in/doorstep';
       }}>
                                     Book Now
                                 </Button>

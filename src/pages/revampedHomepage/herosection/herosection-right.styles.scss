@@ -57,5 +57,11 @@
     &__cta-wrapper {
       flex-direction: column;
     }
+    &__button {
+      margin: 20px 0;
+    }
+    &__title {
+      height: auto !important;
+    }
   }
 }
