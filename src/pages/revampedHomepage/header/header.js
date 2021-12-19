@@ -7,7 +7,6 @@ import Autocomplete from "@material-ui/lab/Autocomplete";
 import HelpIcon from "../../../images/assets/img/icons/global/help.svg";
 // import LoginIcon from "../../../images/assets/img/icons/global/login.svg";
 // import CartIcon from "../../../images/assets/img/icons/global/cart.svg";
-import Button from "../button/button";
 
 import cx from "classnames";
 import PersistentDrawerRight from "../../../components/fancyheader/drawer.component";
@@ -45,7 +44,7 @@ const Header = ({ device }) => {
   const classes = useStyles();
 
   // set latitude longitude and default location from context
-  const { lat, long, setLat, setLong, defaultLocation, setDefaultLocation } =
+  const { setLat, setLong, defaultLocation, setDefaultLocation } =
     useContext(LatLongContext);
 
   useEffect(() => {

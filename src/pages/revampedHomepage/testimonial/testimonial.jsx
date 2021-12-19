@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React from "react";
 import {Grid,Card,CardHeader,Avatar,CardContent,Typography} from '@material-ui/core';
 
 // images
@@ -8,14 +8,6 @@ import user1 from "../../../images/assets/img/testimonial/user1.png";
 import "./testimonial-styles.scss";
 
 const Testimonial =() => {
-    const [breakPoints] = useState([
-        { width: 1, itemsToShow: 1 },
-        { width: 550, itemsToShow: 1, itemsToScroll: 1, pagination: false },
-        { width: 850, itemsToShow: 3 },
-        { width: 1150, itemsToShow: 4, itemsToScroll: 1 },
-        { width: 1450, itemsToShow: 5 },
-        { width: 1750, itemsToShow: 6 },
-      ]);
 return (
     <Grid className="testimonial-container">
         <h3 className="title">What People Says</h3>
