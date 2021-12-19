@@ -1,4 +1,4 @@
-import React,{useState,useEffect,useContext} from 'react';
+import React,{useEffect,useContext} from 'react';
 import {Grid} from "@material-ui/core";
 
 // Components
@@ -42,7 +42,7 @@ const RevampHomePage = ({device}) => {
          <Header device={device} />
          <HeroSectionWrapper />
          <DoorStepServices/>
-         <Accordion />
+         <Accordion device={device} />
          <UpdatedPackages />
          <CarouselItemMechanic />
          <CarServices />
