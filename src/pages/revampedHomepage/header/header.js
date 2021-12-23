@@ -92,10 +92,10 @@ const Header = ({ device }) => {
   return (
     <Grid item className="header-container" xs={12}>
       <Grid container className="header">
+        <PersistentDrawerRight device={breakpoint} />
         <Grid item xs={3} className="logo">
           <img src={Logo} alt="logo" />
         </Grid>
-        <PersistentDrawerRight device={breakpoint} />
         <Grid item xs={12} md={4} className={classForContainer}>
           <ul className="header-list">
             <li>
