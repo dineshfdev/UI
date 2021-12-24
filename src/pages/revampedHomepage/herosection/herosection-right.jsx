@@ -16,6 +16,7 @@ function HeroSectionRight() {
           <span>Fair and transparent pricing!</span>
         </div>
         <div className="hero-section-right__cta-wrapper">
+          <div className="door-step-menu">
           <CustomizedSelect
             options={[
               { menu: 'General Services/ Other Services', value: 'general' },
@@ -24,6 +25,7 @@ function HeroSectionRight() {
             handleChange={() => {}}
             defaultValue="general"
           />
+          </div>
           <button className="hero-section-right__button" onClick={(e) => {
       e.preventDefault();
       window.location.href='https://www.servicegeni.in/doorstep';

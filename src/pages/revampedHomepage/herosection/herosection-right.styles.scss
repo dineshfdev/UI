@@ -51,11 +51,13 @@
   .hero-section-right {
     margin-left: 0;
     margin-right: 0;
+    height: auto;
     &__title {
-      font-size: 22px;
+      font-size: 18px;
     }
     &__cta-wrapper {
       flex-direction: column;
+      margin-top: 10px;
     }
     &__button {
       margin: 20px 0;
@@ -63,5 +65,8 @@
     &__title {
       height: auto !important;
     }
+  }
+  .door-step-menu {
+    display: none;
   }
 }
