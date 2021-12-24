@@ -33,6 +33,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .doorstep-services-container {
+    padding: 0 10px 10px;
+  }
   .card-accessories-button {
     justify-content: flex-start;
     margin-top: 10px !important;
