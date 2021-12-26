@@ -17,7 +17,7 @@ import "../carousel/carousel.styles.scss";
 
 const CarouselItemMechanic = () => {
     const [data, setData] = useState([]);
-    const { lat, long, defaultLocation } =
+    const { lat, long, defaultLocation,servicesNearMe } =
     useContext(LatLongContext);
     useEffect(() => {
     getTopGaragesNearLocation(long,lat)
@@ -37,7 +37,7 @@ const CarouselItemMechanic = () => {
     return (
         <Grid item xs={12} className="items-accessories-container">
              <h3 className="title">Top Rated Mechanics</h3>
-             <h4 className="item-subheader"><img src={locationIcon} alt="location" /> <span>{defaultLocation}</span></h4>
+             <h4 className="item-subheader"><img src={locationIcon} alt="location" /> <span>{servicesNearMe ? servicesNearMe : defaultLocation}</span></h4>
         <Carousel breakPoints={breakPoints} 
         transitionMs={700}
         pagination={false}

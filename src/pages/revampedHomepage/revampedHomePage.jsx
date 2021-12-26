@@ -24,7 +24,7 @@ import './styles/mixins.scss';
 const RevampHomePage = ({device}) => {
 
   // set latitude longitude and default location from context
-  const { setLat, setLong } =
+  const { lat,long,setLat, setLong,setDefaultLocation,servicesNearme } =
     useContext(LatLongContext);
 
   useEffect(() => {
@@ -35,6 +35,37 @@ const RevampHomePage = ({device}) => {
       });
     }
   }, [setLat,setLong]);
+
+
+    // get latest geocode along with latidue and longitude
+    useEffect(() => {
+      if(servicesNearme){
+      (async () => {
+        await fetch(
+          `https://api.mapbox.com/geocoding/v5/mapbox.places/${servicesNearme}.json?access_token=pk.eyJ1Ijoic2VydmljZWdlbmkiLCJhIjoiY2t3cTFqZ3AwMDF2cTJ2bngwMjJybHJpdSJ9.To44yXt9LxoCUi0lk7q77A`
+        )
+          .then((response) => response.json())
+          .then((data) => {
+            setLat(data?.features[0]?.center[0]);
+            setLong(data?.features[0]?.center[1]);
+          });
+      })();
+    }
+    }, [setLat, setLong, servicesNearme]);
+
+
+      // get latest location latidue and longitude
+      useEffect(() => {
+        (async () => {
+          await fetch(
+            `https://api.mapbox.com/geocoding/v5/mapbox.places/${lat},${long}.json?access_token=pk.eyJ1Ijoic2VydmljZWdlbmkiLCJhIjoiY2t3cTFqZ3AwMDF2cTJ2bngwMjJybHJpdSJ9.To44yXt9LxoCUi0lk7q77A`
+          )
+            .then((response) => response.json())
+            .then((data) => {
+              setDefaultLocation(data?.features[0]?.place_name);
+            });
+        })();
+      }, [long, lat, setDefaultLocation]);
 
 
   return (

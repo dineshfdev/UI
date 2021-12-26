@@ -27,7 +27,8 @@ const App = () => {
   // lat long from new home page
   const [lat, setLat] = useState("80.270718");
   const [long, setLong] = useState("13.082680");
-  const [defaultLocation, setDefaultLocation] = React.useState("chennai");
+  const [defaultLocation, setDefaultLocation] = useState("");
+  const [servicesNearme, setServicesNearMe] = useState("");
 
   useGaTracker();
   const breakpoints = [
@@ -93,6 +94,8 @@ const App = () => {
               setLong,
               defaultLocation,
               setDefaultLocation,
+              servicesNearme,
+              setServicesNearMe,
             }}
           >
             <RevampHomePage {...props} device={device} />

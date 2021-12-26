@@ -57,12 +57,13 @@ export default function CustomizedAccordions({ AccordionData }) {
   };
 
   return (
-    <div class="mobile-accordion-container">
+    <div className="mobile-accordion-container">
       {AccordionData.map((x, i) => (
         <Accordion
           square
           expanded={expanded === `panel${i}`}
           onChange={handleChange(`panel${i}`)}
+          key={i}
         >
           <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
             <Typography className="header-accordion-title">
@@ -73,9 +74,10 @@ export default function CustomizedAccordions({ AccordionData }) {
             <Typography>
               <img src={x.image} alt={x.title} />
               {x.content}
-              <div>
+              <br />
+              <span>
                 <a href={x.readMore}>{"Read more >"}</a>
-              </div>
+              </span>
             </Typography>
           </AccordionDetails>
         </Accordion>

@@ -44,7 +44,7 @@ const Header = ({ device }) => {
   const classes = useStyles();
 
   // set latitude longitude and default location from context
-  const { setLat, setLong, defaultLocation, setDefaultLocation } =
+  const { setLat, setLong, servicesNearme, setServicesNearMe } =
     useContext(LatLongContext);
 
   useEffect(() => {
@@ -53,7 +53,7 @@ const Header = ({ device }) => {
         .then((response) => setOptions(response.data))
         .catch((error) => error.message);
     })();
-  }, [open, defaultLocation]);
+  }, [open, servicesNearme]);
 
   useEffect(() => {
     if (!open) {
@@ -61,22 +61,8 @@ const Header = ({ device }) => {
     }
   }, [open]);
 
-  // get latest geocode along eith latidue and longitude
-  useEffect(() => {
-    (async () => {
-      await fetch(
-        `https://api.mapbox.com/geocoding/v5/mapbox.places/${defaultLocation}.json?access_token=pk.eyJ1Ijoic2VydmljZWdlbmkiLCJhIjoiY2t3cTFqZ3AwMDF2cTJ2bngwMjJybHJpdSJ9.To44yXt9LxoCUi0lk7q77A`
-      )
-        .then((response) => response.json())
-        .then((data) => {
-          setLat(data?.features[0]?.center[0]);
-          setLong(data?.features[0]?.center[1]);
-        });
-    })();
-  }, [setLat, setLong, defaultLocation]);
-
   const selectChange = (event, val) => {
-    setDefaultLocation(val);
+    setServicesNearMe(val);
   };
 
   const getCurrentLocation = () => {
@@ -88,7 +74,6 @@ const Header = ({ device }) => {
     }
   };
 
-  console.log("defaultLocation", defaultLocation);
   return (
     <Grid item className="header-container" xs={12}>
       <Grid container className="header">
