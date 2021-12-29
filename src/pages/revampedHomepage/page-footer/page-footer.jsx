@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import {Grid} from '@material-ui/core';
 
 // images
@@ -11,8 +11,13 @@ import youtubeIcon from "../../../images/assets/img/icons/socialmedia/youtube.sv
 
 // styles
 import "./page-footer-styles.scss";
+import TermsConditions from "../../../components/modal/termsConditions";
+
 
 const PageFooter =() => {
+
+    const [open, setOpen] = useState(false);
+
 return (
     <Grid className="page-footer-container">
         <Grid container xs={12} spacing={3}>
@@ -32,12 +37,13 @@ return (
                     <a href="https://www.youtube.com/channel/UC7rSwsw7lqxQ4477gzlyAOg"><img src={youtubeIcon} alt="youtube" /></a>
                 </div>
                 <p>
-                   <a href="#" className="offset-margin-right-10">Terms & Conditions</a>
-                   <a href="#">Privacy Policy</a>
+                   <p className="offset-margin-right-10 cursor-pointer" onClick={() => setOpen(true)}>Terms & Conditions</p>
                 </p>
                 <p>
                     Copyright © 2021 BRN Technologies - All Rights Reserved.
                 </p>
+
+                <TermsConditions modalOpen={open} onCloseButton={() => setOpen(false)} />
             </Grid>
         </Grid>
     </Grid>
