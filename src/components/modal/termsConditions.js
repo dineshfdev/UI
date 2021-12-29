@@ -1,0 +1,178 @@
+import React from "react";
+import { withStyles } from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
+import Dialog from "@material-ui/core/Dialog";
+import MuiDialogTitle from "@material-ui/core/DialogTitle";
+import MuiDialogContent from "@material-ui/core/DialogContent";
+import MuiDialogActions from "@material-ui/core/DialogActions";
+import IconButton from "@material-ui/core/IconButton";
+import CloseIcon from "@material-ui/icons/Close";
+import Typography from "@material-ui/core/Typography";
+
+import "./modal.scss";
+
+const styles = (theme) => ({
+  root: {
+    margin: 0,
+    padding: theme.spacing(2),
+  },
+  closeButton: {
+    position: "absolute",
+    right: theme.spacing(1),
+    top: theme.spacing(1),
+    color: theme.palette.grey[500],
+  },
+});
+
+const DialogTitle = withStyles(styles)((props) => {
+  const { children, classes, onClose, ...other } = props;
+  return (
+    <MuiDialogTitle disableTypography className={classes.root} {...other}>
+      <Typography variant="h6">{children}</Typography>
+      {onClose ? (
+        <IconButton
+          aria-label="close"
+          className={classes.closeButton}
+          onClick={onClose}
+        >
+          <CloseIcon />
+        </IconButton>
+      ) : null}
+    </MuiDialogTitle>
+  );
+});
+
+const DialogContent = withStyles((theme) => ({
+  root: {
+    padding: theme.spacing(2),
+  },
+}))(MuiDialogContent);
+
+const DialogActions = withStyles((theme) => ({
+  root: {
+    margin: 0,
+    padding: theme.spacing(1),
+  },
+}))(MuiDialogActions);
+
+export default function TermsConditions(props) {
+  const { modalOpen, onCloseButton } = props;
+
+  return (
+    <Dialog
+      onClose={onCloseButton}
+      aria-labelledby="customized-dialog-title"
+      open={modalOpen}
+    >
+      <DialogTitle id="customized-dialog-title" onClose={onCloseButton}>
+        TERMS AND CONDITIONS
+      </DialogTitle>
+      <DialogContent dividers>
+        ​
+        <p>
+          Service Geni provides access to the https://servicegeni.in/ website.
+          These Terms of Use account for a legal agreement between users and the
+          Website.
+        </p>
+        ​
+        <p>
+          With the focus on these Terms of Use, wherever the context so requires
+          "You", “Your” or "User" shall mean any legal person who is a user/
+          visitor of the Website benefiting the services, purchasing products,
+          and seeking information and/ or who has agreed to become a user on the
+          Website by providing registration data during registering on the
+          Website as Registered User using the digital platforms. Service Geni
+          enables the User to surf the Website or make purchases without
+          registering on the Website. The term "Our", "We", "Us", shall refer to
+          Service Geni. When You use any of the services offered by Us through
+          the Website such as booking the services, purchasing products, seeking
+          information, selling and buying any vehicles, leaving service reviews,
+          service provider reviews, posting question and answers, and related
+          content on the Service Geni page, You will be subject to the rules,
+          guidelines, policies, terms, and conditions related to such Services,
+          and they shall abide by these Terms of Use.
+        </p>
+        <p>
+          We reserve the right, at Our sole judgment, to change, modify, add or
+          remove portions of these Terms of Use, at any point of time without
+          any prior notice. It is Your responsibility to review these Terms of
+          Use regularly for updates/changes. Users making a booking on the
+          Website shall be referred to as the “car owner” and Users providing
+          their services by listing them on the Website shall be referred to as
+          the “garage owner”.
+        </p>
+        ​
+        <p>
+          You will be asked to provide certain information about yourself
+          including your name, contact details, and vehicle information. You
+          should ensure that the information furnished by you is correct,
+          complete, and not misleading. You should also inform us promptly of
+          any changes to the data that you have provided, by updating your
+          details, so we can deliver and provide you the services efficiently.
+        </p>
+        ​
+        <p>
+          We will make several services available to you free of charge. The
+          services will include the ability to search Service providers for
+          automotive repair to perform for your vehicle, The ability to view a
+          detailed profile of Garages / Car Service providers and their services
+          prices and rating data, and the ability to post feedback and ratings
+          concerning any Service provider you have used as a result of your use.
+          We do not interfere with the services provided and bills generated by
+          the garages listed in our website, however, you are welcome to provide
+          a rating and review for the garage where you availed of car service
+          through our scheduling system.
+        </p>
+        <p>
+          It is important to remember that comments posted to our public
+          sections /forum may be recorded on our Website. It is hence important
+          that You are thoughtful and judicious about the personal information
+          that You may reveal about Yourself and others, and in particular, You
+          must not reveal sensitive, proprietary or classified information in
+          Your comments to our public sections/forums.
+        </p>
+        <p>
+          If You are making online payments of any kind, You signify and warrant
+          that (a) any credit card, debit card, and bank account data You
+          provide is true, accurate, and comprehensive, (b) the card was issued
+          in Your name and charges incurred by You will be accepted by Your
+          credit/debit card organization or bank. You shall be solely liable for
+          compliance with all relevant laws for making payments to Service Geni.
+        </p>
+        <p>
+          ​ ACCESSING, BROWSING, OR USING THE SITE MEANS YOUR ACCEPTANCE OF ALL
+          THE TERMS AND CONDITIONS UNDER THESE TERMS OF USE, SO PLEASE
+          UNDERSTAND THE TERMS OF USE THOROUGHLY BEFORE PROCEEDING.
+        </p>
+        <h5> PRIVACY POLICY</h5>
+        <p>
+          If you accept to avail of our Service, then you consent to the
+          collection and use of data concerning this policy. The Personal Data
+          that we collect is used for rendering and improving the Service. We
+          will not use or share your data with anyone. Cookies are a little part
+          of data stored by a web server on a web browser so it can be
+          translated back from that browser for succeeding logins. Service Geni
+          uses cookie and capturing technology depending on the features given.
+          No personal data will be obtained via cookies and other capturing
+          technology.
+        </p>
+        <p>
+          We give our permission to get transactional communications from
+          Service Geni over the WhatsApp channel on booking order through the
+          website. ​
+        </p>
+        <h5>REFUNDS AND CANCELLATION POLICY</h5>
+        <p>
+          The items currently listed are not qualified for a return. The Website
+          will not issue refunds for products bought through other entities,
+          such as distributors or retail partners.
+        </p>
+      </DialogContent>
+      <DialogActions>
+        <Button onClick={onCloseButton} className="modal-button">
+          close
+        </Button>
+      </DialogActions>
+    </Dialog>
+  );
+}
