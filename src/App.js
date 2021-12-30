@@ -2,7 +2,7 @@ import "./App.scss";
 import React, { useState, useEffect } from "react";
 import { Route, withRouter } from "react-router-dom";
 import "./App.scss";
-import withClearCache from "./ClearCache";
+// import withClearCache from "./ClearCache";
 // commenting homepage for temporary purpose
 // import Homepage from "./components/homePage/homePage.component";
 import SearchPage from "./pages/searchPage/searchPage.component";

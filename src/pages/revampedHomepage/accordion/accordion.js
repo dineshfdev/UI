@@ -48,7 +48,7 @@ function Accordion({ device }) {
   };
 
   const renderAccordionContent = () => {
-    const { content, title, image, alt, readMore } = AccordionData[selected];
+    const { content, image, alt, readMore } = AccordionData[selected];
     return (
       <div className="accordion-content-wrapper">
         <div className="accordion-content__container">

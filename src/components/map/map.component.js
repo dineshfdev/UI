@@ -11,11 +11,7 @@ const mapStyles = {
   overflow: "hidden",
 };
 
-const config = {
-  SECRET_KEY: "AIzaSyDBhrZsd9SRO27aS8D69MNn2kJ1zsaXdUM",
-};
-
-const secretkey = config.SECRET_KEY;
+const { REACT_APP_GOOGLE_MAPS_TOKEN } = process.env;
 
 export class MapContainer extends Component {
   constructor(props) {
@@ -151,5 +147,5 @@ export class MapContainer extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: secretkey,
+  apiKey: REACT_APP_GOOGLE_MAPS_TOKEN,
 })(MapContainer);

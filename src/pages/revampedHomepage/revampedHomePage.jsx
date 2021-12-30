@@ -23,6 +23,8 @@ import './styles/mixins.scss';
 
 const RevampHomePage = ({device}) => {
 
+  const {REACT_APP_MAPBOX_ACCESS_TOKEN} =process.env;
+
   // set latitude longitude and default location from context
   const { lat,long,setLat, setLong,setDefaultLocation,servicesNearme } =
     useContext(LatLongContext);
@@ -42,7 +44,7 @@ const RevampHomePage = ({device}) => {
       if(servicesNearme){
       (async () => {
         await fetch(
-          `https://api.mapbox.com/geocoding/v5/mapbox.places/${servicesNearme}.json?access_token=pk.eyJ1Ijoic2VydmljZWdlbmkiLCJhIjoiY2t3cTFqZ3AwMDF2cTJ2bngwMjJybHJpdSJ9.To44yXt9LxoCUi0lk7q77A`
+          `https://api.mapbox.com/geocoding/v5/mapbox.places/${servicesNearme}.json?access_token=${REACT_APP_MAPBOX_ACCESS_TOKEN}`
         )
           .then((response) => response.json())
           .then((data) => {
@@ -51,21 +53,21 @@ const RevampHomePage = ({device}) => {
           });
       })();
     }
-    }, [setLat, setLong, servicesNearme]);
+    }, [setLat, setLong, servicesNearme,REACT_APP_MAPBOX_ACCESS_TOKEN]);
 
 
       // get latest location latidue and longitude
       useEffect(() => {
         (async () => {
           await fetch(
-            `https://api.mapbox.com/geocoding/v5/mapbox.places/${lat},${long}.json?access_token=pk.eyJ1Ijoic2VydmljZWdlbmkiLCJhIjoiY2t3cTFqZ3AwMDF2cTJ2bngwMjJybHJpdSJ9.To44yXt9LxoCUi0lk7q77A`
+            `https://api.mapbox.com/geocoding/v5/mapbox.places/${lat},${long}.json?access_token=${REACT_APP_MAPBOX_ACCESS_TOKEN}`
           )
             .then((response) => response.json())
             .then((data) => {
               setDefaultLocation(data?.features[0]?.place_name);
             });
         })();
-      }, [long, lat, setDefaultLocation]);
+      }, [long, lat, setDefaultLocation,REACT_APP_MAPBOX_ACCESS_TOKEN]);
 
 
   return (
