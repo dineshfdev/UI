@@ -57,7 +57,6 @@ const DialogActions = withStyles((theme) => ({
 
 export default function TermsConditions(props) {
   const { modalOpen, onCloseButton } = props;
-
   return (
     <Dialog
       onClose={onCloseButton}

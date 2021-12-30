@@ -84,17 +84,26 @@ const Header = ({ device }) => {
         <Grid item xs={12} md={4} className={classForContainer}>
           <ul className="header-list">
             <li>
-              <a className="header-content-left-menu-item__link" href="#">
+              <a
+                className="header-content-left-menu-item__link"
+                href="https://service-geni.in/"
+              >
                 Find a Mechanic
               </a>
             </li>
             <li>
-              <a className="header-content-left-menu-item__link" href="#">
+              <a
+                className="header-content-left-menu-item__link"
+                href="https://www.servicegeni.in/doorstep-services"
+              >
                 Doorstep services
               </a>
             </li>
             <li>
-              <a className="header-content-left-menu-item__link" href="#">
+              <a
+                className="header-content-left-menu-item__link"
+                href="https://www.servicegeni.in/ecu"
+              >
                 ECU Coding
               </a>
             </li>

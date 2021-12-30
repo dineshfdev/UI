@@ -36,11 +36,9 @@ import {
 //Icon
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkedAlt } from "@fortawesome/free-solid-svg-icons";
-import NearMeIcon from "@material-ui/icons/NearMe";
 
 // style
 import "./detailsPage.styles.scss";
-import MobileDetailsPage from "./detailsPage.mobile.component";
 import VerifiedTile from "../../components/common/verified.title";
 import BackToSearchButton from "../../components/backtosearch/backtosearch";
 import Loader from "../../components/loader/loader";
