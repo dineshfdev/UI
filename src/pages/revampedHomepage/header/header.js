@@ -1,5 +1,14 @@
 import React, { useEffect, useContext } from "react";
-import { Grid, makeStyles, TextField } from "@material-ui/core";
+import {
+  AppBar,
+  Button,
+  Grid,
+  IconButton,
+  makeStyles,
+  TextField,
+  Toolbar,
+  Typography,
+} from "@material-ui/core";
 import LinkWithIcon from "../linkwithicon/linkwithicon";
 import Logo from "../../../images/logo.png";
 import Autocomplete from "@material-ui/lab/Autocomplete";
@@ -75,89 +84,53 @@ const Header = ({ device }) => {
   };
 
   return (
-    <Grid item className="header-container" xs={12}>
-      <Grid container className="header">
-        <PersistentDrawerRight device={breakpoint} />
-        <Grid item xs={3} className="logo">
-          <img src={Logo} alt="logo" />
-        </Grid>
-        <Grid item xs={12} md={4} className={classForContainer}>
-          <ul className="header-list">
-            <li>
-              <a
-                className="header-content-left-menu-item__link"
-                href="https://service-geni.in/"
-              >
-                Find a Mechanic
-              </a>
-            </li>
-            <li>
-              <a
-                className="header-content-left-menu-item__link"
-                href="https://www.servicegeni.in/doorstep-services"
-              >
-                Doorstep services
-              </a>
-            </li>
-            <li>
-              <a
-                className="header-content-left-menu-item__link"
-                href="https://www.servicegeni.in/ecu"
-              >
-                ECU Coding
-              </a>
-            </li>
-          </ul>
-        </Grid>
-        <Grid item xs={12} md={5} className={classForContainer}>
-          <div className="link-icon-container">
-            {/* commented for future use*/}
-            {/* <LinkWithIcon icon={SearchIcon} text="Search" link="#" alt="search" /> */}
-            <LinkWithIcon icon={HelpIcon} text="Help" link="#" alt="help" />
-            {/* <LinkWithIcon icon={LoginIcon} text="Help" link="#" alt="Help" />
+    <AppBar position="static" className="header-container">
+      <Toolbar>
+        <Grid container className="header">
+          <PersistentDrawerRight device={breakpoint} />
+          <Grid item xs={3} className="logo">
+            <img src={Logo} alt="logo" />
+          </Grid>
+          <Grid item xs={12} md={4} className={classForContainer}>
+            {/* <ul className="header-list">
+              <li>
+                <a
+                  className="header-content-left-menu-item__link"
+                  href="https://service-geni.in/"
+                >
+                  Find a Mechanic
+                </a>
+              </li>
+              <li>
+                <a
+                  className="header-content-left-menu-item__link"
+                  href="https://www.servicegeni.in/doorstep-services"
+                >
+                  Doorstep services
+                </a>
+              </li>
+              <li>
+                <a
+                  className="header-content-left-menu-item__link"
+                  href="https://www.servicegeni.in/ecu"
+                >
+                  ECU Coding
+                </a>
+              </li>
+            </ul> */}
+          </Grid>
+          <Grid item xs={12} md={5} className={classForContainer}>
+            <div className="link-icon-container">
+              {/* commented for future use*/}
+              {/* <LinkWithIcon icon={SearchIcon} text="Search" link="#" alt="search" /> */}
+              <LinkWithIcon icon={HelpIcon} text="Help" link="#" alt="help" />
+              {/* <LinkWithIcon icon={LoginIcon} text="Help" link="#" alt="Help" />
           <LinkWithIcon icon={CartIcon} text="Cart" link="#" alt="cart" /> */}
-          </div>
+            </div>
+          </Grid>
         </Grid>
-      </Grid>
-      <Grid container item xs={12} className="header-location-container">
-        <div>
-          <img src={location} alt="location" />
-          We serve chennai alone
-        </div>
-        <div>
-          <Autocomplete
-            id="garage-select"
-            style={{ width: 300 }}
-            options={options}
-            autoHighlight
-            getOptionLabel={(option) => (option ? option : "")}
-            onChange={selectChange}
-            onOpen={() => {
-              setOpen(true);
-            }}
-            onClose={() => {
-              setOpen(false);
-            }}
-            renderOption={(option) => <React.Fragment>{option}</React.Fragment>}
-            renderInput={(params) => (
-              <TextField
-                {...params}
-                label="Choose Location"
-                variant="outlined"
-                inputProps={{
-                  ...params.inputProps,
-                }}
-                classes={{ root: classes.autoCompleteTextFields }}
-              />
-            )}
-          />
-        </div>
-        <img src={locationTracker} alt="current location" />
-        <div className="header-current-location" onClick={getCurrentLocation}>
-          Use My Current Location
-        </div>
-      </Grid>
-    </Grid>
+      </Toolbar>
+    </AppBar>
   );
 };
 

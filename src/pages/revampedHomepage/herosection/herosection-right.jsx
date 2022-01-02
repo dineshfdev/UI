@@ -1,10 +1,34 @@
-import React from 'react';
+import React,{useState} from 'react';
 import heroStar from '../../../images/assets/img/icons/global/hero-star.svg';
 import CustomizedSelect from '../select/select';
 
 import './herosection-right.styles.scss';
 
 function HeroSectionRight() {
+  const [optionValue,setOptionValue] = useState();
+  const redirect = (e) =>{
+    e.preventDefault();
+    switch (optionValue) {
+      case 'general':
+        window.location.href='https://www.servicegeni.in/car-wash-near-me';
+        break;
+      case 'breakdown':
+        window.location.href='https://www.servicegeni.in/car-emergency';
+        break;
+      case 'periodic':
+        window.location.href='https://www.servicegeni.in/car-service';
+        break;
+      case 'inspection':
+        window.location.href='https://www.servicegeni.in/car-service';
+        break;
+      default:
+        window.location.href='https://www.servicegeni.in/car-wash-near-me';
+        break;
+    }
+    
+  }
+
+  console.log('optionValue',optionValue);
   return (
     <div className="hero-section-right">
       <div className="hero-section-right__content">
@@ -19,17 +43,16 @@ function HeroSectionRight() {
           <div className="door-step-menu">
           <CustomizedSelect
             options={[
-              { menu: 'General Services/ Other Services', value: 'general' },
-              { menu: 'OMBT Services', value: 'ombt' },
+              { menu: 'Car Wash', value: 'general' },
+              { menu: 'Breakdown Assistance', value: 'breakdown' },
+              { menu: 'Periodic Services', value: 'periodic' },
+              { menu: 'Car Inspection', value: 'inspection' },
             ]}
-            handleChange={() => {}}
+            handleChange={value => setOptionValue(value)}
             defaultValue="general"
           />
           </div>
-          <button className="hero-section-right__button" onClick={(e) => {
-      e.preventDefault();
-      window.location.href='https://www.servicegeni.in/doorstep';
-      }}>BOOK NOW</button>
+          <button className="hero-section-right__button" onClick={(e) => redirect(e)}>BOOK NOW</button>
         </div>
       </div>
     </div>

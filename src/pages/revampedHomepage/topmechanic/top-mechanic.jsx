@@ -19,10 +19,13 @@ const CarouselItemMechanic = () => {
     const [data, setData] = useState([]);
     const { lat, long, defaultLocation,servicesNearMe } =
     useContext(LatLongContext);
+
     useEffect(() => {
-    getTopGaragesNearLocation(long,lat)
-      .then((res) => setData(res.data))
-      .catch((error) => error.message);
+      if(lat && long){
+        getTopGaragesNearLocation(long,lat)
+        .then((res) => setData(res.data))
+        .catch((error) => error.message);
+      }
     }, [lat,long]);
 
       const [breakPoints] = useState([
@@ -38,13 +41,14 @@ const CarouselItemMechanic = () => {
         <Grid item xs={12} className="items-accessories-container">
              <h3 className="title">Top Rated Mechanics</h3>
              <h4 className="item-subheader"><img src={locationIcon} alt="location" /> <span>{servicesNearMe ? servicesNearMe : defaultLocation}</span></h4>
+        {data.length ? 
         <Carousel breakPoints={breakPoints} 
         transitionMs={700}
         pagination={false}
         className="carousel-container"
         >
             {data.map(x=>
-                <div className="mechanic-carousel__item" key={x.garageTitle}>
+                <div className="mechanic-carousel__item same-height" key={x.garageTitle}>
                 {x.garageImage === "" ? (
                   <img src="http://via.placeholder.com/400x200" alt="garage" className="mechanic-carousel__item-image" />
                 ) : (
@@ -115,6 +119,8 @@ const CarouselItemMechanic = () => {
                 </div>
               </div>)}
       </Carousel>
+      : <div>No service centre found</div>
+}
       </Grid>
 
       

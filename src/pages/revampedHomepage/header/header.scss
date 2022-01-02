@@ -2,9 +2,11 @@
 
 // align left container and right container using grid
 .header-container {
-  padding: 15px 40px !important;
-  border-bottom: 1px solid #e6e6e6;
+  padding: 0 40px !important;
   font-family: LatoBold;
+  background-color: #fff !important;
+  color: #555 !important;
+  margin-bottom: 20px;
 }
 .header {
   .logo {

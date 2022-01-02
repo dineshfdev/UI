@@ -34,7 +34,7 @@
     display: flex;
     grid-auto-flow: column;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 50px;
     padding-left: 40px;
     padding-right: 40px;
     width: 100%;
@@ -44,6 +44,11 @@
 
   &__button {
     @include button-style(#ff8400, #ffa748);
+  }
+  .door-step-menu {
+    &.MuiSelect-select:focus {
+      background-color: inherit;
+    }
   }
 }
 

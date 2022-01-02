@@ -61,7 +61,7 @@ return (
                 </ul>
             </Grid>
             <Grid item xs={12} md={5}>
-                <h5 className="footer-header">Popular Areas We Serve At Chennai</h5>
+                <h5 className="footer-header">Our Service Partner are all across the city, check now</h5>
                 <Grid container xs={12}>
                     <ul className="footer-list-container footer-list-location">
                         {locationData.map(x =><li key={x} onClick={() => onLocationClick(x)}>{x}</li> )}
