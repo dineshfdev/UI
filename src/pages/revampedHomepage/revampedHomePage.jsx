@@ -14,6 +14,7 @@ import PageFooter from "./page-footer/page-footer";
 import CarouselItemMechanic  from './topmechanic/top-mechanic';
 import Accordion from './accordion/accordion';
 import Accessories from './accessories/accessories';
+import HeaderSearch from "./headerSearch/headerSearch";
 
 // context
 import { LatLongContext } from "../../../src/context/latLongContext";
@@ -29,13 +30,22 @@ const RevampHomePage = ({device}) => {
   const { lat,long,setLat, setLong,setDefaultLocation,servicesNearme } =
     useContext(LatLongContext);
 
+  // reversing the lat long values according to service future we have to change in service
   useEffect(() => {
-    if (navigator.geolocation) {
-      navigator.geolocation.watchPosition((position) => {
-        setLat(position.coords.latitude);
-        setLong(position.coords.longitude);
-      });
-    }
+    (async () => {
+      const permissionStatus = await navigator?.permissions?.query({name: 'geolocation'})
+      if(permissionStatus.state ==="granted"){
+        navigator.geolocation.getCurrentPosition((position) => {
+          setLat(position.coords.longitude);
+          setLong(position.coords.latitude);
+        });
+      }
+      else{
+            setLat("80.270718");
+            setLong("13.082680") 
+      }
+    })();
+
   }, [setLat,setLong]);
 
 
@@ -73,6 +83,7 @@ const RevampHomePage = ({device}) => {
   return (
       <Grid container>
          <Header device={device} />
+         <HeaderSearch device={device} />
          <HeroSectionWrapper />
          <DoorStepServices/>
          <Accordion device={device} />

@@ -23,6 +23,7 @@
   &__item {
     width: 90%;
     margin-bottom: 20px;
+    min-height: 500px;
     @include box-shadow;
 
     &-content {
@@ -171,6 +172,8 @@
 
 .carousel-container {
   margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 768px) {

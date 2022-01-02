@@ -13,18 +13,18 @@ const OurTeam =() => {
 return (
     <Grid className="our-team-container">
         <Grid container xs={12} spacing={3}>
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12} md={8}>
                 <h4 className="team-header">
                      Our Team would love to help you!
                 </h4>
             </Grid>
-            <Grid item xs={12} md={6} className="contact-right-section">
+            <Grid item xs={12} md={4} className="contact-right-section">
                 <div className="contacts-container">
                <div>
                    <span><img src={phone} alt="phone" />+91 9361 040506 </span> 
                    <span><img src={mail} alt="mail" />care@servicegeni.in</span> 
                 </div>
-                <button className="hero-section-right__button book-now">BOOK NOW</button>
+                <button className="hero-section-right__button book-now">CHAT NOW</button>
                 </div>
             </Grid>
         </Grid>

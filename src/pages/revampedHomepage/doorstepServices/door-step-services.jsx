@@ -14,7 +14,7 @@ import jumpstartService from "../../../images/assets/img/services/jumpstart-serv
 const DoorStepServices = () =>{
     return(
         <Grid item className="doorstep-services-container" xs={12} >
-            <h3 className="title">Popular Doorstep Services</h3>
+            <h3 className="title">Need services to be done at your place</h3>
             <Grid container>
                     <Grid container item xs={12} md={8}>
                         <div>For your convenience, we also provide handpicked car maintenance services right at your home or work premises.</div>
@@ -125,6 +125,7 @@ const DoorStepServices = () =>{
                                 </CardActions>
                         </Card>
                 </Grid>
+                
                 
             </Grid>
             </div>
