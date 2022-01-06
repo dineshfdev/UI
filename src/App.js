@@ -1,4 +1,3 @@
-import "./App.scss";
 import React, { useState, useEffect } from "react";
 import { Route, withRouter } from "react-router-dom";
 import "./App.scss";
@@ -9,8 +8,6 @@ import SearchPage from "./pages/searchPage/searchPage.component";
 import LocationList from "./pages/locationList/locationList.component";
 
 // component
-import Footer from "../src/components/footer/footer.component";
-import FancyHeaderComponent from "./components/fancyheader/fancyheader.component";
 import useDevice from "./customHooks/findDevice/useDevice";
 import AddNewGarage from "./pages/AddNewGarage/addnewgarage";
 import DetailPageLoadableComponent from "./pages/detailsPage";
