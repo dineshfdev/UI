@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 // import FindAMechImage from '../../../images/assets/img/brand/find a mechanic.png';
 import './herosection-left.styles.scss';
 
@@ -8,11 +9,8 @@ function HeroSection() {
       <div className="hero-section-left__content">
         <p className="hero-section-left__title">Find a Mechanic Near me </p>
         <p className="hero-section-left__sub-title">*FREE to search mechanics </p>
-        <button className="hero-section-left__button" onClick={(e) => {
-      e.preventDefault();
-      window.location.href='https://service-geni.in/';
-      }}
-      >Find now</button>
+        <button className="hero-section-left__button"><Link to="/search">Find Now</Link>
+      </button>
       </div>
     </div>
   );

@@ -30,6 +30,10 @@
     @include button-style(#ff8400, #ffa748);
     margin-left: 40px;
   }
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
 }
 
 @media screen and (max-width: 768px) {

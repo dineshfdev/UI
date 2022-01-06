@@ -2,7 +2,6 @@ import React,{useEffect,useContext} from 'react';
 import {Grid} from "@material-ui/core";
 
 // Components
-import Header from './header/header';
 import { HeroSectionWrapper } from './herosection';
 import DoorStepServices from './doorstepServices/door-step-services';
 import UpdatedPackages from './updatedpackages/updated-packages';
@@ -10,7 +9,6 @@ import CarServices from './carservices/car-services';
 import Testimonial from './testimonial/testimonial';
 import OurTeam from './ourteam/our-team';
 import Footer from './footer/footer';
-import PageFooter from "./page-footer/page-footer";
 import CarouselItemMechanic  from './topmechanic/top-mechanic';
 import Accordion from './accordion/accordion';
 import Accessories from './accessories/accessories';
@@ -82,7 +80,6 @@ const RevampHomePage = ({device}) => {
 
   return (
       <Grid container>
-         <Header device={device} />
          <HeaderSearch device={device} />
          <HeroSectionWrapper />
          <DoorStepServices/>
@@ -94,7 +91,6 @@ const RevampHomePage = ({device}) => {
          <Testimonial />
          <OurTeam />
          <Footer />
-         <PageFooter />
       </Grid>
   );
 }
