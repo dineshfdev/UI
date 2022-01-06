@@ -23,7 +23,7 @@ function BackToSearchButton({ renderedIn }) {
         variant="contained"
         className="cursor-pointer back-search__button back-search__button--brand-button"
         color="primary"
-        href="/"
+        href="/search"
       >
         Back to search
       </Link>

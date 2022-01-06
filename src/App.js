@@ -17,9 +17,11 @@ import DetailPageLoadableComponent from "./pages/detailsPage";
 // import LandscapeScreen from './components/landscapeScreen/landscapeScreen';
 import useGaTracker from "./useGaTracker";
 import RevampHomePage from "./pages/revampedHomepage/revampedHomePage";
+import Header from "./pages/revampedHomepage/header/header";
 
 // context
 import { LatLongContext } from "./context/latLongContext";
+import PageFooter from "./pages/revampedHomepage/page-footer/page-footer";
 
 const App = () => {
   const [isNewHome, setIsNewHome] = useState();
@@ -53,12 +55,31 @@ const App = () => {
     <>
       {!isNewHome && (
         <div className="grid-container">
-          <FancyHeaderComponent device={device} />
+          <Header device={device} />
           <main>
-            {/* <Route exact path="/" render={(props) => <Homepage {...props} />} /> */}
             <Route
               exact
               path="/"
+              render={(props) => (
+                <LatLongContext.Provider
+                  value={{
+                    lat,
+                    setLat,
+                    long,
+                    setLong,
+                    defaultLocation,
+                    setDefaultLocation,
+                    servicesNearme,
+                    setServicesNearMe,
+                  }}
+                >
+                  <RevampHomePage {...props} device={device} />
+                </LatLongContext.Provider>
+              )}
+            />
+            <Route
+              exact
+              path="/search"
               render={(props) => <SearchPage {...props} />}
             />
             <Route
@@ -79,29 +100,9 @@ const App = () => {
               render={(props) => <AddNewGarage {...props} device={device} />}
             />
           </main>
-          <Footer path={window.location.pathname} />
+          <PageFooter />
         </div>
       )}
-      <Route
-        exact
-        path="/new-home"
-        render={(props) => (
-          <LatLongContext.Provider
-            value={{
-              lat,
-              setLat,
-              long,
-              setLong,
-              defaultLocation,
-              setDefaultLocation,
-              servicesNearme,
-              setServicesNearMe,
-            }}
-          >
-            <RevampHomePage {...props} device={device} />
-          </LatLongContext.Provider>
-        )}
-      />
     </>
   );
 };
