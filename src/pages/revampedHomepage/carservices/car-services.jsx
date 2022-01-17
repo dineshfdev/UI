@@ -14,13 +14,11 @@ import WindShield from '../../../images/assets/img/carservices/windshield.png';
 
 const CarServices = () => {
     return(<Grid className="car-container" xs={12}>
-        <Grid container>
-            <Grid container item xs={12} md={8}>
-                <h3 className="title">Popular Car Services</h3>
-            </Grid>
-            <Grid container item xs={12} md={4} justify="flex-end">
-                <div>View All Services</div>
-            </Grid>
+        <Grid container item xs={12} md={12}>
+            <div className="services-header-container">
+                <h3 className="title item">Popular Car Services</h3>
+                <div className="item content-right"><a className="services-link" href="#">View all Services</a></div>
+            </div>
         </Grid>
         <Grid container item spacing={3} xs={12} className="car-container-inner" >
                 <Grid items xs={6} md={2}>

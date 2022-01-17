@@ -8,11 +8,11 @@ import './herosection-wrapper.styles.scss';
 function HeroSectionWrapper() {
   return (
     <Grid container className="hero-section-wrapper" justifycontent="center"
-    alignItems="center">
-      <Grid item xs={12} md={6}>
+    alignItems="center" spacing={2}>
+      <Grid item xs={6} md={6}>
         <HeroSectionLeft />
       </Grid>
-      <Grid item xs={12} md={6}>
+      <Grid item xs={6} md={6}>
         <HeroSectionRight />
       </Grid>
     </Grid>

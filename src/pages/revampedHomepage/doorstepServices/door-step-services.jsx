@@ -14,19 +14,19 @@ import jumpstartService from "../../../images/assets/img/services/jumpstart-serv
 const DoorStepServices = () =>{
     return(
         <Grid item className="doorstep-services-container" xs={12} >
-            <h3 className="title">Need services to be done at your place</h3>
+            <h3 className="title">Need services at your place</h3>
             <Grid container>
                     <Grid container item xs={12} md={8}>
-                        <div>For your convenience, we also provide handpicked car maintenance services right at your home or work premises.</div>
+                        <div>For your convenience, we also provide handpicked car maintenance services right at your Doorstep.</div>
                     </Grid>
                     <Grid container item xs={12} md={4} className="card-accessories-button">
-                        <a className="services-link" href="https://www.servicegeni.in/doorstep">View All Services </a>
+                        <a className="services-link" href="https://www.servicegeni.in/doorstep">View all Services </a>
                     </Grid>
             </Grid>
             <div style={{ padding: "20px 0" }}>
             <Grid container spacing={3}>
                 <Grid item xs={6} md={3}>
-                        <Card>
+                        <Card className="card-container">
                                 <CardActionArea>
                                 <img src={generalService} alt={generalService} style={{width: "100%"}} />
                                 <CardContent>
@@ -43,7 +43,10 @@ const DoorStepServices = () =>{
                                 <CardActions>
                                 <Button size="small" color="primary" className="card-button" onClick={e => {
       e.preventDefault();
-      window.location.href='https://www.servicegeni.in/doorstep';
+      window.open(
+        'https://www.servicegeni.in/doorstep',
+        '_blank' 
+      );
       }}>
                                     Book Now
                                 </Button>
@@ -51,7 +54,7 @@ const DoorStepServices = () =>{
                         </Card>
                 </Grid>
                 <Grid item xs={6} md={3}>
-                        <Card>
+                        <Card className="card-container">
                                 <CardActionArea>
                                 <img src={expressService} alt={expressService} style={{width: "100%"}} />
                                 <CardContent>
@@ -68,7 +71,10 @@ const DoorStepServices = () =>{
                                 <CardActions>
                                 <Button size="small" color="primary" className="card-button" onClick={e => {
       e.preventDefault();
-      window.location.href='https://www.servicegeni.in/doorstep';
+      window.open(
+        'https://www.servicegeni.in/doorstep',
+        '_blank' 
+      );
       }}>
                                     Book Now
                                 </Button>
@@ -76,7 +82,7 @@ const DoorStepServices = () =>{
                         </Card>
                 </Grid>
                 <Grid item xs={6} md={3}>
-                <Card>
+                <Card className="card-container">
                                 <CardActionArea>
                                 <img src={inspectionService} alt={inspectionService} style={{width: "100%"}} />
                                 <CardContent>
@@ -93,7 +99,10 @@ const DoorStepServices = () =>{
                                 <CardActions>
                                 <Button size="small" color="primary" className="card-button" onClick={e => {
       e.preventDefault();
-      window.location.href='https://www.servicegeni.in/doorstep';
+      window.open(
+        'https://www.servicegeni.in/doorstep',
+        '_blank' 
+      );
       }}>
                                     Book Now
                                 </Button>
@@ -101,7 +110,7 @@ const DoorStepServices = () =>{
                         </Card>
                 </Grid>
                 <Grid item xs={6} md={3}>
-                <Card>
+                <Card className="card-container">
                                 <CardActionArea>
                                 <img src={jumpstartService} alt={jumpstartService} style={{width: "100%"}} />
                                 <CardContent>
@@ -118,7 +127,10 @@ const DoorStepServices = () =>{
                                 <CardActions>
                                 <Button size="small" color="primary" className="card-button" onClick={e => {
       e.preventDefault();
-      window.location.href='https://www.servicegeni.in/doorstep';
+      window.open(
+        'https://www.servicegeni.in/doorstep',
+        '_blank' 
+      );
       }}>
                                     Book Now
                                 </Button>

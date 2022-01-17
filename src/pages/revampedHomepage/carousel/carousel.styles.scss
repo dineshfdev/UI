@@ -164,6 +164,8 @@
   }
 }
 .item-subheader {
+  line-height: 30px;
+  font-family: LatoRegular;
   img {
     vertical-align: middle;
     margin-right: 10px;
@@ -183,5 +185,11 @@
   .mechanic-carousel__item-last-child,
   .accessories-carousel__item-last-child {
     display: inherit !important;
+  }
+  .mechanic-carousel,
+  .accessories-carousel {
+    &__item {
+      min-height: auto;
+    }
   }
 }

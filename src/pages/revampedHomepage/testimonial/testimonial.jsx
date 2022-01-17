@@ -1,5 +1,6 @@
 import React from "react";
 import {Grid,Card,CardHeader,Avatar,CardContent,Typography} from '@material-ui/core';
+import PersonIcon from '@material-ui/icons/Person';
 
 // images
 import user1 from "../../../images/assets/img/testimonial/user1.png";
@@ -22,7 +23,7 @@ return (
                     <CardHeader
                         avatar={
                         <Avatar aria-label="recipe">
-                            <img src={user1} alt="user1" />
+                            <PersonIcon />
                         </Avatar>
                         }
                         title="Swetha Prabu"
@@ -40,7 +41,7 @@ return (
                     <CardHeader
                         avatar={
                         <Avatar aria-label="recipe">
-                            <img src={user1} alt="user1" />
+                            <PersonIcon />
                         </Avatar>
                         }
                         title="Jennifer Hamrita"

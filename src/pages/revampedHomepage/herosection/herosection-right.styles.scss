@@ -56,7 +56,7 @@
   .hero-section-right {
     margin-left: 0;
     margin-right: 0;
-    height: auto;
+    height: 200px;
     &__title {
       font-size: 18px;
     }
@@ -64,11 +64,15 @@
       flex-direction: column;
       margin-top: 10px;
     }
-    &__button {
-      margin: 20px 0;
-    }
     &__title {
-      height: auto !important;
+      padding: 0 20px;
+      width: 100%;
+    }
+    &__sub-title {
+      padding: 0 20px;
+    }
+    &__button {
+      margin-top: 10px;
     }
   }
   .door-step-menu {
