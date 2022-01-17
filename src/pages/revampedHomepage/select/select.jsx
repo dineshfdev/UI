@@ -56,6 +56,7 @@ export default function CustomizedSelect({
         value={value}
         onChange={onChange}
         input={<BootstrapInput />}
+        style={{width:300}}
       >
         {renderOptions()}
       </Select>

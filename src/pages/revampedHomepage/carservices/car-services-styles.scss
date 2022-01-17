@@ -24,3 +24,16 @@
   font-size: 16px;
   font-family: PoppinsSemiBold;
 }
+
+.services-header-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  .item {
+    flex-grow: 1;
+  }
+}
+.content-right {
+  justify-content: flex-end;
+  text-align: right;
+}

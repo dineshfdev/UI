@@ -2,7 +2,7 @@
 .our-team-container {
   background: #cd6a03;
   width: 100%;
-  padding: 30px;
+  padding: 0 30px;
   color: #fff;
 }
 .team-header {
@@ -31,12 +31,15 @@
 }
 
 @media screen and (max-width: 768px) {
+  .our-team-container {
+    padding: 0 5px;
+  }
   .contact-right-section {
     border: none !important;
   }
   .team-header {
-    font-size: 30px;
-    padding: 0 20px 0 30px;
+    font-size: 25px;
+    padding: 0 5px;
   }
   .contacts-container {
     padding: 10px;
