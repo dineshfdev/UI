@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid } from '@material-ui/core';
+import { Grid,Container } from '@material-ui/core';
 
 // styles
 import './updated-packages-styles.scss';
@@ -11,7 +11,10 @@ import packages from '../../../images/assets/img/icons/global/package.svg';
 import social from '../../../images/assets/img/icons/global/social.svg';
 
 const UpdatedPackages = () => {
-    return(<Grid className="updated-packages-container" xs={12} container>
+    return(
+        <Grid className="updated-packages-container" xs={12}>
+    <Container>
+        <Grid  xs={12} container>
         <Grid container xs={12} md={3} className="updated-packages-inner">
             <Grid item xs={3} md={12}>
                 <div className="packages-img">
@@ -88,7 +91,10 @@ const UpdatedPackages = () => {
                 </Grid>
                 </Grid>
         </Grid>
-    </Grid>)
+    </Grid>
+    </Container>
+    </Grid>
+    )
 
 };
 
