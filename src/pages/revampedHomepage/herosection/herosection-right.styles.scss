@@ -52,25 +52,25 @@
 
 @media screen and (max-width: 768px) {
   .hero-section-right {
-    margin-left: 0;
+    margin-left: 10px;
     margin-right: 0;
-    height: 200px;
+    height: 150px;
     &__title {
-      font-size: 18px;
+      font-size: 14px;
+      padding: 0 20px;
+      width: 100%;
     }
     &__cta-wrapper {
       flex-direction: column;
       margin-top: 10px;
     }
-    &__title {
-      padding: 0 20px;
-      width: 100%;
-    }
     &__sub-title {
       padding: 0 20px;
+      font-size: 12px;
     }
     &__button {
       margin-top: 10px;
+      font-size: 12px;
     }
   }
   .door-step-menu {

@@ -4,6 +4,10 @@
     @extend %title;
     line-height: 0;
   }
+  .doorstep-subtitle {
+    font-family: LatoRegular;
+    font-size: 16px;
+  }
   .card-header {
     font-family: PoppinsBold;
     font-size: 20px;
@@ -38,12 +42,28 @@
 @media screen and (max-width: 768px) {
   .doorstep-services-container {
     padding: 0 10px 10px;
+    .title {
+      font-size: 16px;
+    }
+    .doorstep-subtitle {
+      font-size: 12px;
+    }
+    .card-header {
+      font-size: 14px;
+    }
+    .card-price {
+      font-size: 13px;
+    }
+    .card-button {
+      font-size: 12px;
+    }
   }
+
   .card-accessories-button {
     justify-content: flex-start;
     margin-top: 10px !important;
   }
   .card-container {
-    min-height: 270px;
+    min-height: 220px;
   }
 }

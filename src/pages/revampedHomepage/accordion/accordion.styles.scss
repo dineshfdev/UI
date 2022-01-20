@@ -140,8 +140,9 @@
 }
 @media screen and (max-width: 768px) {
   .accordion {
+    margin-bottom: 20px;
     &__main-header {
-      padding-top: 25px;
+      padding: 0;
     }
   }
 }

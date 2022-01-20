@@ -135,8 +135,15 @@
 
 @media screen and (max-width: 768px) {
   .header-location-container {
+    justify-content: center;
     div {
       margin-top: 5px;
+      font-size: 12px;
+      font-family: LatoRegular;
+      align-items: center;
+    }
+    img {
+      margin-left: 5px;
     }
   }
   .header {
@@ -148,6 +155,9 @@
     }
   }
   .header-current-location {
-    font-size: 14px;
+    font-size: 12px;
+  }
+  .header-container {
+    padding: 0 !important;
   }
 }
