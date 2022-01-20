@@ -158,7 +158,6 @@
 }
 
 .items-accessories-container {
-  padding: 40px;
   .title {
     @extend %title;
   }
@@ -179,9 +178,6 @@
 }
 
 @media screen and (max-width: 768px) {
-  .items-accessories-container {
-    padding: 10px;
-  }
   .mechanic-carousel__item-last-child,
   .accessories-carousel__item-last-child {
     display: inherit !important;

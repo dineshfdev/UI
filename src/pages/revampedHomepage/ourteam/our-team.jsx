@@ -1,5 +1,5 @@
 import React from "react";
-import {Grid} from '@material-ui/core';
+import {Grid,Container} from '@material-ui/core';
 
 // images
 import phone from '../../../images/assets/img/icons/global/phone.svg';
@@ -12,6 +12,7 @@ import "./our-team-styles.scss";
 const OurTeam =() => {
 return (
     <Grid className="our-team-container">
+        <Container>
         <Grid container xs={12} spacing={3}>
             <Grid item xs={12} md={8}>
                 <h4 className="team-header">
@@ -28,6 +29,7 @@ return (
                 </div>
             </Grid>
         </Grid>
+        </Container>
     </Grid>
 )};
 

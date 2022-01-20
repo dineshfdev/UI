@@ -26,8 +26,6 @@
 
 @mixin button-style($color, $hoverColor) {
   background-color: $color;
-  width: 153px;
-  height: 56px;
   font-family: LatoBold;
   font-size: 16px;
   text-transform: uppercase;
@@ -36,6 +34,7 @@
   border: 0;
   color: #fff;
   cursor: pointer;
+  padding: 12px;
   &:hover {
     background-color: $hoverColor;
   }

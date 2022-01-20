@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid } from '@material-ui/core';
+import { Grid,Container } from '@material-ui/core';
 
 // styles
 import './car-services-styles.scss';
@@ -13,7 +13,9 @@ import Painting from '../../../images/assets/img/carservices/painting.png';
 import WindShield from '../../../images/assets/img/carservices/windshield.png';
 
 const CarServices = () => {
-    return(<Grid className="car-container" xs={12}>
+    return(
+    <Container>
+    <Grid className="car-container" xs={12}>
         <Grid container item xs={12} md={12}>
             <div className="services-header-container">
                 <h3 className="title item">Popular Car Services</h3>
@@ -83,7 +85,9 @@ const CarServices = () => {
                 </Grid>
                 
             </Grid>
-    </Grid>)
+    </Grid>
+    </Container>
+    )
 
 };
 

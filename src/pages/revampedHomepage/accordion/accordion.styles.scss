@@ -4,11 +4,10 @@
 .accordion {
   background-color: #f4f6f9;
   margin-bottom: 50px;
+  padding: 5px;
 
   &__main-header {
     @extend %title;
-    padding-top: 80px;
-    padding-left: 64px;
   }
   &-wrapper {
     display: grid;
@@ -17,7 +16,6 @@
   }
   &-headings-container {
     width: 80%;
-    padding-left: 64px;
   }
   &__item {
     margin: 10px 0 10px 0;
@@ -132,6 +130,13 @@
       }
     }
   }
+}
+
+.accordion-content {
+  padding: 20px;
+  color: #7a7c80;
+  font-family: LatoRegular;
+  line-height: 24px;
 }
 @media screen and (max-width: 768px) {
   .accordion {

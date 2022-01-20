@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid,Card,CardActionArea,CardContent,Typography,CardActions,Button } from '@material-ui/core';
+import { Grid,Card,CardActionArea,CardContent,Typography,CardActions,Button,Container } from '@material-ui/core';
 
 // styles
 import './door-step-services-styles.scss';
@@ -13,6 +13,7 @@ import jumpstartService from "../../../images/assets/img/services/jumpstart-serv
 
 const DoorStepServices = () =>{
     return(
+        <Container className="doorstep-services-wrapper">
         <Grid item className="doorstep-services-container" xs={12} >
             <h3 className="title">Need services at your place</h3>
             <Grid container>
@@ -142,7 +143,7 @@ const DoorStepServices = () =>{
             </Grid>
             </div>
         </ Grid>
-
+        </Container>
     );
 };
 

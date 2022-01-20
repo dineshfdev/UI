@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
+import { Grid, Container } from "@material-ui/core";
 import cx from "classnames";
 import AccordionData from "./accordionData.js";
 import "../accordion/accordion.styles.scss";
@@ -51,13 +51,15 @@ function Accordion({ device }) {
     const { content, image, alt, readMore } = AccordionData[selected];
     return (
       <div className="accordion-content-wrapper">
-        <div className="accordion-content__container">
-          <div className="accordion-content__content">{content}</div>
+        <div className="accordion-content">
+          {content}
           <div className="accordion-content__link">
             <a href={readMore}>{"Read more >"}</a>
           </div>
         </div>
-        <img src={image} alt={alt} className="accordion-content__image" />
+        <div>
+          <img src={image} alt={alt} className="accordion-content__image" />
+        </div>
       </div>
     );
   };
@@ -65,17 +67,19 @@ function Accordion({ device }) {
   return (
     <Grid item xs={12}>
       <div className="accordion">
-        <p className="accordion__main-header">Why People Love Us</p>
-        {device.device === "desktop" ? (
-          <div className="accordion-wrapper">
-            {renderAccordionHeaders()}
-            {renderAccordionContent()}
-          </div>
-        ) : (
-          <div>
-            <CustomizedAccordions AccordionData={AccordionData} />
-          </div>
-        )}
+        <Container>
+          <p className="accordion__main-header">Why People Love Us</p>
+          {device.device === "desktop" ? (
+            <div className="accordion-wrapper">
+              {renderAccordionHeaders()}
+              {renderAccordionContent()}
+            </div>
+          ) : (
+            <div>
+              <CustomizedAccordions AccordionData={AccordionData} />
+            </div>
+          )}
+        </Container>
       </div>
     </Grid>
   );

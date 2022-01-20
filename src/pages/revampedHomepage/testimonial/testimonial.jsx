@@ -1,5 +1,5 @@
 import React from "react";
-import {Grid,Card,CardHeader,Avatar,CardContent,Typography} from '@material-ui/core';
+import {Grid,Card,CardHeader,Avatar,CardContent,Typography,Container} from '@material-ui/core';
 import PersonIcon from '@material-ui/icons/Person';
 
 // images
@@ -11,6 +11,7 @@ import "./testimonial-styles.scss";
 const Testimonial =() => {
 return (
     <Grid className="testimonial-container">
+        <Container>
         <h3 className="title">What People Says</h3>
         <Grid container xs={12} spacing={3}>
             <Grid item xs={12} md={3}>
@@ -50,6 +51,7 @@ return (
                 </Card>
             </Grid>
         </Grid>
+        </Container>
     </Grid>
 )};
 

@@ -1,5 +1,5 @@
 import React,{useState,useEffect,useContext} from 'react';
-import {Grid} from "@material-ui/core";
+import {Container, Grid} from "@material-ui/core";
 import StarRatings from "react-star-ratings";
 
 import Carousel from 'react-elastic-carousel';
@@ -30,14 +30,15 @@ const CarouselItemMechanic = () => {
 
       const [breakPoints] = useState([
         { width: 1, itemsToShow: 1,showArrows: false,enableSwipe: true  },
-        { width: 550, itemsToShow: 1, itemsToScroll: 2, pagination: false,showArrows: false ,enableSwipe: true},
-        { width: 850, itemsToShow: 1,showArrows: false ,enableSwipe: true},
+        { width: 550, itemsToShow: 1, itemsToScroll: 1, pagination: false,showArrows: false ,enableSwipe: true},
+        { width: 850, itemsToShow: 3,showArrows: true , itemsToScroll: 1,enableSwipe: true},
         { width: 1150, itemsToShow: 3, itemsToScroll: 2 ,enableSwipe: true},
         { width: 1450, itemsToShow: 4 },
         { width: 1750, itemsToShow: 4 },
       ]);
 
     return (
+      <Container>
         <Grid item xs={12} className="items-accessories-container">
              <h3 className="title">Top Rated Mechanics</h3>
              <h4 className="item-subheader"><img src={locationIcon} alt="location" /> <span>{servicesNearMe ? servicesNearMe : defaultLocation}</span></h4>
@@ -119,10 +120,11 @@ const CarouselItemMechanic = () => {
                 </div>
               </div>)}
       </Carousel>
+
       : <div>No service centre found</div>
 }
       </Grid>
-
+</Container>
       
     );
   }

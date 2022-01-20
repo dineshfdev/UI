@@ -1,8 +1,8 @@
 @import "../styles/mixins.scss";
 .doorstep-services-container {
-  padding: 40px 40px 10px;
   .title {
     @extend %title;
+    line-height: 0;
   }
   .card-header {
     font-family: PoppinsBold;
@@ -30,6 +30,9 @@
 
 .card-accessories-button {
   justify-content: flex-end;
+}
+.doorstep-services-wrapper {
+  margin-top: 20px;
 }
 
 @media screen and (max-width: 768px) {
