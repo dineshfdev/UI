@@ -37,9 +37,9 @@
 @media screen and (max-width: 768px) {
   .hero-section-left {
     margin-left: 0;
-    height: 200px;
+    height: 150px;
     &__title {
-      font-size: 18px;
+      font-size: 14px;
     }
     &__title {
       padding: 0 20px;
@@ -47,14 +47,16 @@
     }
     &__sub-title {
       padding: 0 20px;
+      font-size: 12px;
     }
     &__button {
-      margin: 20px 0 0 20px;
+      margin: 0 0 0 20px;
+      font-size: 12px;
     }
   }
-  button {
-    height: auto !important;
-    padding: 10px;
-    width: auto !important;
-  }
+  // button {
+  //   height: auto !important;
+  //   padding: 10px;
+  //   width: auto !important;
+  // }
 }

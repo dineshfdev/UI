@@ -7,6 +7,7 @@ import { LatLongContext } from "../../../context/latLongContext";
 
 // styles
 import "../header/header.scss";
+import "./headerSearch.scss";
 
 // image
 import location from "../../../images/assets/img/header/location.png";
@@ -63,7 +64,16 @@ const HeaderSearch = ({ device }) => {
         <Grid container item xs={12} className="header-location-container">
           <div>
             <img src={location} alt="location" />
-            We serve chennai alone
+            <span>We serve chennai alone</span>
+            <div className="location-hide">
+              <img src={locationTracker} alt="current location" />
+              <span
+                className="header-current-location"
+                onClick={getCurrentLocation}
+              >
+                Use My Current Location
+              </span>
+            </div>
           </div>
           <div>
             <Autocomplete
@@ -95,9 +105,14 @@ const HeaderSearch = ({ device }) => {
               )}
             />
           </div>
-          <img src={locationTracker} alt="current location" />
-          <div className="header-current-location" onClick={getCurrentLocation}>
-            Use My Current Location
+          <div className="location-reverse">
+            <img src={locationTracker} alt="current location" />
+            <div
+              className="header-current-location"
+              onClick={getCurrentLocation}
+            >
+              Use My Current Location
+            </div>
           </div>
         </Grid>
       </Grid>

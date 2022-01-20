@@ -1,0 +1,16 @@
+.location-hide {
+  display: none !important;
+}
+
+.location-reverse {
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .location-hide {
+    display: flex !important;
+  }
+  .location-reverse {
+    display: none !important;
+  }
+}

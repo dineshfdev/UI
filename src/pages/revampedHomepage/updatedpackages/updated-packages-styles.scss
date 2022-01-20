@@ -30,5 +30,10 @@
 @media screen and (max-width: 768px) {
   .packages-primary-text {
     margin: 0;
+    font-size: 18px;
+  }
+  .packages-secondary-text {
+    font-size: 12px;
+    line-height: 18px;
   }
 }

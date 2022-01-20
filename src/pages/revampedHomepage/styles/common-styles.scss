@@ -6,3 +6,13 @@
   border-bottom: 1px dotted #f98306;
   text-decoration: none;
 }
+
+.MuiIconButton-edgeEnd {
+  padding: 0 !important;
+}
+
+@media screen and (max-width: 768px) {
+  .services-link {
+    font-size: 12px;
+  }
+}
