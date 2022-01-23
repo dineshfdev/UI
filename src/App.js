@@ -43,10 +43,16 @@ const App = () => {
 
   // added to check url correctly
   useEffect(() => {
-    if (window.location.pathname === "/new-home") {
-      setIsNewHome(true);
+    if (navigator.geolocation) {
+      navigator.geolocation.watchPosition((position) => {
+        this.setState({
+          loading: false,
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude,
+        });
+      });
     }
-  }, [isNewHome]);
+  }, []);
 
   return (
     <>

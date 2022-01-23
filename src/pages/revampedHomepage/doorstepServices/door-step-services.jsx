@@ -26,91 +26,7 @@ const DoorStepServices = () =>{
             </Grid>
             <div style={{ padding: "20px 0" }}>
             <Grid container spacing={3}>
-                <Grid item xs={6} md={3}>
-                        <Card className="card-container">
-                                <CardActionArea>
-                                <img src={generalService} alt={generalService} style={{width: "100%"}} />
-                                <CardContent>
-                                
-                                    <Typography gutterBottom variant="h5" component="h2" className="card-header">
-                                        General Service
-                                    </Typography>
-                                    <Typography variant="body2" color="textSecondary" component="p" className="card-price">
-                                    Starts @ 3600
-                                    </Typography>
-                                    
-                                </CardContent>
-                                </CardActionArea>
-                                <CardActions>
-                                <Button size="small" color="primary" className="card-button" onClick={e => {
-      e.preventDefault();
-      window.open(
-        'https://www.servicegeni.in/doorstep',
-        '_blank' 
-      );
-      }}>
-                                    Book Now
-                                </Button>
-                                </CardActions>
-                        </Card>
-                </Grid>
-                <Grid item xs={6} md={3}>
-                        <Card className="card-container">
-                                <CardActionArea>
-                                <img src={expressService} alt={expressService} style={{width: "100%"}} />
-                                <CardContent>
-                                
-                                    <Typography gutterBottom variant="h5" component="h2" className="card-header">
-                                    Express Service
-                                    </Typography>
-                                    <Typography variant="body2" color="textSecondary" component="p" className="card-price">
-                                    Starts @ 3600
-                                    </Typography>
-                                    
-                                </CardContent>
-                                </CardActionArea>
-                                <CardActions>
-                                <Button size="small" color="primary" className="card-button" onClick={e => {
-      e.preventDefault();
-      window.open(
-        'https://www.servicegeni.in/doorstep',
-        '_blank' 
-      );
-      }}>
-                                    Book Now
-                                </Button>
-                                </CardActions>
-                        </Card>
-                </Grid>
-                <Grid item xs={6} md={3}>
-                <Card className="card-container">
-                                <CardActionArea>
-                                <img src={inspectionService} alt={inspectionService} style={{width: "100%"}} />
-                                <CardContent>
-                                
-                                    <Typography gutterBottom variant="h5" component="h2" className="card-header">
-                                    Inspection Service
-                                    </Typography>
-                                    <Typography variant="body2" color="textSecondary" component="p" className="card-price">
-                                    Starts @ 3600
-                                    </Typography>
-                                    
-                                </CardContent>
-                                </CardActionArea>
-                                <CardActions>
-                                <Button size="small" color="primary" className="card-button" onClick={e => {
-      e.preventDefault();
-      window.open(
-        'https://www.servicegeni.in/doorstep',
-        '_blank' 
-      );
-      }}>
-                                    Book Now
-                                </Button>
-                                </CardActions>
-                        </Card>
-                </Grid>
-                <Grid item xs={6} md={3}>
+            <Grid item xs={6} md>
                 <Card className="card-container">
                                 <CardActionArea>
                                 <img src={jumpstartService} alt={jumpstartService} style={{width: "100%"}} />
@@ -120,7 +36,7 @@ const DoorStepServices = () =>{
                                     Car Wash
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p" className="card-price">
-                                    Starts @ 3600
+                                    Starts @ 649 &#8377;
                                     </Typography>
                                     
                                 </CardContent>
@@ -138,7 +54,121 @@ const DoorStepServices = () =>{
                                 </CardActions>
                         </Card>
                 </Grid>
-                
+                <Grid item xs={6} md>
+                <Card className="card-container">
+                                <CardActionArea>
+                                <img src={jumpstartService} alt={jumpstartService} style={{width: "100%"}} />
+                                <CardContent>
+                                
+                                    <Typography gutterBottom variant="h5" component="h2" className="card-header">
+                                    Jumpstart
+                                    </Typography>
+                                    <Typography variant="body2" color="textSecondary" component="p" className="card-price">
+                                    Starts @ 799 &#8377;
+                                    </Typography>
+                                    
+                                </CardContent>
+                                </CardActionArea>
+                                <CardActions>
+                                <Button size="small" color="primary" className="card-button" onClick={e => {
+      e.preventDefault();
+      window.open(
+        'https://www.servicegeni.in/doorstep',
+        '_blank' 
+      );
+      }}>
+                                    Book Now
+                                </Button>
+                                </CardActions>
+                        </Card>
+                </Grid>
+                <Grid item xs={6} md>
+                <Card className="card-container">
+                                <CardActionArea>
+                                <img src={inspectionService} alt={inspectionService} style={{width: "100%"}} />
+                                <CardContent>
+                                
+                                    <Typography gutterBottom variant="h5" component="h2" className="card-header">
+                                    Inspection 
+                                    </Typography>
+                                    <Typography variant="body2" color="textSecondary" component="p" className="card-price">
+                                    Starts @ 799 &#8377;
+                                    </Typography>
+                                    
+                                </CardContent>
+                                </CardActionArea>
+                                <CardActions>
+                                <Button size="small" color="primary" className="card-button" onClick={e => {
+      e.preventDefault();
+      window.open(
+        'https://www.servicegeni.in/doorstep',
+        '_blank' 
+      );
+      }}>
+                                    Book Now
+                                </Button>
+                                </CardActions>
+                        </Card>
+                </Grid>
+                <Grid item xs={6} md>
+                        <Card className="card-container">
+                                <CardActionArea>
+                                <img src={expressService} alt={expressService} style={{width: "100%"}} />
+                                <CardContent>
+                                
+                                    <Typography gutterBottom variant="h5" component="h2" className="card-header">
+                                    Express Service
+                                    </Typography>
+                                    <Typography variant="body2" color="textSecondary" component="p" className="card-price">
+                                    Starts @ 1800 &#8377;
+                                    </Typography>
+                                    
+                                </CardContent>
+                                </CardActionArea>
+                                <CardActions>
+                                <Button size="small" color="primary" className="card-button" onClick={e => {
+      e.preventDefault();
+      window.open(
+        'https://www.servicegeni.in/doorstep',
+        '_blank' 
+      );
+      }}>
+                                    Book Now
+                                </Button>
+                                </CardActions>
+                        </Card>
+                </Grid>
+                <Grid item xs={6} md>
+                        <Card className="card-container">
+                                <CardActionArea>
+                                <img src={generalService} alt={generalService} style={{width: "100%"}} />
+                                <CardContent>
+                                
+                                    <Typography gutterBottom variant="h5" component="h2" className="card-header">
+                                        General Service
+                                    </Typography>
+                                    <Typography variant="body2" color="textSecondary" component="p" className="card-price">
+                                    Starts @ 4499 &#8377;
+                                    </Typography>
+                                    
+                                </CardContent>
+                                </CardActionArea>
+                                <CardActions>
+                                <Button size="small" color="primary" className="card-button" onClick={e => {
+      e.preventDefault();
+      window.open(
+        'https://www.servicegeni.in/doorstep',
+        '_blank' 
+      );
+      }}>
+                                    Book Now
+                                </Button>
+                                </CardActions>
+                        </Card>
+                </Grid>
+
+             
+
                 
             </Grid>
             </div>

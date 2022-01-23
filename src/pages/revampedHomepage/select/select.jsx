@@ -3,6 +3,10 @@ import { withStyles } from '@material-ui/core/styles';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import InputBase from '@material-ui/core/InputBase';
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+
+// styels 
+import "./select.scss";
 
 const BootstrapInput = withStyles((theme) => ({
   root: {
@@ -43,7 +47,7 @@ export default function CustomizedSelect({
 
   const renderOptions = () =>
     options.map((option, idx) => (
-      <MenuItem key={idx} value={option.value}>
+      <MenuItem key={idx} value={option.value} className='select-list'>
         {option.menu}
       </MenuItem>
     ));
@@ -57,6 +61,8 @@ export default function CustomizedSelect({
         onChange={onChange}
         input={<BootstrapInput />}
         style={{width:300}}
+        IconComponent={ExpandMoreIcon}
+        className="select-style"
       >
         {renderOptions()}
       </Select>

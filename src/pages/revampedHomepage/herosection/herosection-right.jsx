@@ -33,7 +33,7 @@ function HeroSectionRight() {
     <div className="hero-section-right">
       <div className="hero-section-right__content">
         <p className="hero-section-right__title">
-          I’m Looking For Doorstep Services
+          I’m looking for Doorstep Services
         </p>
         <div className="hero-section-right__sub-title">
           <img src={heroStar} alt="star" />
@@ -44,9 +44,9 @@ function HeroSectionRight() {
           <CustomizedSelect
             options={[
               { menu: 'Car Wash', value: 'general' },
-              { menu: 'Breakdown Assistance', value: 'breakdown' },
-              { menu: 'Periodic Services', value: 'periodic' },
+              { menu: 'Periodic Service', value: 'periodic' },
               { menu: 'Car Inspection', value: 'inspection' },
+              { menu: 'Breakdown assistance', value: 'breakdown' },
             ]}
             handleChange={value => setOptionValue(value)}
             defaultValue="general"

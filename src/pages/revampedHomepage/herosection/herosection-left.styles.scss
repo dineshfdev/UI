@@ -8,6 +8,7 @@
   color: #fff;
   box-sizing: border-box;
   background-size: cover;
+  position: relative;
 
   &__content {
     padding-top: 10px;
@@ -27,6 +28,8 @@
   &__button {
     @include button-style(#ff8400, #ffa748);
     margin-left: 40px;
+    position: absolute;
+    bottom: 25px;
   }
   a {
     color: #fff;
@@ -54,9 +57,12 @@
       font-size: 12px;
     }
   }
-  // button {
-  //   height: auto !important;
-  //   padding: 10px;
-  //   width: auto !important;
-  // }
+}
+
+@media screen and (max-width: 450px) {
+  .hero-section-left {
+    &__title {
+      font-size: 12px;
+    }
+  }
 }

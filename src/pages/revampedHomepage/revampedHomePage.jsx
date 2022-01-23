@@ -31,7 +31,7 @@ const RevampHomePage = ({device}) => {
   // reversing the lat long values according to service future we have to change in service
   useEffect(() => {
     (async () => {
-      const permissionStatus = await navigator?.permissions?.query({name: 'geolocation'})
+      const permissionStatus = await navigator?.permissions?.query({name: 'geolocation'});
       if(permissionStatus.state ==="granted"){
         navigator.geolocation.getCurrentPosition((position) => {
           setLat(position.coords.longitude);

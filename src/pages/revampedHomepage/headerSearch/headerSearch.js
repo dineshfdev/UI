@@ -1,6 +1,7 @@
 import React, { useEffect, useContext } from "react";
 import { Grid, makeStyles, TextField, Container } from "@material-ui/core";
 import Autocomplete from "@material-ui/lab/Autocomplete";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 // context
 import { LatLongContext } from "../../../context/latLongContext";
@@ -29,7 +30,7 @@ const HeaderSearch = ({ device }) => {
   const classes = useStyles();
 
   // set latitude longitude and default location from context
-  const { lat, long, setLat, setLong, servicesNearme, setServicesNearMe } =
+  const { setLat, setLong, servicesNearme, setServicesNearMe } =
     useContext(LatLongContext);
 
   useEffect(() => {
@@ -60,27 +61,28 @@ const HeaderSearch = ({ device }) => {
 
   return (
     <Container>
-      <Grid item className="header-container" xs={12}>
+      <Grid item className="header-search-container" xs={12}>
         <Grid container item xs={12} className="header-location-container">
-          <div>
+          <div className="header-search-items">
             <img src={location} alt="location" />
-            <span>We serve chennai alone</span>
+            <span>We serve Chennai alone</span>
             <div className="location-hide">
               <img src={locationTracker} alt="current location" />
               <span
                 className="header-current-location"
                 onClick={getCurrentLocation}
               >
-                Use My Current Location
+                Use my current location
               </span>
             </div>
           </div>
-          <div>
+          <div className="header-search-items">
             <Autocomplete
               id="garage-select"
               style={{ width: 300 }}
               options={options}
               autoHighlight
+              popupIcon={<ExpandMoreIcon />}
               getOptionLabel={(option) => (option ? option : "")}
               onChange={selectChange}
               onOpen={() => {
@@ -95,8 +97,9 @@ const HeaderSearch = ({ device }) => {
               renderInput={(params) => (
                 <TextField
                   {...params}
-                  label="Choose Location"
+                  label="Select Area or Pincode"
                   variant="outlined"
+                  className="input-text-container"
                   inputProps={{
                     ...params.inputProps,
                   }}
@@ -111,7 +114,7 @@ const HeaderSearch = ({ device }) => {
               className="header-current-location"
               onClick={getCurrentLocation}
             >
-              Use My Current Location
+              Use my current location
             </div>
           </div>
         </Grid>
