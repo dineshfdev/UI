@@ -1,0 +1,25 @@
+.select-style {
+  .MuiSelect-select.MuiSelect-select {
+    padding: 15px 10px 10px;
+    font-family: LatoRegular;
+    font-size: 16px;
+    color: #7a7c80;
+    background: #fff;
+  }
+  .MuiSelect-icon {
+    right: 10px;
+    top: 12px;
+  }
+}
+.select-list {
+  font-family: LatoRegular !important;
+  font-size: 16px !important;
+}
+.MuiListItem-root.Mui-selected,
+.MuiListItem-root.Mui-selected:hover {
+  background-color: #f98306 !important;
+  opacity: 0.8;
+  color: #fff !important;
+  font-family: LatoRegular;
+  font-size: 16px;
+}
