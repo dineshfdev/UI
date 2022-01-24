@@ -25,7 +25,7 @@ return (
                    <span><img src={phone} alt="phone" />+91 9361 040506 </span> 
                    <span><img src={mail} alt="mail" />care@servicegeni.in</span> 
                 </div>
-                <button className="hero-section-right__button book-now">CHAT NOW</button>
+                {/* <button className="hero-section-right__button book-now">CHAT NOW</button> */}
                 </div>
             </Grid>
         </Grid>

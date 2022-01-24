@@ -23,11 +23,12 @@
   &__item {
     width: 94%;
     margin-bottom: 20px;
-    min-height: 500px;
+    min-height: 480px;
     @include box-shadow;
+    position: relative;
 
     &-content {
-      margin: 30px;
+      margin: 15px;
     }
 
     &--semibold {
@@ -76,6 +77,8 @@
     &-reviews {
       display: flex;
       align-items: center;
+      position: absolute;
+      bottom: 90px;
 
       .star-ratings {
         @include margin(0, 10px, 0, 0);
@@ -83,24 +86,22 @@
     }
 
     &-last-child {
-      display: grid;
-      grid-auto-flow: column;
-
+      display: flex;
+      position: absolute;
+      bottom: 20px;
+      width: 90%;
+      justify-content: space-between;
+      left: 15px;
       .mechanic-carousel__item-button,
       .accessories-carousel__item-button {
         @include button-style(#ff8400, #ffa748);
         letter-spacing: 2px;
-        align-self: center;
         margin-top: 15px;
       }
 
       .mechanic-carousel__item-starts-from,
       .mechanic-carousel__item-distance {
         @include margin(20px, 0, 0, 0);
-      }
-
-      .accessories-carousel__item-starts-from {
-        align-self: center;
       }
     }
   }

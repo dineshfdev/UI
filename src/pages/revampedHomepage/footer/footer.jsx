@@ -30,7 +30,7 @@ return (
                         <li><a href="https://www.servicegeni.in/about-us">About</a></li>
                         <li><a href="https://www.servicegeni.in/contact-us">Contact Us</a></li>
                         <li><a href="https://www.servicegeni.in/faq">FAQs</a></li>
-                        <li><a href="#">News</a></li>
+                        <li><a href="https://www.servicegeni.in/blogs/categories/trending-auto-news">News</a></li>
                         <li><a href="https://www.servicegeni.in/blogs">Blogs</a></li>
                         <li><a href="#">Careers</a></li>
                         <li><a href="#">Our Partners</a></li>
@@ -45,11 +45,11 @@ return (
                     </ul>
                     <h5 className="footer-header">Doorstep Services</h5>
                     <ul className="footer-list-container">
-                        <li><a href="https://www.servicegeni.in/doorstep-services">General service</a></li>
-                        <li><a href="https://www.servicegeni.in/doorstep-services">Express Service</a></li>
-                        <li><a href="https://www.servicegeni.in/doorstep-services">Inspection Service</a></li>
-                        <li><a href="https://www.servicegeni.in/doorstep-services">Jumpstart Service</a></li>
-                        <li><a href="https://www.servicegeni.in/doorstep-services">Other Service</a></li>
+                        <li><a href="https://www.servicegeni.in/doorstep">General service</a></li>
+                        <li><a href="https://www.servicegeni.in/doorstep">Express Service</a></li>
+                        <li><a href="https://www.servicegeni.in/doorstep">Inspection Service</a></li>
+                        <li><a href="https://www.servicegeni.in/doorstep">Jumpstart Service</a></li>
+                        <li><a href="https://www.servicegeni.in/doorstep">Car Wash</a></li>
                     </ul>
                 </Grid>
                 <Grid item xs={12} md={5}>

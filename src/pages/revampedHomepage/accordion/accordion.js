@@ -54,7 +54,7 @@ function Accordion({ device }) {
         <div className="accordion-content">
           {content}
           <div className="accordion-content__link">
-            <a href={readMore}>{"Read more >"}</a>
+            <a href={readMore}>{"Read More >"}</a>
           </div>
         </div>
         <div>

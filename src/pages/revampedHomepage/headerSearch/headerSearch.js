@@ -97,7 +97,7 @@ const HeaderSearch = ({ device }) => {
               renderInput={(params) => (
                 <TextField
                   {...params}
-                  label="Select Area or Pincode"
+                  label="Select Area"
                   variant="outlined"
                   className="input-text-container"
                   inputProps={{
