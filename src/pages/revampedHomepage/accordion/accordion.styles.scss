@@ -5,6 +5,7 @@
   background-color: #f4f6f9;
   margin-bottom: 50px;
   padding: 5px;
+  position: relative;
 
   &__main-header {
     @extend %title;
@@ -70,6 +71,8 @@
     &__link {
       display: flex;
       align-items: center;
+      position: absolute;
+      bottom: 20px;
 
       & > a {
         font-family: LatoRegular;

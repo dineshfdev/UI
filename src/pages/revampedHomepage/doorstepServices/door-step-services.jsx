@@ -64,7 +64,7 @@ const DoorStepServices = () =>{
                                     Jumpstart
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p" className="card-price">
-                                    Starts @ 799 &#8377;
+                                    Starts @ &#8377; 799 
                                     </Typography>
                                     
                                 </CardContent>
@@ -92,7 +92,7 @@ const DoorStepServices = () =>{
                                     Inspection 
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p" className="card-price">
-                                    Starts @ 799 &#8377;
+                                    Starts @ &#8377; 799 
                                     </Typography>
                                     
                                 </CardContent>
@@ -120,7 +120,7 @@ const DoorStepServices = () =>{
                                     Express Service
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p" className="card-price">
-                                    Starts @ 1800 &#8377;
+                                    Starts @ &#8377; 1800 
                                     </Typography>
                                     
                                 </CardContent>
@@ -148,7 +148,7 @@ const DoorStepServices = () =>{
                                         General Service
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p" className="card-price">
-                                    Starts @ 4499 &#8377;
+                                    Starts @ &#8377; 4499 
                                     </Typography>
                                     
                                 </CardContent>

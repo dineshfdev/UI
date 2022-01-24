@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import {Grid} from '@material-ui/core';
+import {Grid,Container} from '@material-ui/core';
 
 // images
 import Logo from "../../../images/logo.png";
@@ -20,6 +20,7 @@ const PageFooter =() => {
 
 return (
     <Grid className="page-footer-container">
+        <Container>
         <Grid container xs={12} spacing={3}>
             <Grid item xs={12} md={6}>
                 <img src={Logo} alt={Logo} className="page-footer-logo" />
@@ -46,6 +47,7 @@ return (
                 <TermsConditions modalOpen={open} onCloseButton={() => setOpen(false)} />
             </Grid>
         </Grid>
+        </Container>
     </Grid>
 )};
 

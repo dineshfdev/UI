@@ -8,6 +8,7 @@
   color: #fff;
   overflow: hidden;
   background-size: cover;
+  background-position: right;
   margin-left: 20px;
   &__title {
     @extend %hero-title-styles;

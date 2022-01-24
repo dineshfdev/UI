@@ -72,8 +72,8 @@ const UpdatedPackages = () => {
                 </Grid>
                 </Grid>
         </Grid>
-        <Grid container xs={12} md={3}>
-        <Grid item xs={3} md={12} className="updated-packages-inner">
+        <Grid container xs={12} md={3} className="updated-packages-inner">
+        <Grid item xs={3} md={12}>
                 <div className="packages-img">
                 <img src ={social} alt="social" />
                 </div>
@@ -81,12 +81,12 @@ const UpdatedPackages = () => {
                 <Grid item xs={9} md={12}>
                 <Grid item xs={12}>
                 <div className="packages-primary-text">
-                    799
+                &#8377; 799
                 </div>
                 </Grid>
                 <Grid item xs={12}>
                 <div className="packages-secondary-text">
-                    Hand picked packages <br/> starts at
+                     Hand picked packages <br/> starts at
                 </div>
                 </Grid>
                 </Grid>

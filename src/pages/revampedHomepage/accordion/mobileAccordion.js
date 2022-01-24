@@ -76,7 +76,7 @@ export default function CustomizedAccordions({ AccordionData }) {
               {x.content}
               <br />
               <span>
-                <a href={x.readMore}>{"Read more >"}</a>
+                <a href={x.readMore}>{"Read More >"}</a>
               </span>
             </Typography>
           </AccordionDetails>

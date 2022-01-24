@@ -87,7 +87,7 @@ const RevampHomePage = ({device}) => {
          <UpdatedPackages />
          <CarouselItemMechanic />
          <CarServices />
-         <Accessories />
+         {/* <Accessories /> */}
          <Testimonial />
          <OurTeam />
          <Footer />

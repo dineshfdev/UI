@@ -45,11 +45,9 @@ const App = () => {
   useEffect(() => {
     if (navigator.geolocation) {
       navigator.geolocation.watchPosition((position) => {
-        this.setState({
-          loading: false,
-          latitude: position.coords.latitude,
-          longitude: position.coords.longitude,
-        });
+        console.log("position", position);
+        setLat(position.coords.longitude);
+        setLong(position.coords.latitude);
       });
     }
   }, []);
