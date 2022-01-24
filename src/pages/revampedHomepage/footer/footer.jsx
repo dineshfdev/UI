@@ -45,7 +45,7 @@ return (
                     </ul>
                     <h5 className="footer-header">Doorstep Services</h5>
                     <ul className="footer-list-container">
-                        <li><a href="https://www.servicegeni.in/doorstep">General service</a></li>
+                        <li><a href="https://www.servicegeni.in/doorstep">General Service</a></li>
                         <li><a href="https://www.servicegeni.in/doorstep">Express Service</a></li>
                         <li><a href="https://www.servicegeni.in/doorstep">Inspection Service</a></li>
                         <li><a href="https://www.servicegeni.in/doorstep">Jumpstart Service</a></li>

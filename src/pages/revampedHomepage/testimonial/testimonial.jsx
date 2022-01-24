@@ -12,7 +12,7 @@ const Testimonial =() => {
 return (
     <Grid className="testimonial-container">
         <Container>
-        <h3 className="title">What People Says</h3>
+        <h3 className="title">What people say</h3>
         <Grid container xs={12} spacing={3}>
             <Grid item xs={12} md={3}>
                 <Card className="testimonial-card same-height">

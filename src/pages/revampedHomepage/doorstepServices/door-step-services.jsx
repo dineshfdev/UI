@@ -33,10 +33,10 @@ const DoorStepServices = () =>{
                                 <CardContent>
                                 
                                     <Typography gutterBottom variant="h5" component="h2" className="card-header">
-                                    Car Wash
+                                    Car wash
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p" className="card-price">
-                                    Starts @ 649 &#8377;
+                                    Starts @ &#8377; 649 
                                     </Typography>
                                     
                                 </CardContent>

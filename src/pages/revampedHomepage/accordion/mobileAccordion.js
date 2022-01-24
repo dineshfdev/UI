@@ -61,8 +61,8 @@ export default function CustomizedAccordions({ AccordionData }) {
       {AccordionData.map((x, i) => (
         <Accordion
           square
-          expanded={expanded === `panel${i}`}
-          onChange={handleChange(`panel${i}`)}
+          expanded={expanded === `panel${i + 1}`}
+          onChange={handleChange(`panel${i + 1}`)}
           key={i}
         >
           <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
