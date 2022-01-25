@@ -19,11 +19,16 @@
   display: flex;
 }
 .input-text-container {
+  .MuiInputLabel-outlined.MuiInputLabel-shrink {
+    transform: translate(14px, -3px) scale(0.75) !important;
+    background: #fff;
+  }
   label {
     font-family: LatoRegular;
     font-size: 16px;
     color: #7a7c80;
     line-height: 6px;
+    z-index: 10000 !important;
   }
   .MuiAutocomplete-popupIndicator {
     svg {

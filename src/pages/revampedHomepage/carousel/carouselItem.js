@@ -54,7 +54,7 @@ function CarouselItemMechanic({
         </div>
         <div className="mechanic-carousel__item-reviews mechanic-carousel__item--semibold">
           {garageOverallRating.averageGarageRatings === "NaN" ? (
-            "No Reviews"
+            "No reviews"
           ) : (
             <>
               <StarRatings
@@ -119,7 +119,7 @@ function CarouselItemAccessories({
         <p className="accessories-carousel__item-heading">{text.heading}</p>
         <div className="accessories-carousel__item-reviews accessories-carousel__item--semibold">
           {garageOverallRating.averageGarageRatings === "NaN" ? (
-            "No Reviews"
+            "No reviews"
           ) : (
             <>
               <StarRatings

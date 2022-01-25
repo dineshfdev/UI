@@ -1,17 +1,26 @@
-import React from "react";
+import React,{useState} from "react";
 import { Grid,Card,CardActionArea,CardContent,Typography,CardActions,Button,Container } from '@material-ui/core';
-
+import Carousel from 'react-elastic-carousel';
 // styles
 import './door-step-services-styles.scss';
 import "../styles/common-styles.scss";
 
 // images  
-import generalService from "../../../images/assets/img/services/general-service.png";
-import expressService from "../../../images/assets/img/services/express-service.png";
-import inspectionService from "../../../images/assets/img/services/inspection-service.png";
-import jumpstartService from "../../../images/assets/img/services/jumpstart-service.png";
+import generalService from "../../../images/assets/img/services/general-service.jpg";
+import expressService from "../../../images/assets/img/services/express-service.jpg";
+import inspectionService from "../../../images/assets/img/services/inspection-service.jpg";
+import jumpstartService from "../../../images/assets/img/services/jumpstart-service.jpg";
+import carWash from "../../../images/assets/img/services/car-wash.jpg";
 
 const DoorStepServices = () =>{
+    const [breakPoints] = useState([
+        { width: 1, itemsToShow: 1,showArrows: false,enableSwipe: true  },
+        { width: 550, itemsToShow: 1, itemsToScroll: 1, pagination: false,showArrows: false ,enableSwipe: true},
+        { width: 850, itemsToShow: 4,showArrows: true , itemsToScroll: 1,enableSwipe: true},
+        { width: 1150, itemsToShow: 4, itemsToScroll: 2 ,enableSwipe: true},
+        { width: 1450, itemsToShow: 4 },
+        { width: 1750, itemsToShow: 4 },
+      ]);
     return(
         <Container className="doorstep-services-wrapper">
         <Grid item className="doorstep-services-container" xs={12} >
@@ -21,22 +30,27 @@ const DoorStepServices = () =>{
                         <div className="doorstep-subtitle">For your convenience, we also provide handpicked car maintenance services right at your Doorstep.</div>
                     </Grid>
                     <Grid container item xs={12} md={4} className="card-accessories-button">
-                        <a className="services-link" href="https://www.servicegeni.in/doorstep">View all Services </a>
+                        <div className="desktop-content-top">
+                            <a className="services-link" href="https://www.servicegeni.in/doorstep">View all Services </a>
+                        </div>
                     </Grid>
             </Grid>
-            <div style={{ padding: "20px 0" }}>
-            <Grid container spacing={3}>
-            <Grid item xs={6} md>
+            <Carousel breakPoints={breakPoints} 
+        transitionMs={700}
+        pagination={false}
+        className="carousel-container"
+        >
+            <Grid>
                 <Card className="card-container">
                                 <CardActionArea>
-                                <img src={jumpstartService} alt={jumpstartService} style={{width: "100%"}} />
+                                <img src={carWash} alt={carWash} style={{width: "100%"}} />
                                 <CardContent>
                                 
                                     <Typography gutterBottom variant="h5" component="h2" className="card-header">
                                     Car wash
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p" className="card-price">
-                                    Starts @ &#8377; 649 
+                                    Starts @ &#x20B9; 649 
                                     </Typography>
                                     
                                 </CardContent>
@@ -54,7 +68,7 @@ const DoorStepServices = () =>{
                                 </CardActions>
                         </Card>
                 </Grid>
-                <Grid item xs={6} md>
+                <Grid>
                 <Card className="card-container">
                                 <CardActionArea>
                                 <img src={jumpstartService} alt={jumpstartService} style={{width: "100%"}} />
@@ -64,7 +78,7 @@ const DoorStepServices = () =>{
                                     Jumpstart
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p" className="card-price">
-                                    Starts @ &#8377; 799 
+                                    Starts @ &#x20B9; 799 
                                     </Typography>
                                     
                                 </CardContent>
@@ -82,7 +96,7 @@ const DoorStepServices = () =>{
                                 </CardActions>
                         </Card>
                 </Grid>
-                <Grid item xs={6} md>
+                <Grid>
                 <Card className="card-container">
                                 <CardActionArea>
                                 <img src={inspectionService} alt={inspectionService} style={{width: "100%"}} />
@@ -92,7 +106,7 @@ const DoorStepServices = () =>{
                                     Inspection 
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p" className="card-price">
-                                    Starts @ &#8377; 799 
+                                    Starts @ &#x20B9; 799 
                                     </Typography>
                                     
                                 </CardContent>
@@ -110,7 +124,7 @@ const DoorStepServices = () =>{
                                 </CardActions>
                         </Card>
                 </Grid>
-                <Grid item xs={6} md>
+                <Grid>
                         <Card className="card-container">
                                 <CardActionArea>
                                 <img src={expressService} alt={expressService} style={{width: "100%"}} />
@@ -120,7 +134,7 @@ const DoorStepServices = () =>{
                                     Express Service
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p" className="card-price">
-                                    Starts @ &#8377; 1800 
+                                    Starts @ &#x20B9; 1800 
                                     </Typography>
                                     
                                 </CardContent>
@@ -138,7 +152,7 @@ const DoorStepServices = () =>{
                                 </CardActions>
                         </Card>
                 </Grid>
-                <Grid item xs={6} md>
+                <Grid>
                         <Card className="card-container">
                                 <CardActionArea>
                                 <img src={generalService} alt={generalService} style={{width: "100%"}} />
@@ -148,7 +162,7 @@ const DoorStepServices = () =>{
                                         General Service
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p" className="card-price">
-                                    Starts @ &#8377; 4499 
+                                    Starts @ &#x20B9; 4499 
                                     </Typography>
                                     
                                 </CardContent>
@@ -166,12 +180,12 @@ const DoorStepServices = () =>{
                                 </CardActions>
                         </Card>
                 </Grid>
-
-             
-
-                
+            </Carousel>
+            <Grid container item xs={12} md={4} className="card-accessories-button">
+                <div className="desktop-content-bottom">
+                        <a className="services-link" href="https://www.servicegeni.in/doorstep">View all Services </a>
+                </div>
             </Grid>
-            </div>
         </ Grid>
         </Container>
     );
