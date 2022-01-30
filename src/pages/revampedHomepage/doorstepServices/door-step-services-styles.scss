@@ -1,5 +1,6 @@
 @import "../styles/mixins.scss";
 .doorstep-services-container {
+  padding-top: 60px;
   .title {
     @extend %title;
     line-height: 0;
@@ -35,9 +36,6 @@
 .card-accessories-button {
   justify-content: flex-end;
 }
-.doorstep-services-wrapper {
-  margin-top: 20px;
-}
 .card-container {
   padding-bottom: 20px;
   width: 94%;
@@ -60,7 +58,7 @@
     display: block;
   }
   .doorstep-services-container {
-    padding: 0 10px 10px;
+    padding: 20px 0 0 0;
     .title {
       font-size: 16px;
     }

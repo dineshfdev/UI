@@ -14,7 +14,7 @@ return (
     <Grid className="our-team-container">
         <Container>
         <Grid container xs={12} spacing={3}>
-            <Grid item xs={12} md={8}>
+            <Grid item xs={12} md={6}>
                 <h4 className="team-header">
                      Our Team would love to help you!
                 </h4>

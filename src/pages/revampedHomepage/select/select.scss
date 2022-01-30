@@ -16,7 +16,8 @@
   font-size: 16px !important;
 }
 .MuiListItem-root.Mui-selected,
-.MuiListItem-root.Mui-selected:hover {
+.MuiListItem-root.Mui-selected:hover,
+.MuiListItem-button:hover {
   background-color: #f98306 !important;
   opacity: 0.8;
   color: #fff !important;

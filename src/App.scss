@@ -1,4 +1,4 @@
-@import './styles/utility.scss';
+@import "./styles/utility.scss";
 
 * {
   box-sizing: border-box;
@@ -31,11 +31,11 @@ body {
 .grid-container {
   display: grid;
   grid-template-areas:
-    'header'
-    'main'
-    'footer';
+    "header"
+    "main"
+    "footer";
   grid-template-columns: 1fr;
-  grid-template-rows: 8rem 1fr 10rem;
+  grid-template-rows: 15.5rem 1fr 10rem;
   height: 100%;
 }
 header {
@@ -109,7 +109,7 @@ a:hover {
 }
 
 .material-icons {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-weight: normal;
   font-style: normal;
   font-size: 24px; /* Preferred icon size */
@@ -130,7 +130,7 @@ a:hover {
   -moz-osx-font-smoothing: grayscale;
 
   /* Support for IE. */
-  font-feature-settings: 'liga';
+  font-feature-settings: "liga";
 }
 
 .map-holder {
