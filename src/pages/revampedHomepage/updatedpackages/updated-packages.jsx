@@ -67,7 +67,7 @@ const UpdatedPackages = () => {
                 </Grid>
                 <Grid item xs={12}>
                 <div className="packages-secondary-text">
-                    Social Media connects
+                    social media connects
                 </div>
                 </Grid>
                 </Grid>
@@ -86,7 +86,7 @@ const UpdatedPackages = () => {
                 </Grid>
                 <Grid item xs={12}>
                 <div className="packages-secondary-text">
-                     Hand picked packages <br/> starts at
+                     hand picked packages <br/> starts at
                 </div>
                 </Grid>
                 </Grid>

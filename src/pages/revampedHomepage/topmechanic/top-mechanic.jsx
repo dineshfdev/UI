@@ -11,6 +11,7 @@ import { LatLongContext } from "../../../context/latLongContext";
 // images
 import Marker from "../../../images/assets/img/icons/global/marker.svg";
 import locationIcon from "../../../images/assets/img/header/location.png";
+import comingSoon from "../../../images/coming-soon.jpg";
 
 // styles 
 import "../carousel/carousel.styles.scss";
@@ -51,7 +52,7 @@ const CarouselItemMechanic = () => {
             {data.map(x=>
                 <div className="mechanic-carousel__item same-height" key={x.garageTitle}>
                 {x.garageImage === "" ? (
-                  <img src="http://via.placeholder.com/400x200" alt="garage" className="mechanic-carousel__item-image" />
+                  <img src={comingSoon} alt="garage" className="mechanic-carousel__item-image" />
                 ) : (
                   <img
                     src={`data:image/jpeg;base64,${x.garageImage}`}
@@ -89,9 +90,9 @@ const CarouselItemMechanic = () => {
                             starSpacing="3px"
                           />
                           <span style={{ paddingLeft: "10px" }}>
-                            {x.totalGarageReviews > 1
-                              ? `${x.totalGarageReviews} reviews`
-                              : `${x.totalGarageReviews} review`}
+                            {x.totalReviews > 1
+                              ? `${x.totalReviews} reviews`
+                              : `${x.totalReviews} review`}
                           </span>
                         </>
                       )}
