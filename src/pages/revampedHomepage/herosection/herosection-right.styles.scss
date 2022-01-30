@@ -1,7 +1,6 @@
 @import "../styles/mixins.scss";
 
 .hero-section-right {
-  height: 319px;
   border-radius: 8px;
   background: url("../../../images/assets/img/banner/doorstep services.png")
     no-repeat;
@@ -9,15 +8,18 @@
   overflow: hidden;
   background-size: cover;
   background-position: right;
+  padding: 40px;
+  height: 319px;
   margin-left: 20px;
+  position: relative;
   &__title {
     @extend %hero-title-styles;
     color: #3a404f;
   }
 
   &__sub-title {
-    padding-left: 40px;
     display: flex;
+    margin-top: 8px;
 
     img {
       fill: #cd6a03;
@@ -31,14 +33,11 @@
 
   &__cta-wrapper {
     display: flex;
-    grid-auto-flow: column;
     align-items: center;
-    margin-top: 51px;
-    padding-left: 40px;
-    padding-right: 40px;
-    width: 100%;
-    height: 100%;
+    width: 86%;
     justify-content: space-between;
+    position: absolute;
+    bottom: 40px;
   }
 
   &__button {
@@ -55,6 +54,7 @@
   .hero-section-right {
     margin-left: 10px;
     margin-right: 0;
+    padding: 10px 0;
     height: 150px;
     &__title {
       font-size: 14px;
@@ -67,10 +67,11 @@
       margin-top: 10px;
       padding-left: 10px;
       padding-right: 10px;
+      bottom: 10px;
     }
     &__sub-title {
       padding: 0 20px;
-      font-size: 12px;
+      font-size: 11px;
     }
     &__button {
       margin-top: 10px;

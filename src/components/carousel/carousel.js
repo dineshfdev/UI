@@ -1,14 +1,14 @@
-import React from 'react';
-import Carousel from 'react-material-ui-carousel';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardMedia from '@material-ui/core/CardMedia';
-import './carousel.scss';
-import { BannerDesktopItems, BannerMobileItems } from './carouselItems';
+import React from "react";
+import Carousel from "react-material-ui-carousel";
+import { makeStyles } from "@material-ui/core/styles";
+import Card from "@material-ui/core/Card";
+import CardMedia from "@material-ui/core/CardMedia";
+import "./carousel.scss";
+import { BannerDesktopItems, BannerMobileItems } from "./carouselItems";
 
 function CustomCarousel(props) {
   const render =
-    props.device.breakpoint === 'phone'
+    props.device.breakpoint === "phone"
       ? BannerMobileItems()
       : BannerDesktopItems();
   return (
@@ -22,8 +22,8 @@ function CustomCarousel(props) {
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: '100%',
-    borderRadius: '0px',
+    maxWidth: "100%",
+    borderRadius: "0px",
   },
 });
 

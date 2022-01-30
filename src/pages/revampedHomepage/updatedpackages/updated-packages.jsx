@@ -24,12 +24,12 @@ const UpdatedPackages = () => {
             <Grid item xs={9} md={12}>
             <Grid item xs={12}>
                 <div className="packages-primary-text">
-                    200+
+                    250+
                 </div>
             </Grid>
             <Grid item xs={12} md={12}>
                 <div className="packages-secondary-text">
-                    Business Partners across <br/> Chennai
+                    service partners across <br/> Chennai
                 </div>
             </Grid>
             </Grid>
@@ -43,12 +43,12 @@ const UpdatedPackages = () => {
             <Grid item xs={9} md={12}>
                 <Grid item xs={12}>
                 <div className="packages-primary-text">
-                    Free
+                &#8377; 0
                 </div>
             </Grid>
             <Grid item xs={12}>
                 <div className="packages-secondary-text">
-                    To search & schedule<br/> car service
+                    to search & schedule <br/> car service
                 </div>
                 </Grid>
             </Grid>
@@ -62,12 +62,12 @@ const UpdatedPackages = () => {
                 <Grid item xs={9} md={12}>
                 <Grid item xs={12}>
                 <div className="packages-primary-text">
-                    3543+
+                    5394+
                 </div>
                 </Grid>
                 <Grid item xs={12}>
                 <div className="packages-secondary-text">
-                    Social Media connects <br/> Global
+                    Social Media connects
                 </div>
                 </Grid>
                 </Grid>
@@ -81,7 +81,7 @@ const UpdatedPackages = () => {
                 <Grid item xs={9} md={12}>
                 <Grid item xs={12}>
                 <div className="packages-primary-text">
-                &#8377; 799
+                &#8377; 649
                 </div>
                 </Grid>
                 <Grid item xs={12}>

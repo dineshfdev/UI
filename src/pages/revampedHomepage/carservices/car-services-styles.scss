@@ -1,5 +1,6 @@
 @import "../styles/mixins.scss";
 .car-container {
+  margin-top: 60px;
   .car-container-inner {
     margin-top: 20px;
   }
@@ -35,4 +36,10 @@
 .content-right {
   justify-content: flex-end;
   text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+  .car-container {
+    margin-top: 30px;
+  }
 }

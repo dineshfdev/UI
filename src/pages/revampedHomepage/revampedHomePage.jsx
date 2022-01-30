@@ -80,9 +80,8 @@ const RevampHomePage = ({device}) => {
 
   return (
       <Grid container>
-         <HeaderSearch device={device} />
          <HeroSectionWrapper />
-         <DoorStepServices/>
+         <DoorStepServices device={device}/>
          <Accordion device={device} />
          <UpdatedPackages />
          <CarouselItemMechanic />
