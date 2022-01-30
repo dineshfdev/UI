@@ -45,7 +45,6 @@ const App = () => {
   useEffect(() => {
     if (navigator.geolocation) {
       navigator.geolocation.watchPosition((position) => {
-        console.log("position", position);
         setLat(position.coords.longitude);
         setLong(position.coords.latitude);
       });
@@ -54,29 +53,25 @@ const App = () => {
 
   return (
     <>
-      {!isNewHome && (
-        <div className="grid-container">
+      <div className="grid-container">
+        <LatLongContext.Provider
+          value={{
+            lat,
+            setLat,
+            long,
+            setLong,
+            defaultLocation,
+            setDefaultLocation,
+            servicesNearme,
+            setServicesNearMe,
+          }}
+        >
           <Header device={device} />
           <main>
             <Route
               exact
               path="/"
-              render={(props) => (
-                <LatLongContext.Provider
-                  value={{
-                    lat,
-                    setLat,
-                    long,
-                    setLong,
-                    defaultLocation,
-                    setDefaultLocation,
-                    servicesNearme,
-                    setServicesNearMe,
-                  }}
-                >
-                  <RevampHomePage {...props} device={device} />
-                </LatLongContext.Provider>
-              )}
+              render={(props) => <RevampHomePage {...props} device={device} />}
             />
             <Route
               exact
@@ -102,8 +97,8 @@ const App = () => {
             />
           </main>
           <PageFooter />
-        </div>
-      )}
+        </LatLongContext.Provider>
+      </div>
     </>
   );
 };
