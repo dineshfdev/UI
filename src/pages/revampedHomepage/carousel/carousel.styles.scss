@@ -190,6 +190,7 @@
       min-height: auto;
       &-reviews {
         position: relative;
+        bottom: inherit;
       }
       &-last-child {
         position: relative;

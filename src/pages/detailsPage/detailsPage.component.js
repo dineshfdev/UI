@@ -25,6 +25,7 @@ import carWash from "../../images/car-wash.png";
 import ac from "../../images/ac.png";
 import accessories from "../../images/hubcap.png";
 import ecu from "../../images/ecu.png";
+import comingSoon from "../../images/coming-soon.jpg";
 
 // service
 import {
@@ -407,7 +408,7 @@ const DetailsPage = (props) => {
             >
               <div className="image-container">
                 {name.garageImage === "" ? (
-                  <img src="http://via.placeholder.com/400x200" alt="garage" />
+                  <img src={comingSoon} alt="garage" />
                 ) : (
                   <img
                     src={`data:image/jpeg;base64,${name.garageImage}`}
