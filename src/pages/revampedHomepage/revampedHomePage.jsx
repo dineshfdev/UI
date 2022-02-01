@@ -11,8 +11,7 @@ import OurTeam from './ourteam/our-team';
 import Footer from './footer/footer';
 import CarouselItemMechanic  from './topmechanic/top-mechanic';
 import Accordion from './accordion/accordion';
-import Accessories from './accessories/accessories';
-import HeaderSearch from "./headerSearch/headerSearch";
+// import Accessories from './accessories/accessories';
 
 // context
 import { LatLongContext } from "../../../src/context/latLongContext";
@@ -83,13 +82,13 @@ const RevampHomePage = ({device}) => {
          <HeroSectionWrapper />
          <DoorStepServices device={device}/>
          <Accordion device={device} />
-         <UpdatedPackages />
+         <UpdatedPackages device={device} />
          <CarouselItemMechanic />
-         <CarServices />
+         <CarServices device={device}  />
          {/* <Accessories /> */}
-         <Testimonial />
+         <Testimonial device={device} />
          <OurTeam />
-         <Footer />
+         <Footer device={device} />
       </Grid>
   );
 }

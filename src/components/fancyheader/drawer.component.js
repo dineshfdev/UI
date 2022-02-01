@@ -3,8 +3,10 @@ import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
+
+//images
+import Hamburger from "../../images/assets/img/hamburger.svg";
 
 const drawerWidth = 240;
 
@@ -117,14 +119,7 @@ export default function PersistentDrawerRight({ device }) {
         onClick={handleDrawerOpen}
         className={clsx(open && classes.hide)}
       >
-        <MenuIcon
-          style={{
-            fontSize: "35",
-            right: "20",
-            position: "relative",
-            top: "-9px",
-          }}
-        />
+        <img src={Hamburger} alt="hamburger" />
       </IconButton>
       <Drawer
         className={classes.drawer}

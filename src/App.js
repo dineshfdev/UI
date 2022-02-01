@@ -21,8 +21,6 @@ import { LatLongContext } from "./context/latLongContext";
 import PageFooter from "./pages/revampedHomepage/page-footer/page-footer";
 
 const App = () => {
-  const [isNewHome, setIsNewHome] = useState();
-
   // lat long from new home page
   const [lat, setLat] = useState("");
   const [long, setLong] = useState("");
@@ -96,7 +94,7 @@ const App = () => {
               render={(props) => <AddNewGarage {...props} device={device} />}
             />
           </main>
-          <PageFooter />
+          <PageFooter device={device} />
         </LatLongContext.Provider>
       </div>
     </>

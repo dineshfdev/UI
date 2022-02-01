@@ -106,7 +106,7 @@
     justify-content: center;
     align-items: center;
     img {
-      margin-right: 20px;
+      margin-right: 10px;
     }
   }
   .mobile-accordion-content {
@@ -118,10 +118,11 @@
       color: #7a7c80;
       font-family: LatoRegular;
       line-height: 24px;
+      font-size: 16px;
     }
 
     a {
-      font-family: LatoRegular;
+      font-family: LatoBold;
       font-size: 16px;
       color: #f98306;
       text-decoration: underline !important;

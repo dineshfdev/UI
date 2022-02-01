@@ -31,11 +31,11 @@ const CarouselItemMechanic = () => {
 
       const [breakPoints] = useState([
         { width: 1, itemsToShow: 1.2,showArrows: false,enableSwipe: true  },
-        { width: 550, itemsToShow: 1.2, itemsToScroll: 1, pagination: false,showArrows: false ,enableSwipe: true},
-        { width: 850, itemsToShow: 3.2,showArrows: true , itemsToScroll: 1,enableSwipe: true},
-        { width: 1150, itemsToShow: 3.2, itemsToScroll: 2 ,enableSwipe: true},
-        { width: 1450, itemsToShow: 4.2 },
-        { width: 1750, itemsToShow: 4.2 },
+        { width: 550, itemsToShow: 2.2, itemsToScroll: 1, pagination: false,showArrows: false ,enableSwipe: true},
+        { width: 850, itemsToShow: 3.5,showArrows: true , itemsToScroll: 1,enableSwipe: true},
+        { width: 1150, itemsToShow: 3.5, itemsToScroll: 2 ,enableSwipe: true},
+        { width: 1450, itemsToShow: 4.5 },
+        { width: 1750, itemsToShow: 4.5 },
       ]);
 
     return (

@@ -4,6 +4,13 @@
   width: 100%;
   margin: 60px 0 20px;
 }
+.testimonial-container-mobile {
+  background: url("../../../images/assets/img/testimonial/mobile-bg.png")
+    no-repeat;
+  width: 100%;
+  margin: 30px 0 20px;
+  padding-top: 30px;
+}
 .title {
   @extend %title;
 }
@@ -44,5 +51,14 @@
   .testimonial-container {
     padding-top: 0;
     margin-top: 30px;
+  }
+}
+
+.testimonial-container-mobile {
+  .carousel-container {
+    margin-top: 20px;
+  }
+  .MuiCard-root.same-height {
+    height: 500px;
   }
 }

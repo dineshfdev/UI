@@ -12,14 +12,15 @@ import Tyre from '../../../images/assets/img/carservices/tyre.png';
 import Painting from '../../../images/assets/img/carservices/painting.png';
 import WindShield from '../../../images/assets/img/carservices/windshield.png';
 
-const CarServices = () => {
+const CarServices = ({device}) => {
+    const {breakpoint} = device;
     return(
     <Container>
     <Grid className="car-container" xs={12}>
         <Grid container item xs={12} md={12}>
             <div className="services-header-container">
                 <h3 className="title item">Popular Car Services</h3>
-                <div className="item content-right"><a className="services-link" href="#">View all Services</a></div>
+               {breakpoint !== 'phone'? <div className="item content-right"><a className="services-link" href="#">View all Services</a></div> : null}
             </div>
         </Grid>
         <Grid container item spacing={3} xs={12} className="car-container-inner" >
@@ -85,6 +86,7 @@ const CarServices = () => {
                 </Grid>
                 
             </Grid>
+            {breakpoint === 'phone'? <div className="item services-mobile-text"><a className="services-link" href="#">View all Services</a></div> : null}
     </Grid>
     </Container>
     )

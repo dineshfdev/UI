@@ -146,60 +146,66 @@ const Header = ({ device }) => {
         <Container>
           <Grid item className="header-search-container" xs={12}>
             <Grid container item xs={12} className="header-location-container">
-              <div className="header-search-items">
-                <img src={location} alt="location" />
-                <span>We serve Chennai alone</span>
-                <div className="location-hide">
-                  <img src={locationTracker} alt="current location" />
-                  <span
-                    className="header-current-location"
+              <Grid item xs={12} md={3}>
+                <div className="header-search-items">
+                  <img src={location} alt="location" />
+                  <span>We serve Chennai alone</span>
+                </div>
+              </Grid>
+              <Grid item xs={10} md={3}>
+                <div className="header-search-items">
+                  <Autocomplete
+                    id="garage-select"
+                    style={{ width: 300 }}
+                    options={options}
+                    autoHighlight
+                    popupIcon={<ExpandMoreIcon />}
+                    getOptionLabel={(option) => (option ? option : "")}
+                    onChange={selectChange}
+                    onOpen={() => {
+                      setOpen(true);
+                    }}
+                    onClose={() => {
+                      setOpen(false);
+                    }}
+                    renderOption={(option) => (
+                      <React.Fragment>{option}</React.Fragment>
+                    )}
+                    renderInput={(params) => (
+                      <TextField
+                        {...params}
+                        label="Select Area"
+                        variant="outlined"
+                        className="input-text-container"
+                        inputProps={{
+                          ...params.inputProps,
+                        }}
+                        classes={{ root: classes.autoCompleteTextFields }}
+                      />
+                    )}
+                  />
+                </div>
+              </Grid>
+              <Grid item xs={2} md={3}>
+                {breakpoint === "phone" ? (
+                  <div
                     onClick={getCurrentLocation}
+                    class="location-header-icon"
                   >
-                    Use my current location
-                  </span>
-                </div>
-              </div>
-              <div className="header-search-items">
-                <Autocomplete
-                  id="garage-select"
-                  style={{ width: 300 }}
-                  options={options}
-                  autoHighlight
-                  popupIcon={<ExpandMoreIcon />}
-                  getOptionLabel={(option) => (option ? option : "")}
-                  onChange={selectChange}
-                  onOpen={() => {
-                    setOpen(true);
-                  }}
-                  onClose={() => {
-                    setOpen(false);
-                  }}
-                  renderOption={(option) => (
-                    <React.Fragment>{option}</React.Fragment>
-                  )}
-                  renderInput={(params) => (
-                    <TextField
-                      {...params}
-                      label="Select Area"
-                      variant="outlined"
-                      className="input-text-container"
-                      inputProps={{
-                        ...params.inputProps,
-                      }}
-                      classes={{ root: classes.autoCompleteTextFields }}
-                    />
-                  )}
-                />
-              </div>
-              <div className="location-reverse">
-                <img src={locationTracker} alt="current location" />
-                <div
-                  className="header-current-location"
-                  onClick={getCurrentLocation}
-                >
-                  Use my current location
-                </div>
-              </div>
+                    <img src={locationTracker} alt="current location" />
+                  </div>
+                ) : (
+                  <div className="location-reverse">
+                    <img src={locationTracker} alt="current location" />
+                    <div
+                      className="header-current-location"
+                      onClick={getCurrentLocation}
+                    >
+                      Use my current location
+                    </div>
+                  </div>
+                )}
+              </Grid>
             </Grid>
           </Grid>
         </Container>

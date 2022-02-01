@@ -14,7 +14,8 @@ import "./page-footer-styles.scss";
 import TermsConditions from "../../../components/modal/termsConditions";
 
 
-const PageFooter =() => {
+const PageFooter =({device}) => {
+    const { breakpoint } = device;
 
     const [open, setOpen] = useState(false);
 
@@ -29,7 +30,7 @@ return (
                     Chennai - 600073, India.
                 </p>
             </Grid>
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12} md={6} className={breakpoint === 'phone' ? 'no-padding-top' : ''}>
                 <div>
                     <a href="https://www.instagram.com/servicegeni/" target="_blank" rel="instagram noreferrer"><img src={instagramIcon} alt="instagram" /></a>
                     <a href="https://twitter.com/GeniService"><img src={twitterIcon} alt="twitter" /></a>

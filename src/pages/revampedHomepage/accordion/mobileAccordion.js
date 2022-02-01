@@ -74,10 +74,9 @@ export default function CustomizedAccordions({ AccordionData }) {
             <Typography>
               <img src={x.image} alt={x.title} />
               {x.content}
-              <br />
-              <span>
+              <div style={{ marginTop: 20 }}>
                 <a href={x.readMore}>{"Read More >"}</a>
-              </span>
+              </div>
             </Typography>
           </AccordionDetails>
         </Accordion>

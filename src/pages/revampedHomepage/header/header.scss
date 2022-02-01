@@ -134,10 +134,6 @@
   padding: 15px 0;
 }
 
-.location-hide {
-  display: none !important;
-}
-
 .location-reverse {
   display: flex;
   img {
@@ -174,11 +170,15 @@
   box-shadow: 0 1px 8px 0 #f1f1f1;
 }
 @media screen and (max-width: 768px) {
+  .input-text-container .MuiInputBase-input {
+    height: 8px;
+    font-family: LatoRegular;
+  }
   .header-location-container {
     justify-content: center;
     div {
-      font-size: 12px;
-      font-family: LatoRegular;
+      font-size: 16px;
+
       align-items: center;
     }
     img {
@@ -198,18 +198,23 @@
   }
   .header-container {
     padding: 0 !important;
+    box-shadow: none !important;
+    font-family: LatoBold;
   }
   .input-text-container {
     margin-top: 10px !important;
   }
-  .location-hide {
-    display: flex !important;
-  }
-  .location-reverse {
-    display: none !important;
-  }
   .header-search-container {
     padding-top: 0;
+  }
+  .header-border {
+    margin: 8px 0;
+  }
+  .header-search-items {
+    margin-top: 5px;
+  }
+  .location-header-icon {
+    margin-top: 15px;
   }
 }
 @media screen and (max-width: 500px) {
