@@ -11,3 +11,8 @@
 .hero-section-container {
   margin-top: 25px;
 }
+@media screen and (max-width: 768px) {
+  .hero-section-container {
+    margin-top: 35px;
+  }
+}

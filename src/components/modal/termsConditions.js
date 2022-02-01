@@ -67,13 +67,11 @@ export default function TermsConditions(props) {
         TERMS AND CONDITIONS
       </DialogTitle>
       <DialogContent dividers>
-        ​
         <p>
           Service Geni provides access to the https://servicegeni.in/ website.
           These Terms of Use account for a legal agreement between users and the
           Website.
         </p>
-        ​
         <p>
           With the focus on these Terms of Use, wherever the context so requires
           "You", “Your” or "User" shall mean any legal person who is a user/
@@ -100,7 +98,6 @@ export default function TermsConditions(props) {
           their services by listing them on the Website shall be referred to as
           the “garage owner”.
         </p>
-        ​
         <p>
           You will be asked to provide certain information about yourself
           including your name, contact details, and vehicle information. You
@@ -109,7 +106,6 @@ export default function TermsConditions(props) {
           any changes to the data that you have provided, by updating your
           details, so we can deliver and provide you the services efficiently.
         </p>
-        ​
         <p>
           We will make several services available to you free of charge. The
           services will include the ability to search Service providers for
@@ -139,7 +135,7 @@ export default function TermsConditions(props) {
           compliance with all relevant laws for making payments to Service Geni.
         </p>
         <p>
-          ​ ACCESSING, BROWSING, OR USING THE SITE MEANS YOUR ACCEPTANCE OF ALL
+          ACCESSING, BROWSING, OR USING THE SITE MEANS YOUR ACCEPTANCE OF ALL
           THE TERMS AND CONDITIONS UNDER THESE TERMS OF USE, SO PLEASE
           UNDERSTAND THE TERMS OF USE THOROUGHLY BEFORE PROCEEDING.
         </p>
@@ -158,7 +154,7 @@ export default function TermsConditions(props) {
         <p>
           We give our permission to get transactional communications from
           Service Geni over the WhatsApp channel on booking order through the
-          website. ​
+          website.
         </p>
         <h5>REFUNDS AND CANCELLATION POLICY</h5>
         <p>

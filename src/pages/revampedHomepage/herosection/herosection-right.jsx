@@ -27,8 +27,6 @@ function HeroSectionRight() {
     }
     
   }
-
-  console.log('optionValue',optionValue);
   return (
     <div className="hero-section-right">
       <div className="hero-section-right__content">

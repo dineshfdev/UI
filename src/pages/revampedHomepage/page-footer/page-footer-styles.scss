@@ -2,6 +2,7 @@
 .page-footer-container {
   width: 100%;
   padding: 30px;
+  color: #7a7c80;
   p {
     font-family: LatoRegular;
     font-size: 16px;
@@ -10,6 +11,9 @@
 }
 .title {
   @extend %title;
+}
+.no-padding-top {
+  padding-top: 0 !important;
 }
 
 .page-footer-logo {
