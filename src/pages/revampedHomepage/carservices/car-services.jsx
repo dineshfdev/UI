@@ -1,4 +1,5 @@
 import React from "react";
+import { Link} from "react-router-dom";
 import { Grid,Container } from '@material-ui/core';
 
 // styles
@@ -20,7 +21,9 @@ const CarServices = ({device}) => {
         <Grid container item xs={12} md={12}>
             <div className="services-header-container">
                 <h3 className="title item">Popular Car Services</h3>
-               {breakpoint !== 'phone'? <div className="item content-right"><a className="services-link" href="#">View all Services</a></div> : null}
+               {breakpoint !== 'phone'? <div className="item content-right"><Link to="/search" className="services-link">
+                View all Services
+            </Link></div> : null}
             </div>
         </Grid>
         <Grid container item spacing={3} xs={12} className="car-container-inner" >
@@ -86,7 +89,11 @@ const CarServices = ({device}) => {
                 </Grid>
                 
             </Grid>
-            {breakpoint === 'phone'? <div className="item services-mobile-text"><a className="services-link" href="#">View all Services</a></div> : null}
+            {breakpoint === 'phone'? <div className="item services-mobile-text">
+            <Link to="/search" className="services-link">
+                View all Services
+            </Link>
+            </div> : null}
     </Grid>
     </Container>
     )
