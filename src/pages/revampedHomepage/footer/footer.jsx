@@ -150,7 +150,7 @@ return (
                         <h5 className="footer-header">Our Service Partner are all across the city, check now</h5>
                         <Grid container xs={12}>
                             <ul className="footer-list-container footer-list-location">
-                                {ourServicesData.map(x => <li onClick={() => onLocationClick({x})}>{x}</li>)}
+                                {ourServicesData.map(x => <li onClick={() => onLocationClick(x)}>{x}</li>)}
                             </ul>
                             <Link to="/search" className="link offset-margin-top">
                                 More Locations
