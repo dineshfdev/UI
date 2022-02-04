@@ -84,7 +84,7 @@ return (
                             <AccordionDetails className="accordion-body">
                             <Typography>
                             <ul className="footer-list-container">
-                                {aboutUsData.map(x => <li><a href={x.link}>{x.text}</a></li>)}
+                                {aboutUsData.map(x => <li key={x.text}><a href={x.link}>{x.text}</a></li>)}
                             </ul>
                             </Typography>
                             </AccordionDetails>
@@ -108,7 +108,7 @@ return (
                             <AccordionDetails className="accordion-body">
                             <Typography>
                             <ul className="footer-list-container">
-                                {doorStepData.map(x => <li><a href={x.link}>{x.text}</a></li>)}
+                                {doorStepData.map(x => <li key={x.text}><a href={x.link}>{x.text}</a></li>)}
                             </ul>
                             </Typography>
                             </AccordionDetails>
@@ -120,7 +120,7 @@ return (
                             <AccordionDetails  className="accordion-body">
                             <Typography>
                             <ul className="footer-list-container footer-list-location">
-                                {ourServicesData.map(x => <li onClick={() => onLocationClick({x})}>{x}</li>)}
+                                {ourServicesData.map(x => <li onClick={() => onLocationClick(x)} key={x}>{x}</li>)}
                             </ul>
                             <Link to="/search" className="link offset-margin-top">
                                 More Locations
@@ -133,7 +133,7 @@ return (
                     <Grid item xs={6} md={3}>
                         <h5 className="footer-header">About Us</h5>
                         <ul className="footer-list-container">
-                            {aboutUsData.map(x => <li><a href={x.link}>{x.text}</a></li>)}
+                            {aboutUsData.map(x => <li key={x.text}><a href={x.link}>{x.text}</a></li>)}
                         </ul>
                     </Grid>
                     <Grid item xs={6} md={3}>
@@ -143,14 +143,14 @@ return (
                         </ul>
                         <h5 className="footer-header">Doorstep Services</h5>
                         <ul className="footer-list-container">
-                            {doorStepData.map(x => <li><a href={x.link}>{x.text}</a></li>)}
+                            {doorStepData.map(x => <li key={x.text}><a href={x.link}>{x.text}</a></li>)}
                         </ul>
                     </Grid>
                     <Grid item xs={12} md={5}>
                         <h5 className="footer-header">Our Service Partner are all across the city, check now</h5>
                         <Grid container xs={12}>
                             <ul className="footer-list-container footer-list-location">
-                                {ourServicesData.map(x => <li onClick={() => onLocationClick(x)}>{x}</li>)}
+                                {ourServicesData.map(x => <li onClick={() => onLocationClick(x)} key={x}>{x}</li>)}
                             </ul>
                             <Link to="/search" className="link offset-margin-top">
                                 More Locations

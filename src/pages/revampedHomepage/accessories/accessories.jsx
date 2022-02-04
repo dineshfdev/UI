@@ -13,7 +13,7 @@ import "./accessories.styles.scss";
 const Accessories = () =>{
   const [breakPoints] = useState([
     { width: 1, itemsToShow: 1.5,showArrows: false,enableSwipe: true  },
-    { width: 550, itemsToShow: 1.5, itemsToScroll: 1, pagination: false,showArrows: false ,enableSwipe: true},
+    { width: 550, itemsToShow: 2.5, itemsToScroll: 1, pagination: false,showArrows: false ,enableSwipe: true},
     { width: 850, itemsToShow: 3.5,showArrows: true , itemsToScroll: 1,enableSwipe: true},
     { width: 1150, itemsToShow: 3.5, itemsToScroll: 2 ,enableSwipe: true},
     { width: 1450, itemsToShow: 4.5 },
