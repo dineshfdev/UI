@@ -27,28 +27,11 @@ const RevampHomePage = ({device}) => {
   const { lat,long,setLat, setLong,setDefaultLocation,servicesNearme } =
     useContext(LatLongContext);
 
-  // reversing the lat long values according to service future we have to change in service
-  useEffect(() => {
-    (async () => {
-      const permissionStatus = await navigator?.permissions?.query({name: 'geolocation'});
-      if(permissionStatus.state ==="granted"){
-        navigator.geolocation.getCurrentPosition((position) => {
-          setLat(position.coords.longitude);
-          setLong(position.coords.latitude);
-        });
-      }
-      else{
-            setLat("80.270718");
-            setLong("13.082680") 
-      }
-    })();
-
-  }, [setLat,setLong]);
-
 
     // get latest geocode along with latidue and longitude
     useEffect(() => {
       if(servicesNearme){
+        debugger;
       (async () => {
         await fetch(
           `https://api.mapbox.com/geocoding/v5/mapbox.places/${servicesNearme}.json?access_token=${REACT_APP_MAPBOX_ACCESS_TOKEN}`

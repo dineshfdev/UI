@@ -41,11 +41,20 @@ const App = () => {
 
   // added to check url correctly
   useEffect(() => {
+    let firedAlready = false;
     if (navigator.geolocation) {
-      navigator.geolocation.watchPosition((position) => {
-        setLat(position.coords.longitude);
-        setLong(position.coords.latitude);
-      });
+      navigator.geolocation.watchPosition(showPosition, throwError);
+      function showPosition(position) {
+        if (!firedAlready) {
+          setLat(position.coords.longitude);
+          setLong(position.coords.latitude);
+          firedAlready = true;
+        }
+      }
+      function throwError(err) {
+        setLat("80.270718");
+        setLong("13.082680");
+      }
     }
   }, []);
 

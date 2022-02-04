@@ -8,10 +8,10 @@ import {
   TextField,
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
-import LinkWithIcon from "../linkwithicon/linkwithicon";
+// import LinkWithIcon from "../linkwithicon/linkwithicon";
 import Logo from "../../../images/logo.png";
 // import SearchIcon from "../../../images/assets/img/icons/global/search.svg";
-import HelpIcon from "../../../images/assets/img/icons/global/help.svg";
+// import HelpIcon from "../../../images/assets/img/icons/global/help.svg";
 // import LoginIcon from "../../../images/assets/img/icons/global/login.svg";
 // import CartIcon from "../../../images/assets/img/icons/global/cart.svg";
 
@@ -129,12 +129,12 @@ const Header = ({ device }) => {
                 <div className="link-icon-container">
                   {/* commented for future use*/}
                   {/* <LinkWithIcon icon={SearchIcon} text="Search" link="#" alt="search" /> */}
-                  <LinkWithIcon
+                  {/* <LinkWithIcon
                     icon={HelpIcon}
                     text="Help"
                     link="#"
                     alt="help"
-                  />
+                  /> */}
                   {/* <LinkWithIcon icon={LoginIcon} text="Help" link="#" alt="Help" />
           <LinkWithIcon icon={CartIcon} text="Cart" link="#" alt="cart" /> */}
                 </div>
