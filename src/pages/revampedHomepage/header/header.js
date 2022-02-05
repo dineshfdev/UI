@@ -129,7 +129,6 @@ const Header = ({ device }) => {
               </Grid>
               <Grid item xs={12} md={5} className={classForContainer}>
                 <div className="link-icon-container">
-                  {/* commented for future use*/}
                   {/* <LinkWithIcon icon={SearchIcon} text="Search" link="#" alt="search" /> */}
                   {/* <LinkWithIcon
                     icon={HelpIcon}
