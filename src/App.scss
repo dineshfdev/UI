@@ -38,6 +38,10 @@ body {
   grid-template-rows: 15.5rem 1fr 10rem;
   height: 100%;
 }
+
+.override-grid-container {
+  grid-template-rows: 10rem 1fr 10rem;
+}
 header {
   grid-area: header;
   background-color: #203040;

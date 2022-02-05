@@ -23,7 +23,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-export default function Search() {
+export default function Search(props) {
   const [value, setValue] = React.useState("location");
   const [open, setOpen] = React.useState(false);
   const [options, setOptions] = React.useState([]);

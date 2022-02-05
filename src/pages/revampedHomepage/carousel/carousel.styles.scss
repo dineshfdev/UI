@@ -160,6 +160,7 @@
 
 .items-accessories-container {
   margin-top: 60px !important;
+  position: relative;
   .title {
     @extend %title;
   }

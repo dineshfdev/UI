@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Route, withRouter } from "react-router-dom";
+import { Route, withRouter, useLocation } from "react-router-dom";
 import "./App.scss";
 // import withClearCache from "./ClearCache";
 // commenting homepage for temporary purpose
@@ -35,6 +35,8 @@ const App = () => {
   ];
   const device = useDevice({ breakpoints });
 
+  const location = useLocation();
+
   if (device.os.includes("Mac OS") || device.browser.includes("Safari")) {
     import("./reset.scss");
   }
@@ -60,7 +62,13 @@ const App = () => {
 
   return (
     <>
-      <div className="grid-container">
+      <div
+        className={`${
+          location.pathname === "/search"
+            ? "grid-container override-grid-container"
+            : "grid-container"
+        }`}
+      >
         <LatLongContext.Provider
           value={{
             lat,

@@ -60,7 +60,7 @@ const RevampHomePage = ({device}) => {
 
 
   return (
-      <Grid container>
+      <>
          <HeroSectionWrapper />
          <DoorStepServices device={device}/>
          <Accordion device={device} />
@@ -71,7 +71,7 @@ const RevampHomePage = ({device}) => {
          <Testimonial device={device} />
          <OurTeam />
          <Footer device={device} />
-      </Grid>
+      </>
   );
 }
 
