@@ -88,7 +88,7 @@
     &-last-child {
       display: flex;
       position: absolute;
-      bottom: 20px;
+      bottom: 0;
       width: 90%;
       justify-content: space-between;
       left: 15px;
@@ -187,7 +187,7 @@
   .mechanic-carousel,
   .accessories-carousel {
     &__item {
-      min-height: auto;
+      min-height: 500px;
       &-reviews {
         position: relative;
         bottom: inherit;
@@ -195,6 +195,11 @@
       &-last-child {
         position: relative;
         padding-top: 15px;
+      }
+      .mechanic-carousel__item-starts-from,
+      .mechanic-carousel__item-distance {
+        display: inline-block;
+        width: 50%;
       }
     }
   }
@@ -207,5 +212,8 @@
       font-size: 12px;
       line-height: 20px;
     }
+  }
+  .block-clear {
+    margin-top: 10px;
   }
 }

@@ -31,7 +31,6 @@ const RevampHomePage = ({device}) => {
     // get latest geocode along with latidue and longitude
     useEffect(() => {
       if(servicesNearme){
-        debugger;
       (async () => {
         await fetch(
           `https://api.mapbox.com/geocoding/v5/mapbox.places/${servicesNearme}.json?access_token=${REACT_APP_MAPBOX_ACCESS_TOKEN}`
