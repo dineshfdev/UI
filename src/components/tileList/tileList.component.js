@@ -84,7 +84,8 @@ const TileList = (props) => {
                 <Grid item container direction="column" spacing={2}>
                   <Grid item xs className="list-container__rating-container">
                     <div>
-                      {x.garageOverallRating.averageGarageRatings === "NaN" ? (
+                      {x.garageOverallRating.averageGarageRatings === "NaN" ||
+                      x.garageOverallRating.averageGarageRatings === "N/A" ? (
                         "No Reviews"
                       ) : (
                         <>

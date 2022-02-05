@@ -148,14 +148,20 @@ const Header = ({ device }) => {
           container
           xs={12}
           className={`${
-            location.pathname === "/search" ? "no-border" : "header-border"
+            location.pathname === "/search" ||
+            location.pathname === "/location-list" ||
+            location.pathname === "/details"
+              ? "no-border"
+              : "header-border"
           }`}
         ></Grid>
         <Container>
           <Grid
             item
             className={`${
-              location.pathname === "/search"
+              location.pathname === "/search" ||
+              location.pathname === "/location-list" ||
+              location.pathname === "/details"
                 ? "display-none override-grid-container"
                 : "header-search-container"
             }`}

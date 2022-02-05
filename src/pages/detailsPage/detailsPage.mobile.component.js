@@ -145,8 +145,9 @@ const MobileDetailsPage = (props) => {
               />
               <div className="details-container__far-reaching">
                 <div className="details-container__ratings">
-                  {overAllRating &&
-                  overAllRating.averageGarageRatings === "NaN" ? (
+                  {(overAllRating &&
+                    overAllRating.averageGarageRatings === "NaN") ||
+                  overAllRating.averageGarageRatings === "N/A" ? (
                     "No Reviews"
                   ) : (
                     <>

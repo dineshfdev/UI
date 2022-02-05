@@ -64,7 +64,9 @@ const App = () => {
     <>
       <div
         className={`${
-          location.pathname === "/search"
+          location.pathname === "/search" ||
+          location.pathname === "/location-list" ||
+          location.pathname === "/details"
             ? "grid-container override-grid-container"
             : "grid-container"
         }`}

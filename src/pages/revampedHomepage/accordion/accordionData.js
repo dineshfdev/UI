@@ -1,6 +1,6 @@
 import TickIcon from "../../../images/assets/img/icons/global/tick.svg";
 import Convenience from "../../../images/assets/img/servicecentre/Convenience.png";
-import Mission from "../../../images/assets/img/servicecentre/Mission.jpg";
+import Mission from "../../../images/assets/img/servicecentre/Mission.png";
 import strive from "../../../images/assets/img/servicecentre/We-strive-to.png";
 
 const data = [

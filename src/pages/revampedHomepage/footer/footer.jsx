@@ -84,7 +84,7 @@ return (
                             <AccordionDetails className="accordion-body">
                             <Typography>
                             <ul className="footer-list-container">
-                                {aboutUsData.map(x => <li key={x.text}><a href={x.link}>{x.text}</a></li>)}
+                                {aboutUsData.map(x => <li key={x.text}><a href={x.link}>{x.text}</a>{x.img ? <img src={x.img} alt="coming soon" />: ''}</li>)}
                             </ul>
                             </Typography>
                             </AccordionDetails>
@@ -133,7 +133,7 @@ return (
                     <Grid item xs={6} md={3}>
                         <h5 className="footer-header">About Us</h5>
                         <ul className="footer-list-container">
-                            {aboutUsData.map(x => <li key={x.text}><a href={x.link}>{x.text}</a></li>)}
+                            {aboutUsData.map(x => <li key={x.text}><a href={x.link}>{x.text}</a> {x.img ? <img src={x.img} alt="coming soon" />: ''}</li>)}
                         </ul>
                     </Grid>
                     <Grid item xs={6} md={3}>

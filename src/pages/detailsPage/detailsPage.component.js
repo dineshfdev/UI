@@ -172,8 +172,9 @@ const DetailsPage = (props) => {
                     </div>
                   </p>
                   <div>
-                    {overAllRating &&
-                    overAllRating.averageGarageRatings === "NaN" ? (
+                    {(overAllRating &&
+                      overAllRating.averageGarageRatings === "NaN") ||
+                    overAllRating.averageGarageRatings === "N/A" ? (
                       "No Reviews"
                     ) : (
                       <>

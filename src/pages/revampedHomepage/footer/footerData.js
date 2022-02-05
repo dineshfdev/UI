@@ -1,16 +1,22 @@
+// images
+import soonIcon from "../../../images/assets/img/soon.png";
+
 export const aboutUsData = [
   { link: "https://www.servicegeni.in/about-us", text: "About" },
-  { link: "https://www.servicegeni.in/contact-us", text: "Contact Us" },
+  {
+    link: "https://www.servicegeni.in/contact-us",
+    text: "Contact Us",
+  },
   { link: "https://www.servicegeni.in/faq", text: "FAQs" },
   {
     link: "https://www.servicegeni.in/blogs/categories/trending-auto-news",
     text: "News",
   },
   { link: "https://www.servicegeni.in/blogs", text: "Blogs" },
-  { link: "#", text: "Careers" },
-  { link: "#", text: "Our Partners" },
-  { link: "#", text: "Offers" },
-  { link: "#", text: "Reviews" },
+  { link: "javascript:void(0);", text: "Careers", img: soonIcon },
+  { link: "javascript:void(0);", text: "Our Partners", img: soonIcon },
+  { link: "javascript:void(0);", text: "Offers", img: soonIcon },
+  { link: "javascript:void(0);", text: "Reviews", img: soonIcon },
 ];
 
 export const doorStepData = [
