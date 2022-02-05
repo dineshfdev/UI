@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Route, withRouter } from "react-router-dom";
+import { Route, withRouter, useLocation } from "react-router-dom";
 import "./App.scss";
 // import withClearCache from "./ClearCache";
 // commenting homepage for temporary purpose
@@ -22,8 +22,8 @@ import PageFooter from "./pages/revampedHomepage/page-footer/page-footer";
 
 const App = () => {
   // lat long from new home page
-  const [lat, setLat] = useState("");
-  const [long, setLong] = useState("");
+  const [lat, setLat] = useState("80.270718");
+  const [long, setLong] = useState("13.082680");
   const [defaultLocation, setDefaultLocation] = useState("");
   const [servicesNearme, setServicesNearMe] = useState("");
 
@@ -34,6 +34,8 @@ const App = () => {
     { name: "desktop", min: 1080, max: Infinity },
   ];
   const device = useDevice({ breakpoints });
+
+  const location = useLocation();
 
   if (device.os.includes("Mac OS") || device.browser.includes("Safari")) {
     import("./reset.scss");
@@ -60,7 +62,13 @@ const App = () => {
 
   return (
     <>
-      <div className="grid-container">
+      <div
+        className={`${
+          location.pathname === "/search"
+            ? "grid-container override-grid-container"
+            : "grid-container"
+        }`}
+      >
         <LatLongContext.Provider
           value={{
             lat,

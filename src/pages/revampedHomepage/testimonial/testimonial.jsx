@@ -22,7 +22,7 @@ return (
     <Grid className={`${breakpoint === 'phone' ? 'testimonial-container-mobile': 'testimonial-container'}`}>
         <Container>
         <h3 className="title">What people say</h3>
-        <Grid container xs={12} spacing={3}>
+        <Grid container xs={12} spacing={3} style={{position: 'relative'}}>
         <Carousel breakPoints={breakPoints} 
         transitionMs={700}
         pagination={false}

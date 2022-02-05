@@ -75,7 +75,7 @@ const CarouselItemMechanic = () => {
                     </p>
                   </div>
                   <div className="mechanic-carousel__item-reviews mechanic-carousel__item--semibold">
-                  {x.averageGarageRatings === "NaN" ? (
+                  {x.averageGarageRatings === "NaN"  || x.averageGarageRatings === "N/A" ? (
                         "No reviews"
                       ) : (
                         <>

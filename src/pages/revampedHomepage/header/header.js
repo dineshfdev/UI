@@ -7,7 +7,7 @@ import {
   Container,
   TextField,
 } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 // import LinkWithIcon from "../linkwithicon/linkwithicon";
 import Logo from "../../../images/logo.png";
 // import SearchIcon from "../../../images/assets/img/icons/global/search.svg";
@@ -30,7 +30,7 @@ import { getAllUniqueGarages } from "../../../services/services";
 import "./header.scss";
 
 // image
-import location from "../../../images/assets/img/header/location.png";
+import locationImage from "../../../images/assets/img/header/location.png";
 import locationTracker from "../../../images/assets/img/header/pointer-location.png";
 
 const useStyles = makeStyles(() => ({
@@ -84,6 +84,8 @@ const Header = ({ device }) => {
       setLong(position.coords.latitude);
     });
   };
+
+  const location = useLocation();
 
   return (
     <>
@@ -142,13 +144,27 @@ const Header = ({ device }) => {
             </Grid>
           </Container>
         </Toolbar>
-        <Grid container xs={12} className="header-border"></Grid>
+        <Grid
+          container
+          xs={12}
+          className={`${
+            location.pathname === "/search" ? "no-border" : "header-border"
+          }`}
+        ></Grid>
         <Container>
-          <Grid item className="header-search-container" xs={12}>
+          <Grid
+            item
+            className={`${
+              location.pathname === "/search"
+                ? "display-none override-grid-container"
+                : "header-search-container"
+            }`}
+            xs={12}
+          >
             <Grid container item xs={12} className="header-location-container">
               <Grid item xs={12} md={3}>
                 <div className="header-search-items">
-                  <img src={location} alt="location" />
+                  <img src={locationImage} alt="location" />
                   <span>We serve Chennai alone</span>
                 </div>
               </Grid>
