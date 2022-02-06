@@ -22,8 +22,8 @@ import PageFooter from "./pages/revampedHomepage/page-footer/page-footer";
 
 const App = () => {
   // lat long from new home page
-  const [lat, setLat] = useState("80.270718");
-  const [long, setLong] = useState("13.082680");
+  const [lat, setLat] = useState("");
+  const [long, setLong] = useState("");
   const [defaultLocation, setDefaultLocation] = useState("");
   const [servicesNearme, setServicesNearMe] = useState("");
 
