@@ -49,8 +49,8 @@ const CarouselItemMechanic = () => {
         pagination={false}
         className="carousel-container"
         >
-            {data.map(x=>
-                <div className="mechanic-carousel__item same-height" key={x.garageTitle}>
+            {data.map((x,index)=>
+                <div className="mechanic-carousel__item same-height" key={index}>
                 {x.garageImage === "" ? (
                   <img src={comingSoon} alt="garage" className="mechanic-carousel__item-image" />
                 ) : (

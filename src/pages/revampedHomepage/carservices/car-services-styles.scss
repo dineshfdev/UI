@@ -1,6 +1,6 @@
 @import "../styles/mixins.scss";
 .car-container {
-  margin-top: 10px;
+  margin-top: 60px;
   .car-container-inner {
     margin-top: 20px;
   }
@@ -31,6 +31,9 @@
   width: 100%;
   .item {
     flex-grow: 1;
+  }
+  .title {
+    padding-top: 0;
   }
 }
 .content-right {

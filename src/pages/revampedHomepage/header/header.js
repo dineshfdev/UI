@@ -74,7 +74,7 @@ const Header = ({ device }) => {
   }, [open]);
 
   const selectChange = (event, val) => {
-    setServicesNearMe(val);
+    setServicesNearMe(`${val} tamilnadu`);
   };
 
   // reversing the lat long values according to service future we have to change in service
