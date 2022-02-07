@@ -24,10 +24,10 @@ const DoorStepServices = () =>{
     return(
         <Container className="doorstep-services-wrapper">
         <Grid item className="doorstep-services-container" xs={12} >
-            <h3 className="title">Need services at your place</h3>
+            <h3 className="title">Send an expert car care team</h3>
             <Grid container>
                     <Grid container item xs={12} md={8}>
-                        <div className="doorstep-subtitle">For your convenience, we provide handpicked car services right at your doorstep.</div>
+                        <div className="doorstep-subtitle">for a safe, secure and convenient service at fixed cost. Select now</div>
                     </Grid>
                     <Grid container item xs={12} md={4} className="card-accessories-button">
                         <div className="desktop-content-top">
@@ -134,7 +134,7 @@ const DoorStepServices = () =>{
                                     Express Service
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p" className="card-price">
-                                    Starts @ &#x20B9; 1800 
+                                    Starts @ &#x20B9; 2340 
                                     </Typography>
                                     
                                 </CardContent>
@@ -162,7 +162,7 @@ const DoorStepServices = () =>{
                                         General Service
                                     </Typography>
                                     <Typography variant="body2" color="textSecondary" component="p" className="card-price">
-                                    Starts @ &#x20B9; 4499 
+                                    Starts @ &#x20B9; 4680 
                                     </Typography>
                                     
                                 </CardContent>
