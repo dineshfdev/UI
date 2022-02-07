@@ -11,6 +11,7 @@ import expressService from "../../../images/assets/img/services/express-service.
 import inspectionService from "../../../images/assets/img/services/inspection-service.jpg";
 import jumpstartService from "../../../images/assets/img/services/jumpstart-service.jpg";
 import carWash from "../../../images/assets/img/services/car-wash.jpg";
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
 const DoorStepServices = () =>{
     const [breakPoints] = useState([
@@ -27,7 +28,7 @@ const DoorStepServices = () =>{
             <h3 className="title">Send an expert car care team</h3>
             <Grid container>
                     <Grid container item xs={12} md={8}>
-                        <div className="doorstep-subtitle">for a safe, secure and convenient service at fixed cost. Select now</div>
+                        <div className="doorstep-subtitle">for a safe, secure and convenient service at fixed cost. Select now <ArrowDropDownIcon fontSize="large" className="arrow-icon"/></div>
                     </Grid>
                     <Grid container item xs={12} md={4} className="card-accessories-button">
                         <div className="desktop-content-top">

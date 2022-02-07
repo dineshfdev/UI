@@ -9,6 +9,8 @@
   .doorstep-subtitle {
     font-family: LatoRegular;
     font-size: 16px;
+    display: flex;
+    align-items: center;
   }
   .card-header {
     font-family: PoppinsBold;
@@ -33,7 +35,10 @@
     border-radius: 0;
   }
 }
-
+.arrow-icon {
+  color: #f98306;
+  margin-left: 5px;
+}
 .card-accessories-button {
   justify-content: flex-end;
 }
