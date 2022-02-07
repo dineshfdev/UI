@@ -47,6 +47,11 @@
   flex-direction: column;
   justify-content: space-between;
 }
+.testimonial-image {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
 
 @media screen and (max-width: 768px) {
   .testimonial-container {

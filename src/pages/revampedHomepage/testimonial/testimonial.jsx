@@ -7,6 +7,13 @@ import Carousel from 'react-elastic-carousel';
 // styles
 import "./testimonial-styles.scss";
 
+//images 
+import user4 from "../../../images/assets/img/testimonial/Mohammed-Hasan.png";
+import user3 from "../../../images/assets/img/testimonial/Avinash.png";
+import user1 from "../../../images/assets/img/testimonial/Swetha-Prabhu.png";
+import user2 from "../../../images/assets/img/testimonial/Jennifer-Hamrita.png";
+import user5 from "../../../images/assets/img/testimonial/Praveen.png";
+
 const Testimonial =({device}) => {
     const {breakpoint} = device;
     const [breakPoints] = useState([
@@ -37,7 +44,7 @@ return (
                     <CardHeader
                         avatar={
                         <Avatar aria-label="recipe">
-                            <PersonIcon />
+                            <img src={user1} alt="service genie feedback" className="testimonial-image" />
                         </Avatar>
                         }
                         title="Swetha Prabu"
@@ -53,7 +60,7 @@ return (
                     <CardHeader
                         avatar={
                         <Avatar aria-label="recipe">
-                            <PersonIcon />
+                            <img src={user2} alt="service genie feedback" className="testimonial-image" />
                         </Avatar>
                         }
                         title="Jennifer Hamrita"
@@ -69,7 +76,7 @@ return (
                     <CardHeader
                         avatar={
                         <Avatar aria-label="recipe">
-                            <PersonIcon />
+                            <img src={user3} alt="service genie feedback" className="testimonial-image" />
                         </Avatar>
                         }
                         title="Avinash"
@@ -85,7 +92,7 @@ return (
                     <CardHeader
                         avatar={
                         <Avatar aria-label="recipe">
-                            <PersonIcon />
+                            <img src={user4} alt="service genie feedback" className="testimonial-image" />
                         </Avatar>
                         }
                         title="Mohammed Hasan"
@@ -101,7 +108,7 @@ return (
                     <CardHeader
                         avatar={
                         <Avatar aria-label="recipe">
-                            <PersonIcon />
+                            <img src={user5} alt="service genie feedback" className="testimonial-image" />
                         </Avatar>
                         }
                         title="Praveen"
