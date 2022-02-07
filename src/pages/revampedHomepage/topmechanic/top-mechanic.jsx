@@ -22,11 +22,11 @@ const CarouselItemMechanic = () => {
     useContext(LatLongContext);
 
     useEffect(() => {
-      if(lat && long){
+      console.log('lat',lat);
+      console.log('long',long);
         getTopGaragesNearLocation(long,lat)
         .then((res) => setData(res.data))
         .catch((error) => error.message);
-      }
     }, [lat,long]);
 
       const [breakPoints] = useState([
