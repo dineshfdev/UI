@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Route, withRouter, useLocation } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import "./App.scss";
 // import withClearCache from "./ClearCache";
 // commenting homepage for temporary purpose
@@ -15,17 +16,13 @@ import DetailPageLoadableComponent from "./pages/detailsPage";
 import useGaTracker from "./useGaTracker";
 import RevampHomePage from "./pages/revampedHomepage/revampedHomePage";
 import Header from "./pages/revampedHomepage/header/header";
-
-// context
-import { LatLongContext } from "./context/latLongContext";
 import PageFooter from "./pages/revampedHomepage/page-footer/page-footer";
 
+// redux actions
+import { setLatLong } from "./redux/latLong";
+
 const App = () => {
-  // lat long from new home page
-  const [lat, setLat] = useState("80.270718");
-  const [long, setLong] = useState("13.082680");
-  const [defaultLocation, setDefaultLocation] = useState("");
-  const [servicesNearme, setServicesNearMe] = useState("");
+  const dispatch = useDispatch();
 
   useGaTracker();
   const breakpoints = [
@@ -41,24 +38,18 @@ const App = () => {
     import("./reset.scss");
   }
 
-  // added to check url correctly
-  useEffect(() => {
-    let firedAlready = false;
-    if (navigator.geolocation) {
-      navigator.geolocation.watchPosition(showPosition, throwError);
-      function showPosition(position) {
-        if (!firedAlready) {
-          setLat(position.coords.longitude);
-          setLong(position.coords.latitude);
-          firedAlready = true;
-        }
-      }
-      function throwError(err) {
-        setLat("80.270718");
-        setLong("13.082680");
-      }
+  // for location access
+  if (navigator.geolocation) {
+    navigator.geolocation.watchPosition(showPosition, throwError);
+    function showPosition(position) {
+      dispatch(
+        setLatLong([position.coords.longitude, position.coords.latitude])
+      );
     }
-  }, []);
+    function throwError(err) {
+      setLatLong(["13.082680", "80.270718"]);
+    }
+  }
 
   return (
     <>
@@ -71,50 +62,31 @@ const App = () => {
             : "grid-container"
         }`}
       >
-        <LatLongContext.Provider
-          value={{
-            lat,
-            setLat,
-            long,
-            setLong,
-            defaultLocation,
-            setDefaultLocation,
-            servicesNearme,
-            setServicesNearMe,
-          }}
-        >
-          <Header device={device} />
-          <main>
-            <Route
-              exact
-              path="/"
-              render={(props) => <RevampHomePage {...props} device={device} />}
-            />
-            <Route
-              exact
-              path="/search"
-              render={(props) => <SearchPage {...props} />}
-            />
-            <Route
-              exact
-              path="/details"
-              render={(props) => (
-                <DetailPageLoadableComponent {...props} device={device} />
-              )}
-            />
-            <Route
-              exact
-              path="/location-list"
-              render={(props) => <LocationList {...props} device={device} />}
-            />
-            <Route
-              exact
-              path="/add-new-garage"
-              render={(props) => <AddNewGarage {...props} device={device} />}
-            />
-          </main>
-          <PageFooter device={device} />
-        </LatLongContext.Provider>
+        <Header device={device} />
+        <main>
+          <Route
+            exact
+            path="/"
+            render={(props) => <RevampHomePage {...props} device={device} />}
+          />
+          <Route path="/search" render={(props) => <SearchPage {...props} />} />
+          <Route
+            path="/details"
+            render={(props) => (
+              <DetailPageLoadableComponent {...props} device={device} />
+            )}
+          />
+          <Route
+            path="/location-list"
+            render={(props) => <LocationList {...props} device={device} />}
+          />
+          <Route
+            exact
+            path="/add-new-garage"
+            render={(props) => <AddNewGarage {...props} device={device} />}
+          />
+        </main>
+        <PageFooter device={device} />
       </div>
     </>
   );

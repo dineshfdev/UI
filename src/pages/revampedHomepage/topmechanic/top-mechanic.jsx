@@ -1,12 +1,10 @@
-import React,{useState,useEffect,useContext} from 'react';
+import React,{useState} from 'react';
+import {useSelector} from "react-redux";
 import {Container, Grid} from "@material-ui/core";
 import StarRatings from "react-star-ratings";
 
 import Carousel from 'react-elastic-carousel';
 import { getTopGaragesNearLocation } from '../../../services/services';
-
-// context
-import { LatLongContext } from "../../../context/latLongContext";
 
 // images
 import Marker from "../../../images/assets/img/icons/global/marker.svg";
@@ -15,19 +13,21 @@ import comingSoon from "../../../images/coming-soon.jpg";
 
 // styles 
 import "../carousel/carousel.styles.scss";
-
+import { useEffect } from 'react';
+import { useHistory } from "react-router-dom";
 const CarouselItemMechanic = () => {
-    const [data, setData] = useState([]);
-    const { lat, long, defaultLocation,servicesNearMe } =
-    useContext(LatLongContext);
+    const history = useHistory();
+      const [data,setData] =useState([]);
 
-    useEffect(() => {
-      console.log('lat',lat);
-      console.log('long',long);
-        getTopGaragesNearLocation(long,lat)
-        .then((res) => setData(res.data))
-        .catch((error) => error.message);
-    }, [lat,long]);
+      const { latLong,defaultLocation } = useSelector(state => state.latLong);
+
+    // get top garages
+      useEffect(() => {
+        getTopGaragesNearLocation(latLong[0],latLong[1])
+      .then((res) => setData(res.data))
+      .catch((error) => error.message);
+    },[latLong]);
+
 
       const [breakPoints] = useState([
         { width: 1, itemsToShow: 1.2,showArrows: false,enableSwipe: true  },
@@ -38,11 +38,22 @@ const CarouselItemMechanic = () => {
         { width: 1750, itemsToShow: 4.5 },
       ]);
 
+      // onclick location 
+        const onBookNow = (title,location) => {
+          history.push({
+            pathname: "/details",
+            search: `?garageName=${title}?location=${location}`,
+            state: { val: title, location: location },
+          });
+        };
+
+        console.log('data',data);
+
     return (
       <Container>
         <Grid item xs={12} className="items-accessories-container">
              <h3 className="title">Top Rated Mechanics</h3>
-             <h4 className="item-subheader"><img src={locationIcon} alt="location" /> <span>{servicesNearMe ? servicesNearMe : defaultLocation}</span></h4>
+             <h4 className="item-subheader"><img src={locationIcon} alt="location" /> <span>{defaultLocation !== null ? defaultLocation : "we don't serve in this area"}</span></h4>
         {data.length ? 
         <Carousel breakPoints={breakPoints} 
         transitionMs={700}
@@ -114,7 +125,7 @@ const CarouselItemMechanic = () => {
                         {x.distanceFromCurrentLocation}
                       </p>
                     </div>
-                    <button className="mechanic-carousel__item-button">
+                    <button className="mechanic-carousel__item-button" onClick={() =>onBookNow(x.garageTitle,x.location)}>
                       Book now
                     </button>
                   </div>
