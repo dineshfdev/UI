@@ -22,8 +22,12 @@ export const getAllGaragesUsingRegex = (name) =>
     endpoint: `/getAllGaragesUsingRegex?garageNameContaining=${name}`,
   });
 
-export const getAllGaragesByLatAndLong = (distance, latitude, longitude) =>
-  sgServices.get({
+export const getAllGaragesByLatAndLong = async (
+  distance,
+  latitude,
+  longitude
+) =>
+  await sgServices.get({
     endpoint: `/getGaragesByLatAndLong?distanceInKms=${distance}&latitude=${latitude}&longitude=${longitude}`,
   });
 
@@ -44,7 +48,7 @@ export const createNewGarage = async (formData) => {
   });
 };
 
-export const getTopGaragesNearLocation = (latitude, longitude) =>
-  sgServices.get({
+export const getTopGaragesNearLocation = async (latitude, longitude) =>
+  await sgServices.get({
     endpoint: `/getTopGaragesNearLocation?latitude=${latitude}&longitude=${longitude}`,
   });

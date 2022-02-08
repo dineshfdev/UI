@@ -1,7 +1,5 @@
 import React,{useState} from "react";
 import {Grid,Card,CardHeader,Avatar,CardContent,Typography,Container} from '@material-ui/core';
-import PersonIcon from '@material-ui/icons/Person';
-
 import Carousel from 'react-elastic-carousel';
 
 // styles

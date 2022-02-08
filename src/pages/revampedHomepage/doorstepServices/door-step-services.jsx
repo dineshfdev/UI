@@ -22,6 +22,7 @@ const DoorStepServices = () =>{
         { width: 1450, itemsToShow: 4.5 },
         { width: 1750, itemsToShow: 4.5 },
       ]);
+      
     return(
         <Container className="doorstep-services-wrapper">
         <Grid item className="doorstep-services-container" xs={12} >

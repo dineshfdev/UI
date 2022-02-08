@@ -1,4 +1,5 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import {
   AppBar,
   Grid,
@@ -20,9 +21,6 @@ import PersistentDrawerRight from "../../../components/fancyheader/drawer.compon
 import Autocomplete from "@material-ui/lab/Autocomplete";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
-// context
-import { LatLongContext } from "../../../context/latLongContext";
-
 // services
 import { getAllUniqueGarages } from "../../../services/services";
 
@@ -32,6 +30,9 @@ import "./header.scss";
 // image
 import locationImage from "../../../images/assets/img/header/location.png";
 import locationTracker from "../../../images/assets/img/header/pointer-location.png";
+
+// reducer
+import { setLatLong, setServiceName } from "../../../redux/latLong";
 
 const useStyles = makeStyles(() => ({
   autoCompleteTextFields: {
@@ -43,6 +44,8 @@ const useStyles = makeStyles(() => ({
 
 const Header = ({ device }) => {
   const { breakpoint } = device;
+  const dispatch = useDispatch();
+  const { serviceName } = useSelector((state) => state.latLong);
   const classForContainer = cx("nav-container", {
     "fancy-header-desktop": breakpoint === "desktop",
     "fancy-header-mobile display-none":
@@ -55,17 +58,13 @@ const Header = ({ device }) => {
 
   const classes = useStyles();
 
-  // set latitude longitude and default location from context
-  const { setLat, setLong, servicesNearme, setServicesNearMe } =
-    useContext(LatLongContext);
-
   useEffect(() => {
     (async () => {
       await getAllUniqueGarages()
         .then((response) => setOptions(response.data))
         .catch((error) => error.message);
     })();
-  }, [open, servicesNearme]);
+  }, [open, serviceName]);
 
   useEffect(() => {
     if (!open) {
@@ -74,14 +73,15 @@ const Header = ({ device }) => {
   }, [open]);
 
   const selectChange = (event, val) => {
-    setServicesNearMe(`${val} tamilnadu`);
+    dispatch(setServiceName(val));
   };
 
   // reversing the lat long values according to service future we have to change in service
   const getCurrentLocation = () => {
     navigator.geolocation.getCurrentPosition((position) => {
-      setLat(position.coords.longitude);
-      setLong(position.coords.latitude);
+      dispatch(
+        setLatLong([position.coords.longitude, position.coords.latitude])
+      );
     });
   };
 

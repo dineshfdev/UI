@@ -1,5 +1,6 @@
-import React,{useEffect,useContext} from 'react';
-import {Grid} from "@material-ui/core";
+import React,{useEffect} from 'react';
+import {useSelector,useDispatch} from 'react-redux';
+import _ from "lodash";
 
 // Components
 import { HeroSectionWrapper } from './herosection';
@@ -13,51 +14,39 @@ import CarouselItemMechanic  from './topmechanic/top-mechanic';
 import Accordion from './accordion/accordion';
 // import Accessories from './accessories/accessories';
 
-// context
-import { LatLongContext } from "../../../src/context/latLongContext";
-
 // Styles
 import './styles/mixins.scss';
+import { getAllGaragesByLatAndLong, getLocationByLocation } from '../../services/services';
+
+// redux
+import { setDefaultLocation, setLatLong } from '../../redux/latLong';
 
 const RevampHomePage = ({device}) => {
-
-  const {REACT_APP_MAPBOX_ACCESS_TOKEN} =process.env;
-
-  // set latitude longitude and default location from context
-  const { lat,long,setLat, setLong,setDefaultLocation,servicesNearme } =
-    useContext(LatLongContext);
-
+  const dispatch = useDispatch();
+  const {serviceName,latLong} = useSelector(state => state.latLong);
 
     // get latest geocode along with latidue and longitude
     useEffect(() => {
-      if(servicesNearme){
-      (async () => {
-        await fetch(
-          `https://api.mapbox.com/geocoding/v5/mapbox.places/${servicesNearme}.json?access_token=${REACT_APP_MAPBOX_ACCESS_TOKEN}`
-        )
-          .then((response) => response.json())
-          .then((data) => {
-            setLat(data?.features[0]?.center[0]);
-            setLong(data?.features[0]?.center[1]);
-          });
-      })();
+      if(serviceName){
+        getLocationByLocation(serviceName).then((res) => {
+         dispatch(setLatLong([res.data[0].latitude,res.data[0].longitude]));
+          dispatch(setDefaultLocation(res.data[0].address));
+        });
     }
-    }, [setLat, setLong, servicesNearme,REACT_APP_MAPBOX_ACCESS_TOKEN]);
+    }, [serviceName,dispatch]);
 
-
-      // get latest location latidue and longitude
-      useEffect(() => {
-        (async () => {
-          await fetch(
-            `https://api.mapbox.com/geocoding/v5/mapbox.places/${lat},${long}.json?access_token=${REACT_APP_MAPBOX_ACCESS_TOKEN}`
-          )
-            .then((response) => response.json())
-            .then((data) => {
-              setDefaultLocation(data?.features[0]?.place_name);
-            });
-        })();
-      }, [long, lat, setDefaultLocation,REACT_APP_MAPBOX_ACCESS_TOKEN]);
-
+  // get location name on first load when user accepts location
+  useEffect(() => {
+    if(!serviceName){
+     getAllGaragesByLatAndLong(20, latLong[0], latLong[1])
+        .then((res) => {
+          const responseData = res.data;
+          const resData = responseData.length ? _.sortBy(responseData,'pinCode')[0].address : null;
+          dispatch(setDefaultLocation(resData));
+        })
+        .catch((error) => error.message);
+      }
+    });
 
   return (
       <>

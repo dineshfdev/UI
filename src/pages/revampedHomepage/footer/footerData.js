@@ -8,11 +8,8 @@ export const aboutUsData = [
     text: "Contact Us",
   },
   { link: "https://www.servicegeni.in/faq", text: "FAQs" },
-  {
-    link: "https://www.servicegeni.in/blogs/categories/trending-auto-news",
-    text: "News",
-  },
-  { link: "https://www.servicegeni.in/blogs", text: "Blogs" },
+  { link: "javascript:void(0);", text: "News", img: soonIcon },
+  { link: "javascript:void(0);", text: "Blogs", img: soonIcon },
   { link: "javascript:void(0);", text: "Careers", img: soonIcon },
   { link: "javascript:void(0);", text: "Our Partners", img: soonIcon },
   { link: "javascript:void(0);", text: "Offers", img: soonIcon },
