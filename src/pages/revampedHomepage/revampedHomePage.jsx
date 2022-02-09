@@ -38,7 +38,7 @@ const RevampHomePage = ({device}) => {
   // get location name on first load when user accepts location
   useEffect(() => {
     if(!serviceName){
-     getAllGaragesByLatAndLong(20, latLong[0], latLong[1])
+     getAllGaragesByLatAndLong(8, latLong[0], latLong[1])
         .then((res) => {
           const responseData = res.data;
           const resData = responseData.length ? _.sortBy(responseData,'pinCode')[0].address : null;

@@ -55,7 +55,7 @@
   color: #fff;
 }
 
-.link-diable a {
+.link-disable a {
   opacity: 0.5;
   cursor: default;
 }
@@ -78,5 +78,8 @@
       font-size: 12px;
       line-height: 26px;
     }
+  }
+  .coming-soon {
+    font-size: 7px;
   }
 }
