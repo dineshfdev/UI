@@ -58,13 +58,56 @@
 .rec-arrow-left {
   position: absolute;
   z-index: 10000;
-  left: 0;
+  left: 8px;
+  background: url("../../../images/assets/img/accordion/left-arrow.png")
+    no-repeat;
+  text-indent: -10000px;
+  border-radius: 0;
+  box-shadow: none;
+  top: 66%;
+  background-position: 6px;
 }
 .rec-arrow-right {
   position: absolute;
   z-index: 10000;
   right: 0;
+  background: url("../../../images/assets/img/accordion/right-arrow.png")
+    no-repeat;
+  text-indent: -10000px;
+  border-radius: 0;
+  box-shadow: none;
+  top: 66%;
+  background-position: 6px;
 }
+
+.rec-arrow-left:disabled,
+.rec-arrow-right:disabled {
+  opacity: 0.5;
+}
+
+.rec-arrow-left:hover {
+  background: #f98306
+    url("../../../images/assets/img/accordion/left-arrow-hover.png") no-repeat !important;
+  transition: unset;
+  background-position: 6px !important;
+}
+
+.rec-arrow-right:hover {
+  background: #f98306
+    url("../../../images/assets/img/accordion/right-arrow-hover.png") no-repeat !important;
+  transition: unset;
+  background-position: 6px !important;
+}
+
+.testimonial-container .rec-arrow-left,
+.testimonial-container .rec-arrow-right {
+  top: 50%;
+}
+.items-accessories-container .rec-arrow-left,
+.items-accessories-container .rec-arrow-right {
+  top: 60%;
+}
+
 .rec-slider-container {
   margin: 0;
 }
