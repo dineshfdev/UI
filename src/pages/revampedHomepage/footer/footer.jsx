@@ -133,13 +133,13 @@ return (
                     <Grid item xs={6} md={3}>
                         <h5 className="footer-header">About Us</h5>
                         <ul className="footer-list-container">
-                            {aboutUsData.map((x,index) => <li key={index}><a href={x.link}>{x.text}</a> {x.img ? <img src={x.img} alt="coming soon" />: ''}</li>)}
+                            {aboutUsData.map((x,index) => <li key={index} className={`${x.comingSoon ? 'link-diable': ''}`}><a href={x.link}>{x.text}</a> {x.comingSoon ? <span className="coming-soon">Coming soon</span>: ''}</li>)}
                         </ul>
                     </Grid>
                     <Grid item xs={6} md={3}>
                         <h5 className="footer-header">Our Services</h5>
                         <ul className="footer-list-container">
-                            <li><a href="https://service-geni.in/">Find Mechanics Near Me</a></li>
+                            <li><a href="/search">Find Mechanics Near Me</a></li>
                         </ul>
                         <h5 className="footer-header">Doorstep Services</h5>
                         <ul className="footer-list-container">

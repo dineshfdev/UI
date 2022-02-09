@@ -14,11 +14,17 @@ export const aboutUsData = [
 ];
 
 export const doorStepData = [
-  { link: "https://www.service-geni.in/doorstep", text: "General Service" },
-  { link: "https://www.service-geni.in/doorstep", text: "Express Service" },
-  { link: "https://www.service-geni.in/doorstep", text: "Inspection Service" },
-  { link: "https://www.service-geni.in/doorstep", text: "Jumpstart Service" },
-  { link: "https://www.service-geni.in/doorstep", text: "Car Wash" },
+  { link: "https://www.service-geni.in/car-service", text: "General Service" },
+  { link: "https://www.service-geni.in/car-service", text: "Express Service" },
+  {
+    link: "https://www.service-geni.in/car-service",
+    text: "Inspection Service",
+  },
+  {
+    link: "https://www.service-geni.in/car-emergency",
+    text: "Jumpstart Service",
+  },
+  { link: "https://www.service-geni.in/car-wash-near-me", text: "Car Wash" },
 ];
 
 export const ourServicesData = [

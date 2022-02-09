@@ -55,6 +55,11 @@
   color: #fff;
 }
 
+.link-diable a {
+  opacity: 0.5;
+  cursor: default;
+}
+
 @media screen and (max-width: 768px) {
   .footer-list-location {
     li {
