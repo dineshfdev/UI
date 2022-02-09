@@ -47,8 +47,6 @@ const CarouselItemMechanic = () => {
           });
         };
 
-        console.log('data',data);
-
     return (
       <Container>
         <Grid item xs={12} className="items-accessories-container">
