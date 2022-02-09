@@ -45,8 +45,8 @@ return (
                             <img src={user1} alt="service genie feedback" className="testimonial-image" />
                         </Avatar>
                         }
-                        title="Swetha Prabu  - Nature Lover"
-                        subheader="About customer"
+                        title="Swetha Prabu"
+                        subheader="Nature Lover"
                     />
                 </Card>
                 <Card className="testimonial-card same-height">
@@ -61,8 +61,8 @@ return (
                             <img src={user2} alt="service genie feedback" className="testimonial-image" />
                         </Avatar>
                         }
-                        title="Jennifer Hamrita - Data Specialist"
-                        subheader="About customer"
+                        title="Jennifer Hamrita"
+                        subheader="Data Specialist"
                     />
                 </Card>
                 <Card className="testimonial-card same-height">
