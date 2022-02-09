@@ -80,7 +80,7 @@ const Header = ({ device }) => {
   const getCurrentLocation = () => {
     navigator.geolocation.getCurrentPosition((position) => {
       dispatch(
-        setLatLong([position.coords.longitude, position.coords.latitude])
+        setLatLong([position.coords.latitude, position.coords.longitude])
       );
     });
   };
