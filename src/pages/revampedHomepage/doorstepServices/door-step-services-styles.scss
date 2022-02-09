@@ -59,25 +59,27 @@
   position: absolute;
   z-index: 10000;
   left: 8px;
+  background-color: transparent !important;
   background: url("../../../images/assets/img/accordion/left-arrow.png")
-    no-repeat;
+    no-repeat !important;
   text-indent: -10000px;
-  border-radius: 0;
-  box-shadow: none;
+  border-radius: 0 !important;
+  box-shadow: none !important;
   top: 66%;
-  background-position: 6px;
+  background-position: 6px !important;
 }
 .rec-arrow-right {
   position: absolute;
   z-index: 10000;
   right: 0;
+  background-color: transparent !important;
   background: url("../../../images/assets/img/accordion/right-arrow.png")
-    no-repeat;
-  text-indent: -10000px;
-  border-radius: 0;
-  box-shadow: none;
+    no-repeat !important;
+  text-indent: -10000px !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
   top: 66%;
-  background-position: 6px;
+  background-position: 6px !important;
 }
 
 .rec-arrow-left:disabled,
@@ -88,7 +90,7 @@
 .rec-arrow-left:hover {
   background: #f98306
     url("../../../images/assets/img/accordion/left-arrow-hover.png") no-repeat !important;
-  transition: unset;
+  transition: unset !important;
   background-position: 6px !important;
 }
 
