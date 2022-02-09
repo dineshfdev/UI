@@ -84,7 +84,7 @@ return (
                             <AccordionDetails className="accordion-body">
                             <Typography>
                             <ul className="footer-list-container">
-                                {aboutUsData.map((x,index) => <li key={index}><a href={x.link}>{x.text}</a>{x.comingsoon ? <img src={x.img} alt="coming soon" />: ''}</li>)}
+                                {aboutUsData.map((x,index) => <li key={index} className={`${x.comingSoon ? 'link-disable': ''}`}><a href={x.link}>{x.text}</a> {x.comingSoon ? <span className="coming-soon">Coming soon</span>: ''}</li>)}
                             </ul>
                             </Typography>
                             </AccordionDetails>
@@ -96,7 +96,7 @@ return (
                             <AccordionDetails className="accordion-body">
                             <Typography>
                             <ul className="footer-list-container">
-                                <li><a href="https://service-geni.in/">Find Mechanics Near Me</a></li>
+                                <li><a href="/search">Find Mechanics Near Me</a></li>
                             </ul>
                             </Typography>
                             </AccordionDetails>
@@ -133,7 +133,7 @@ return (
                     <Grid item xs={6} md={3}>
                         <h5 className="footer-header">About Us</h5>
                         <ul className="footer-list-container">
-                            {aboutUsData.map((x,index) => <li key={index} className={`${x.comingSoon ? 'link-diable': ''}`}><a href={x.link}>{x.text}</a> {x.comingSoon ? <span className="coming-soon">Coming soon</span>: ''}</li>)}
+                            {aboutUsData.map((x,index) => <li key={index} className={`${x.comingSoon ? 'link-disable': ''}`}><a href={x.link}>{x.text}</a> {x.comingSoon ? <span className="coming-soon">Coming soon</span>: ''}</li>)}
                         </ul>
                     </Grid>
                     <Grid item xs={6} md={3}>
