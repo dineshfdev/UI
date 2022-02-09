@@ -18,7 +18,7 @@ const Header = () => (
       </div>
       {/* logo */}
       <div className="col-2 text-center">
-        <a href="https://www.servicegeni.in/">
+        <a href="https://www.service-geni.in/">
           <img src={Logo} alt="service genie" className="logo" />
         </a>
       </div>

@@ -141,7 +141,7 @@ export default function PersistentDrawerRight({ device }) {
             <li className={classes.listItem}>
               <a
                 className={classes.anchorTag}
-                href="https://www.servicegeni.in/"
+                href="https://www.service-geni.in/"
               >
                 HOME
               </a>
@@ -149,7 +149,7 @@ export default function PersistentDrawerRight({ device }) {
             <li className={classes.listItem}>
               <a
                 className={classes.anchorTag}
-                href="https://www.servicegeni.in/doorstep-services"
+                href="https://www.service-geni.in/doorstep-services"
               >
                 DOORSTEP SERVICES
               </a>
@@ -157,7 +157,7 @@ export default function PersistentDrawerRight({ device }) {
             <li className={classes.listItem}>
               <a
                 className={classes.anchorTag}
-                href="https://www.servicegeni.in/ecu"
+                href="https://www.service-geni.in/ecu"
               >
                 ECU CODING
               </a>
@@ -165,7 +165,7 @@ export default function PersistentDrawerRight({ device }) {
             <li className={classes.listItem}>
               <a
                 className={classes.anchorTag}
-                href="https://www.servicegeni.in/gallery"
+                href="https://www.service-geni.in/gallery"
               >
                 GALLERY
               </a>
@@ -173,7 +173,7 @@ export default function PersistentDrawerRight({ device }) {
             <li className={classes.listItem}>
               <a
                 className={classes.anchorTag}
-                href="https://www.servicegeni.in/blogs"
+                href="https://www.service-geni.in/blogs"
               >
                 BLOGS
               </a>
@@ -181,7 +181,7 @@ export default function PersistentDrawerRight({ device }) {
             <li className={classes.listItem}>
               <a
                 className={classes.anchorTag}
-                href="https://www.servicegeni.in/contact-us"
+                href="https://www.service-geni.in/contact-us"
               >
                 CONTACT
               </a>
@@ -189,7 +189,7 @@ export default function PersistentDrawerRight({ device }) {
             <li className={classes.listItem}>
               <a
                 className={classes.anchorTag}
-                href="https://www.servicegeni.in/viral-kindness"
+                href="https://www.service-geni.in/viral-kindness"
               >
                 VIRAL KINDNESS
               </a>

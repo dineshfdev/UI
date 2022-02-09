@@ -387,7 +387,7 @@ const MobileDetailsPage = (props) => {
               <button
                 className="common-button redirect__button"
                 onClick={() => {
-                  window.location.href = 'https://www.servicegeni.in/doorstep';
+                  window.location.href = 'https://www.service-geni.in/doorstep';
                 }}
               >
                 BOOK NOW

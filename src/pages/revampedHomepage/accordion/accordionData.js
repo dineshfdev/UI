@@ -11,7 +11,7 @@ const data = [
     icon: TickIcon,
     image: Convenience,
     alt: "Easy & FREE to find mechanics",
-    readMore: "https://www.servicegeni.in/about-us",
+    readMore: "https://www.service-geni.in/about-us",
   },
   {
     title: "Mission",
@@ -20,7 +20,7 @@ const data = [
     icon: TickIcon,
     image: Mission,
     alt: "Transparent pricing & reviews",
-    readMore: "https://www.servicegeni.in/about-us",
+    readMore: "https://www.service-geni.in/about-us",
   },
   {
     title: "We strive to",
@@ -29,7 +29,7 @@ const data = [
     icon: TickIcon,
     image: strive,
     alt: "Value added text goes here",
-    readMore: "https://www.servicegeni.in/about-us",
+    readMore: "https://www.service-geni.in/about-us",
   },
 ];
 

@@ -43,7 +43,7 @@ const App = () => {
     navigator.geolocation.watchPosition(showPosition, throwError);
     function showPosition(position) {
       dispatch(
-        setLatLong([position.coords.longitude, position.coords.latitude])
+        setLatLong([position.coords.latitude, position.coords.longitude])
       );
     }
     function throwError(err) {

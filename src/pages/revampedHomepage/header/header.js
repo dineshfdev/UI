@@ -112,7 +112,7 @@ const Header = ({ device }) => {
               <li>
                 <a
                   className="header-content-left-menu-item__link"
-                  href="https://www.servicegeni.in/doorstep-services"
+                  href="https://www.service-geni.in/doorstep-services"
                 >
                   Doorstep services
                 </a>
@@ -120,7 +120,7 @@ const Header = ({ device }) => {
               <li>
                 <a
                   className="header-content-left-menu-item__link"
-                  href="https://www.servicegeni.in/ecu"
+                  href="https://www.service-geni.in/ecu"
                 >
                   ECU Coding
                 </a>
