@@ -15,25 +15,25 @@ export default function Footer(props) {
       {/* <div>
         <ul className="footer-list">
           <li>
-            <a href="https://www.servicegeni.in/">HOME</a>
+            <a href="https://www.service-geni.in/">HOME</a>
           </li>
           <li>
-            <a href="https://www.servicegeni.in/doorstep">DOORSTEP SERVICES</a>
+            <a href="https://www.service-geni.in/doorstep">DOORSTEP SERVICES</a>
           </li>
           <li>
-            <a href="https://www.servicegeni.in/ecu">ECU CODING & REPAIR</a>
+            <a href="https://www.service-geni.in/ecu">ECU CODING & REPAIR</a>
           </li>
           <li>
-            <a href="https://www.servicegeni.in/about-us">ABOUT US</a>
+            <a href="https://www.service-geni.in/about-us">ABOUT US</a>
           </li>
           <li>
-            <a href="https://www.servicegeni.in/contact-us">CONTACT</a>
+            <a href="https://www.service-geni.in/contact-us">CONTACT</a>
           </li>
           <li>
-            <a href="https://www.servicegeni.in/blogs">BLOGS</a>
+            <a href="https://www.service-geni.in/blogs">BLOGS</a>
           </li>
           <li>
-            <a href="https://www.servicegeni.in/viral-kindness">
+            <a href="https://www.service-geni.in/viral-kindness">
               VIRAL KINDNESS
             </a>
           </li>
@@ -81,28 +81,28 @@ export default function Footer(props) {
           <Grid item xs={12} md={6}>
             <ul className="footer-list">
               <li>
-                <a href="https://www.servicegeni.in/doorstep-services">
+                <a href="https://www.service-geni.in/doorstep-services">
                   Periodic Services
                 </a>
               </li>
               <li>
-                <a href="https://www.servicegeni.in/car-inspection">
+                <a href="https://www.service-geni.in/car-inspection">
                   Inspection Services
                 </a>
               </li>
               <li>
-                <a href="https://www.servicegeni.in/jumpstart-services">
+                <a href="https://www.service-geni.in/jumpstart-services">
                   Jumpstart Services
                 </a>
               </li>
               <li>
-                <a href="https://www.servicegeni.in/faq">FAQs</a>
+                <a href="https://www.service-geni.in/faq">FAQs</a>
               </li>
               <li>
-                <a href="https://www.servicegeni.in/about-us">About Us</a>
+                <a href="https://www.service-geni.in/about-us">About Us</a>
               </li>
               <li>
-                <a href="https://www.servicegeni.in/terms-conditions">
+                <a href="https://www.service-geni.in/terms-conditions">
                   Terms & Conditions
                 </a>
               </li>

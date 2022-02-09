@@ -10,19 +10,19 @@ function HeroSectionRight() {
     e.preventDefault();
     switch (optionValue) {
       case 'general':
-        window.location.href='https://www.servicegeni.in/car-wash-near-me';
+        window.location.href='https://www.service-geni.in/car-wash-near-me';
         break;
       case 'breakdown':
-        window.location.href='https://www.servicegeni.in/car-emergency';
+        window.location.href='https://www.service-geni.in/car-emergency';
         break;
       case 'periodic':
-        window.location.href='https://www.servicegeni.in/car-service';
+        window.location.href='https://www.service-geni.in/car-service';
         break;
       case 'inspection':
-        window.location.href='https://www.servicegeni.in/car-service';
+        window.location.href='https://www.service-geni.in/car-service';
         break;
       default:
-        window.location.href='https://www.servicegeni.in/car-wash-near-me';
+        window.location.href='https://www.service-geni.in/car-wash-near-me';
         break;
     }
     

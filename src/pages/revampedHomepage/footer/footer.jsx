@@ -84,7 +84,7 @@ return (
                             <AccordionDetails className="accordion-body">
                             <Typography>
                             <ul className="footer-list-container">
-                                {aboutUsData.map((x,index) => <li key={index}><a href={x.link}>{x.text}</a>{x.img ? <img src={x.img} alt="coming soon" />: ''}</li>)}
+                                {aboutUsData.map((x,index) => <li key={index}><a href={x.link}>{x.text}</a>{x.comingsoon ? <img src={x.img} alt="coming soon" />: ''}</li>)}
                             </ul>
                             </Typography>
                             </AccordionDetails>

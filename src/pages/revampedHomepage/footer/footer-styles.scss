@@ -26,6 +26,10 @@
       color: #3a404f;
     }
   }
+  img {
+    width: 30px;
+    vertical-align: middle;
+  }
 }
 
 .footer-list-location {
@@ -42,6 +46,13 @@
 }
 .offset-margin-top {
   margin-top: 10px;
+}
+
+.coming-soon {
+  background: #f98306;
+  padding: 2px;
+  font-size: 10px;
+  color: #fff;
 }
 
 @media screen and (max-width: 768px) {

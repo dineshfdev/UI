@@ -23,7 +23,7 @@ return (
                 <div className="contacts-container">
                <div>
                    <span><img src={phone} alt="phone" />+91 9361 040506 </span> 
-                   <span><img src={mail} alt="mail" />care@servicegeni.in</span> 
+                   <span><img src={mail} alt="mail" />care@service-geni.in</span> 
                 </div>
                 {/* <button className="hero-section-right__button book-now">CHAT NOW</button> */}
                 </div>

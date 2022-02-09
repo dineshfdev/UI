@@ -68,7 +68,7 @@ export default function TermsConditions(props) {
       </DialogTitle>
       <DialogContent dividers>
         <p>
-          Service Geni provides access to the https://servicegeni.in/ website.
+          Service Geni provides access to the https://service-geni.in/ website.
           These Terms of Use account for a legal agreement between users and the
           Website.
         </p>

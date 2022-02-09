@@ -27,7 +27,7 @@ const Accessories = () =>{
                         <Grid container item xs={12}>
                             <div className="accessories-text-container">
                                 <div>Accessorise your favourite car from India's favourite E-commerce brand</div>
-                                <a className="services-link" href="https://www.servicegeni.in/doorstep-services">View all Accessories </a>
+                                <a className="services-link" href="https://www.service-geni.in/doorstep-services">View all Accessories </a>
                             </div>
                         </Grid>
                         {/* <Grid container item xs={12} md={4} justify="flex-end">

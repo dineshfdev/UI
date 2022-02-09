@@ -111,6 +111,9 @@
 .rec-slider-container {
   margin: 0;
 }
+.vertical-middle {
+  vertical-align: middle;
+}
 @media screen and (max-width: 768px) {
   .desktop-content-top {
     display: none;
@@ -125,7 +128,7 @@
       font-size: 18px;
     }
     .doorstep-subtitle {
-      font-size: 12px;
+      font-size: 11px;
     }
     .card-header {
       font-size: 14px;
