@@ -11,22 +11,22 @@ export function BannerMobileItems() {
   return [
     {
       src: DoorStepServicesSMBanner,
-      href: "https://www.service-geni.in/doorstep-services",
+      href: "https://www.service-geni.in/doorstep",
       alt: "Doorstep Services",
     },
     {
       src: JumpstartServicesSMBanner,
-      href: "https://www.service-geni.in/jumpstart-services",
+      href: "https://www.service-geni.in/car-service",
       alt: "Jumpstart Services",
     },
     {
       src: CarInspectionServicesSMBanner,
-      href: "https://www.service-geni.in/car-inspection",
+      href: "https://www.service-geni.in/car-emergency",
       alt: "Car Inspection Services",
     },
     {
       src: PeriodicServicesSMBanner,
-      href: "https://www.service-geni.in/doorstep-services",
+      href: "https://www.service-geni.in/doorstep",
       alt: "Periodic Services",
     },
   ];
@@ -36,22 +36,22 @@ export function BannerDesktopItems() {
   return [
     {
       src: DoorStepServicesXLBanner,
-      href: "https://www.service-geni.in/doorstep-services",
+      href: "https://www.service-geni.in/doorstep",
       alt: "Doorstep Services",
     },
     {
       src: JumpstartServicesXLBanner,
-      href: "https://www.service-geni.in/jumpstart-services",
+      href: "https://www.service-geni.in/car-service",
       alt: "Jumpstart Services",
     },
     {
       src: CarInspectionServicesXLBanner,
-      href: "https://www.service-geni.in/car-inspection",
+      href: "https://www.service-geni.in/car-emergency",
       alt: "Car Inspection Services",
     },
     {
       src: PeriodicServicesXLBanner,
-      href: "https://www.service-geni.in/doorstep-services",
+      href: "https://www.service-geni.in/doorstep",
       alt: "Periodic Services",
     },
   ];

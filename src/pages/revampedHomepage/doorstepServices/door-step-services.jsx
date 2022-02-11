@@ -29,11 +29,11 @@ const DoorStepServices = () =>{
             <h3 className="title">Send an expert car care team</h3>
             <Grid container>
                     <Grid container item xs={12} md={8}>
-                        <div className="doorstep-subtitle"><span>for a safe, secure and convenient service at fixed cost. Select now <span className="vertical-middle"><ArrowDropDownIcon fontSize="large" className="arrow-icon"/></span></span></div>
+                        <div className="doorstep-subtitle">for a safe, secure and convenient service at fixed cost. Select now <ArrowDropDownIcon fontSize="large" className="arrow-icon"/></div>
                     </Grid>
                     <Grid container item xs={12} md={4} className="card-accessories-button">
                         <div className="desktop-content-top">
-                            <a className="services-link" href="https://www.service-geni.in/doorstep">View all Services </a>
+                            <a className="services-link" href="https://www.servicegeni.in/doorstep">View all Services </a>
                         </div>
                     </Grid>
             </Grid>
@@ -61,7 +61,7 @@ const DoorStepServices = () =>{
                                 <Button size="small" color="primary" className="card-button" onClick={e => {
       e.preventDefault();
       window.open(
-        'https://www.service-geni.in/car-wash-near-me',
+        'https://www.servicegeni.in/car-wash-near-me',
         '_blank' 
       );
       }}>
@@ -89,7 +89,7 @@ const DoorStepServices = () =>{
                                 <Button size="small" color="primary" className="card-button" onClick={e => {
       e.preventDefault();
       window.open(
-        'https://www.service-geni.in/car-emergency',
+        'https://www.servicegeni.in/car-emergency',
         '_blank' 
       );
       }}>
@@ -117,7 +117,7 @@ const DoorStepServices = () =>{
                                 <Button size="small" color="primary" className="card-button" onClick={e => {
       e.preventDefault();
       window.open(
-        'https://www.service-geni.in/doorstep',
+        'https://www.service-geni.in/car-service',
         '_blank' 
       );
       }}>
@@ -145,7 +145,7 @@ const DoorStepServices = () =>{
                                 <Button size="small" color="primary" className="card-button" onClick={e => {
       e.preventDefault();
       window.open(
-        'https://www.service-geni.in/doorstep',
+        'https://www.service-geni.in/car-service',
         '_blank' 
       );
       }}>
@@ -173,7 +173,7 @@ const DoorStepServices = () =>{
                                 <Button size="small" color="primary" className="card-button" onClick={e => {
       e.preventDefault();
       window.open(
-        'https://www.service-geni.in/doorstep',
+        'https://www.service-geni.in/car-service',
         '_blank' 
       );
       }}>
@@ -185,7 +185,7 @@ const DoorStepServices = () =>{
             </Carousel>
             <Grid container item xs={12} md={4} className="card-accessories-button">
                 <div className="desktop-content-bottom">
-                        <a className="services-link" href="https://www.service-geni.in/doorstep">View all Services </a>
+                        <a className="services-link" href="https://www.servicegeni.in/doorstep">View all Services </a>
                 </div>
             </Grid>
         </ Grid>

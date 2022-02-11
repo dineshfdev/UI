@@ -5,6 +5,14 @@ import Drawer from "@material-ui/core/Drawer";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
 
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemText from "@material-ui/core/ListItemText";
+import Collapse from "@material-ui/core/Collapse";
+import ExpandLess from "@material-ui/icons/ExpandLess";
+import ExpandMore from "@material-ui/icons/ExpandMore";
+
 //images
 import Hamburger from "../../images/assets/img/hamburger.svg";
 
@@ -89,6 +97,8 @@ const useStyles = makeStyles((theme) => ({
   },
   listItem: {
     height: "30px",
+    fontFamily: "AvenirLight",
+    fontSize: "22px",
   },
   anchorTag: {
     textDecoration: "none",
@@ -102,6 +112,7 @@ const useStyles = makeStyles((theme) => ({
 export default function PersistentDrawerRight({ device }) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
+  const [openMenuList, setOpenMenuList] = React.useState(false);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -109,6 +120,10 @@ export default function PersistentDrawerRight({ device }) {
 
   const handleDrawerClose = () => {
     setOpen(false);
+  };
+
+  const handleClick = () => {
+    setOpenMenuList(!openMenuList);
   };
 
   return device === "phone" ? (
@@ -138,22 +153,44 @@ export default function PersistentDrawerRight({ device }) {
         </div>
         <div className={classes.listWrapper}>
           <ul className={classes.list}>
-            <li className={classes.listItem}>
-              <a
-                className={classes.anchorTag}
-                href="https://www.service-geni.in/"
-              >
-                HOME
-              </a>
+            <li className={classes.listItem} onClick={handleClick}>
+              DOORSTEP SERVICES {openMenuList ? <ExpandLess /> : <ExpandMore />}
             </li>
-            <li className={classes.listItem}>
-              <a
-                className={classes.anchorTag}
-                href="https://www.service-geni.in/doorstep-services"
+            <Collapse in={openMenuList} timeout="auto" unmountOnExit>
+              <li
+                className={classes.listItem}
+                style={{ fontSize: "16px", margin: "20px 0" }}
               >
-                DOORSTEP SERVICES
-              </a>
-            </li>
+                <a
+                  className={classes.anchorTag}
+                  href="https://www.service-geni.in/contact-us"
+                >
+                  Car Maintenance
+                </a>
+              </li>
+              <li
+                className={classes.listItem}
+                style={{ fontSize: "16px", margin: "20px 0" }}
+              >
+                <a
+                  className={classes.anchorTag}
+                  href="https://www.service-geni.in/contact-us"
+                >
+                  Car Spa
+                </a>
+              </li>
+              <li
+                className={classes.listItem}
+                style={{ fontSize: "16px", margin: "20px 0" }}
+              >
+                <a
+                  className={classes.anchorTag}
+                  href="https://www.service-geni.in/contact-us"
+                >
+                  Critical Services
+                </a>
+              </li>
+            </Collapse>
             <li className={classes.listItem}>
               <a
                 className={classes.anchorTag}
@@ -186,14 +223,12 @@ export default function PersistentDrawerRight({ device }) {
                 CONTACT
               </a>
             </li>
-            <li className={classes.listItem}>
-              <a
-                className={classes.anchorTag}
-                href="https://www.service-geni.in/viral-kindness"
-              >
-                VIRAL KINDNESS
-              </a>
-            </li>
+            {/* <ListItem button onClick={handleClick}>
+              <ListItemIcon></ListItemIcon>
+              <ListItemText primary="Inbox" />
+              {openMenuList ? <ExpandLess /> : <ExpandMore />}
+            </ListItem>
+            */}
           </ul>
         </div>
       </Drawer>
