@@ -24,9 +24,6 @@ export default function FancyHeaderComponent({ device }) {
         <nav className="nav-list">
           <ul className="list">
             <li>
-              <a href="https://www.service-geni.in/">HOME</a>
-            </li>
-            <li>
               <a href="https://www.service-geni.in/doorstep-services">
                 DOORSTEP SERVICES
               </a>
@@ -42,11 +39,6 @@ export default function FancyHeaderComponent({ device }) {
             </li>
             <li>
               <a href="https://www.service-geni.in/contact-us">CONTACT</a>
-            </li>
-            <li>
-              <a href="https://www.service-geni.in/viral-kindness">
-                VIRAL KINDNESS
-              </a>
             </li>
           </ul>
         </nav>
