@@ -1,6 +1,5 @@
 import React,{useEffect} from 'react';
 import {useSelector,useDispatch} from 'react-redux';
-import _ from "lodash";
 
 // Components
 import { HeroSectionWrapper } from './herosection';
@@ -16,14 +15,14 @@ import Accordion from './accordion/accordion';
 
 // Styles
 import './styles/mixins.scss';
-import { getAllGaragesByLatAndLong, getLocationByLocation } from '../../services/services';
+import {  getLocationByLocation } from '../../services/services';
 
 // redux
 import { setDefaultLocation, setLatLong } from '../../redux/latLong';
 
 const RevampHomePage = ({device}) => {
   const dispatch = useDispatch();
-  const {serviceName,latLong} = useSelector(state => state.latLong);
+  const {serviceName} = useSelector(state => state.latLong);
 
     // get latest geocode along with latidue and longitude
     useEffect(() => {
@@ -34,19 +33,6 @@ const RevampHomePage = ({device}) => {
         });
     }
     }, [serviceName,dispatch]);
-
-  // get location name on first load when user accepts location
-  useEffect(() => {
-    if(!serviceName){
-     getAllGaragesByLatAndLong(8, latLong[0], latLong[1])
-        .then((res) => {
-          const responseData = res.data;
-          const resData = responseData.length ? _.sortBy(responseData,'pinCode')[0].address : null;
-          dispatch(setDefaultLocation(resData));
-        })
-        .catch((error) => error.message);
-      }
-    });
 
   return (
       <>
