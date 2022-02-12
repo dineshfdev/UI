@@ -18,7 +18,7 @@ import './styles/mixins.scss';
 import {  getLocationByLocation } from '../../services/services';
 
 // redux
-import { setDefaultLocation, setLatLong } from '../../redux/latLong';
+import {setLatLong } from '../../redux/latLong';
 
 const RevampHomePage = ({device}) => {
   const dispatch = useDispatch();
@@ -29,7 +29,6 @@ const RevampHomePage = ({device}) => {
       if(serviceName){
         getLocationByLocation(serviceName).then((res) => {
          dispatch(setLatLong([res.data[0].latitude,res.data[0].longitude]));
-          dispatch(setDefaultLocation(res.data[0].address));
         });
     }
     }, [serviceName,dispatch]);
