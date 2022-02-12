@@ -1,10 +1,13 @@
 import React,{useState} from 'react';
-import {useSelector} from "react-redux";
+import {useSelector,useDispatch} from "react-redux";
 import {Container, Grid} from "@material-ui/core";
 import StarRatings from "react-star-ratings";
 
 import Carousel from 'react-elastic-carousel';
 import { getTopGaragesNearLocation } from '../../../services/services';
+
+// redux
+import { setDefaultLocation } from '../../../redux/latLong';
 
 // images
 import Marker from "../../../images/assets/img/icons/global/marker.svg";
@@ -17,6 +20,7 @@ import { useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 const CarouselItemMechanic = () => {
     const history = useHistory();
+    const dispatch = useDispatch();
       const [data,setData] =useState([]);
 
       const { latLong,defaultLocation } = useSelector(state => state.latLong);
@@ -24,9 +28,13 @@ const CarouselItemMechanic = () => {
     // get top garages
       useEffect(() => {
         getTopGaragesNearLocation(latLong[0],latLong[1])
-      .then((res) => setData(res.data))
+      .then((res) => {
+        setData(res.data);
+        res.data.map(x => dispatch(setDefaultLocation(res.data[0].location)));
+      })
       .catch((error) => error.message);
-    },[latLong]);
+    },[latLong,dispatch]);
+
 
 
       const [breakPoints] = useState([
@@ -51,7 +59,7 @@ const CarouselItemMechanic = () => {
       <Container>
         <Grid item xs={12} className="items-accessories-container">
              <h3 className="title">Top Rated Mechanics</h3>
-             <h4 className="item-subheader"><img src={locationIcon} alt="location" /> <span>{defaultLocation !== null ? defaultLocation : "we don't serve in this area"}</span></h4>
+             <h4 className="item-subheader"><img src={locationIcon} alt="location" /> <span>{data.length ? defaultLocation : "we don't serve in this area"}</span></h4>
         {data.length ? 
         <Carousel breakPoints={breakPoints} 
         transitionMs={700}
