@@ -4,7 +4,8 @@ import CustomizedSelect from '../select/select';
 
 import './herosection-right.styles.scss';
 
-function HeroSectionRight() {
+function HeroSectionRight({device}) {
+  const {breakpoint} = device;
   const [optionValue,setOptionValue] = useState();
   const redirect = (e) =>{
     e.preventDefault();
@@ -50,7 +51,10 @@ function HeroSectionRight() {
             defaultValue="general"
           />
           </div>
-          <button className="hero-section-right__button" onClick={(e) => redirect(e)}>BOOK NOW</button>
+          {breakpoint === 'phone' ? <button className="hero-section-right__button" onClick={(e) =>{
+            e.preventDefault();
+            window.location.href= "https://www.service-geni.in/car-service"
+          }}>BOOK NOW</button> : <button className="hero-section-right__button" onClick={(e) => redirect(e)}>BOOK NOW</button>}
         </div>
       </div>
     </div>

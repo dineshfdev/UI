@@ -40,7 +40,7 @@ const App = () => {
 
   // for location access
   if (navigator.geolocation) {
-    navigator.geolocation.watchPosition(showPosition, throwError);
+    navigator.geolocation.getCurrentPosition(showPosition, throwError);
     function showPosition(position) {
       dispatch(
         setLatLong([position.coords.latitude, position.coords.longitude])

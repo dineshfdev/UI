@@ -35,7 +35,7 @@ const RevampHomePage = ({device}) => {
 
   return (
       <>
-         <HeroSectionWrapper />
+         <HeroSectionWrapper device={device} />
          <DoorStepServices device={device}/>
          <Accordion device={device} />
          <UpdatedPackages device={device} />

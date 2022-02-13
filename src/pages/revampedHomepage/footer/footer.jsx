@@ -115,7 +115,7 @@ return (
                         </Accordion>
                         <Accordion square expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
                             <AccordionSummary aria-controls="panel4d-content" id="panel4d-header" expandIcon={<ArrowForwardIosIcon />}>
-                            <Typography  className="accordion-title">Our Service Partner are all across the city, check now</Typography>
+                            <Typography  className="accordion-title">Our Service Providers are all across the city, check now</Typography>
                             </AccordionSummary>
                             <AccordionDetails  className="accordion-body">
                             <Typography>
@@ -147,7 +147,7 @@ return (
                         </ul>
                     </Grid>
                     <Grid item xs={12} md={5}>
-                        <h5 className="footer-header">Our Service Partner are all across the city, check now</h5>
+                        <h5 className="footer-header">Our Service Providers are all across the city, check now</h5>
                         <Grid container xs={12}>
                             <ul className="footer-list-container footer-list-location">
                                 {ourServicesData.map((x,index) => <li onClick={() => onLocationClick(x)} key={index}>{x}</li>)}
