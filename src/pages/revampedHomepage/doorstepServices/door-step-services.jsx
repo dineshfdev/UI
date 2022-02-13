@@ -61,7 +61,7 @@ const DoorStepServices = () =>{
                                 <Button size="small" color="primary" className="card-button" onClick={e => {
       e.preventDefault();
       window.open(
-        'https://www.servicegeni.in/car-wash-near-me',
+        'https://www.service-geni.in/car-wash-near-me',
         '_blank' 
       );
       }}>
@@ -89,7 +89,7 @@ const DoorStepServices = () =>{
                                 <Button size="small" color="primary" className="card-button" onClick={e => {
       e.preventDefault();
       window.open(
-        'https://www.servicegeni.in/car-emergency',
+        'https://www.service-geni.in/car-emergency',
         '_blank' 
       );
       }}>

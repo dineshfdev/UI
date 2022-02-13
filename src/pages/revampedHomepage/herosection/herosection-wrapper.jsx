@@ -5,7 +5,7 @@ import HeroSectionRight from './herosection-right';
 
 import './herosection-wrapper.styles.scss';
 
-function HeroSectionWrapper() {
+function HeroSectionWrapper({device}) {
   return (
     <Container className='hero-section-container'>
     <Grid container className="hero-section-wrapper" justifycontent="center"
@@ -14,7 +14,7 @@ function HeroSectionWrapper() {
         <HeroSectionLeft />
       </Grid>
       <Grid xs={6} md={6}>
-        <HeroSectionRight />
+        <HeroSectionRight device={device} />
       </Grid>
     </Grid>
     </Container>

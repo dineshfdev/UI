@@ -182,6 +182,7 @@ const Header = ({ device }) => {
                     autoHighlight
                     popupIcon={<ExpandMoreIcon />}
                     getOptionLabel={(option) => (option ? option : "")}
+                    blurOnSelect="touch"
                     onChange={selectChange}
                     onOpen={() => {
                       setOpen(true);
